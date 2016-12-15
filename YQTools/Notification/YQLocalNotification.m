@@ -1,15 +1,15 @@
 //
-//  YQPublic+LocalNotification.m
+//  YQLocalNotification.m
 //  Tools
 //
-//  Created by weixb on 16/12/14.
+//  Created by weixb on 16/12/15.
 //  Copyright © 2016年 weixb. All rights reserved.
 //
 
-#import "YQPublic+LocalNotification.h"
+#import "YQLocalNotification.h"
 #import <UIKit/UIKit.h>
 
-@implementation YQPublic (LocalNotification)
+@implementation YQLocalNotification
 
 #pragma mark - public
 

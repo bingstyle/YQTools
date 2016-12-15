@@ -1,14 +1,14 @@
 //
-//  YQPublic+RegEx.h
+//  NSString+RegEx.h
 //  Tools
 //
-//  Created by weixb on 16/12/14.
+//  Created by weixb on 16/12/15.
 //  Copyright © 2016年 weixb. All rights reserved.
 //
 
-#import "YQPublic.h"
+#import <Foundation/Foundation.h>
 
-@interface YQPublic (RegEx)
+@interface NSString (RegEx)
 
 /*! 自己写正则传入进行判断*/
 + (BOOL)wxb_validateData:(NSString *)data withRegEx: (NSString *)RegEx;

@@ -1,14 +1,14 @@
 //
-//  YQPublic+LocalNotification.h
+//  YQLocalNotification.h
 //  Tools
 //
-//  Created by weixb on 16/12/14.
+//  Created by weixb on 16/12/15.
 //  Copyright © 2016年 weixb. All rights reserved.
 //
 
-#import "YQPublic.h"
+#import <Foundation/Foundation.h>
 
-@interface YQPublic (LocalNotification)
+@interface YQLocalNotification : NSObject
 
 + (void)createLocalNotificationWithTitle:(NSString *)title alertBody:(NSString *)alertBody userInfo:(NSDictionary *)userInfo date:(NSDate *)date;
 

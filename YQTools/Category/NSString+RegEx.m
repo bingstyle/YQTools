@@ -1,14 +1,14 @@
 //
-//  YQPublic+RegEx.m
+//  NSString+RegEx.m
 //  Tools
 //
-//  Created by weixb on 16/12/14.
+//  Created by weixb on 16/12/15.
 //  Copyright © 2016年 weixb. All rights reserved.
 //
 
-#import "YQPublic+RegEx.h"
+#import "NSString+RegEx.h"
 
-@implementation YQPublic (RegEx)
+@implementation NSString (RegEx)
 
 #pragma mark - public
 /*! 自己写正则传入进行判断*/
