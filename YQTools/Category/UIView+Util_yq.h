@@ -1,14 +1,14 @@
 //
-//  UIView+Util_wxb.h
+//  UIView+Util_yq.h
 //  Tools
 //
-//  Created by weixb on 16/10/26.
+//  Created by weixb on 16/12/19.
 //  Copyright © 2016年 weixb. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (Util_wxb)
+@interface UIView (Util_yq)
 
 @property (nonatomic,assign)CGFloat x;
 @property (nonatomic,assign)CGFloat y;

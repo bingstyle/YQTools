@@ -1,37 +1,37 @@
 //
-//  NSString+RegEx.h
+//  NSString+RegEx_yq.h
 //  Tools
 //
-//  Created by weixb on 16/12/15.
+//  Created by weixb on 16/12/19.
 //  Copyright © 2016年 weixb. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (RegEx)
+@interface NSString (RegEx_yq)
 
 /*! 自己写正则传入进行判断*/
-+ (BOOL)wxb_validateData:(NSString *)data withRegEx: (NSString *)RegEx;
++ (BOOL)yq_validateData:(NSString *)data withRegEx: (NSString *)RegEx;
 //邮箱
-+ (BOOL)wxb_validateEmail:(NSString *)data;
++ (BOOL)yq_validateEmail:(NSString *)data;
 //手机号码验证
-+ (BOOL)wxb_validateMobile:(NSString *)data;
++ (BOOL)yq_validateMobile:(NSString *)data;
 //车牌号验证
-+ (BOOL)wxb_validateCarNo:(NSString *)data;
++ (BOOL)yq_validateCarNo:(NSString *)data;
 //车型
-+ (BOOL)wxb_validateCarType:(NSString *)data;
++ (BOOL)yq_validateCarType:(NSString *)data;
 //用户名
-+ (BOOL)wxb_validateUserName:(NSString *)data;
++ (BOOL)yq_validateUserName:(NSString *)data;
 //密码
-+ (BOOL)wxb_validatePassword:(NSString *)data;
++ (BOOL)yq_validatePassword:(NSString *)data;
 //昵称
-+ (BOOL)wxb_validateNickname:(NSString *)data;
++ (BOOL)yq_validateNickname:(NSString *)data;
 //身份证号
-+ (BOOL)wxb_validateIdentityCard: (NSString *)data;
++ (BOOL)yq_validateIdentityCard: (NSString *)data;
 //手机验证码
-+ (BOOL)wxb_validateCheckCode: (NSString *)data;
++ (BOOL)yq_validateCheckCode: (NSString *)data;
 //判断URL是否能够打开
-+ (void)wxb_validateUrl:(NSString *)url block:(void(^)(BOOL))block;
++ (void)yq_validateUrl:(NSString *)url block:(void(^)(BOOL))block;
 @end
 /*
  1 . 校验密码强度

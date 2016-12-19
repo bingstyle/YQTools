@@ -1,14 +1,14 @@
 //
-//  UIView+Util_wxb.m
+//  UIView+Util_yq.m
 //  Tools
 //
-//  Created by weixb on 16/10/26.
+//  Created by weixb on 16/12/19.
 //  Copyright © 2016年 weixb. All rights reserved.
 //
 
-#import "UIView+Util_wxb.h"
+#import "UIView+Util_yq.h"
 
-@implementation UIView (Util_wxb)
+@implementation UIView (Util_yq)
 
 - (CGFloat)x{
     return self.frame.origin.x;
@@ -161,5 +161,6 @@
     }
     return nil;
 }
+
 
 @end

@@ -1,16 +1,16 @@
 //
-//  UIButton+ImageTitleStyle_wxb.m
+//  UIButton+ImageTitleStyle_yq.m
 //  Tools
 //
-//  Created by weixb on 16/10/26.
+//  Created by weixb on 16/12/19.
 //  Copyright © 2016年 weixb. All rights reserved.
 //
 
-#import "UIButton+ImageTitleStyle_wxb.h"
+#import "UIButton+ImageTitleStyle_yq.h"
 
-@implementation UIButton (ImageTitleStyle_wxb)
+@implementation UIButton (ImageTitleStyle_yq)
 
-- (void)layoutButtonWithEdgeInsetsStyle:(MKButtonEdgeInsetsStyle)style
+- (void)yq_layoutButtonWithEdgeInsetsStyle:(MKButtonEdgeInsetsStyle)style
                         imageTitleSpace:(CGFloat)space
 {
     //    self.backgroundColor = [UIColor cyanColor];
@@ -75,5 +75,6 @@
     self.titleEdgeInsets = labelEdgeInsets;
     self.imageEdgeInsets = imageEdgeInsets;
 }
+
 
 @end

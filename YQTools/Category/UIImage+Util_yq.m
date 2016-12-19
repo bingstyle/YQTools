@@ -1,19 +1,19 @@
 //
-//  UIImage+Util_wxb.m
+//  UIImage+Util_yq.m
 //  Tools
 //
-//  Created by weixb on 16/10/26.
+//  Created by weixb on 16/12/19.
 //  Copyright © 2016年 weixb. All rights reserved.
 //
 
-#import "UIImage+Util_wxb.h"
+#import "UIImage+Util_yq.h"
 
-@implementation UIImage (Util_wxb)
+@implementation UIImage (Util_yq)
 
 /**
  *  修改Image 大小
  */
-+ (UIImage *)scaleToSize:(UIImage *)img size:(CGSize)size{
++ (UIImage *)yq_scaleToSize:(UIImage *)img size:(CGSize)size{
     
     UIGraphicsBeginImageContext(size);
     [img drawInRect:CGRectMake(0, 0, size.width, size.height)];

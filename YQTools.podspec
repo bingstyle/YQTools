@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
 s.name         = "YQTools"
-s.version      = "0.1.1"
+s.version      = "0.1.2"
 s.ios.deployment_target = '8.0'
 s.summary      = "some utilities"
 s.homepage     = "https://github.com/weixinbing/YQTools"
@@ -15,7 +15,7 @@ s.dependency "YTKNetwork", "~> 2.0.3"
 s.dependency 'Bugly', '~> 2.4.2'
 s.dependency "AFNetworking", "~> 3.1.0"
 s.dependency 'FMDB', '~> 2.6.2'
-s.dependency 'SDWebImage', '~> 3.8.2'
+s.dependency 'SDWebImage', '~> 4.0.0'
 s.dependency 'Masonry', '~> 1.0.0'
 s.dependency 'MJRefresh', '~> 3.1.12'
 s.dependency 'MJExtension', '~> 3.0.13'

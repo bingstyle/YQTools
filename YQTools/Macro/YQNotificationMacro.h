@@ -9,5 +9,6 @@
 #ifndef YQNotificationMacro_h
 #define YQNotificationMacro_h
 
+static NSString *const YQNotificationLogout = @"YQNotificationLogout";
 
 #endif /* YQNotificationMacro_h */

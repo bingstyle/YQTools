@@ -1,15 +1,14 @@
 //
-//  UIColor+Util_wxb.m
+//  UIColor+Util_yq.m
 //  Tools
 //
-//  Created by weixb on 16/10/26.
+//  Created by weixb on 16/12/19.
 //  Copyright © 2016年 weixb. All rights reserved.
 //
 
-#import "UIColor+Util_wxb.h"
+#import "UIColor+Util_yq.h"
 
-@implementation UIColor (Util_wxb)
-
+@implementation UIColor (Util_yq)
 /**
  *  由16进制字符串获取颜色
  *
@@ -17,7 +16,7 @@
  *
  *  @return
  */
-+ (UIColor *)colorWithHexRGB:(NSString *)hexRGBString {
++ (UIColor *)yq_colorWithHexRGB:(NSString *)hexRGBString {
     
     if (![hexRGBString isKindOfClass:[NSString class]]) {
         return [UIColor clearColor];

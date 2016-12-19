@@ -1,8 +1,8 @@
 //
-//  UIButton+ImageTitleStyle_wxb.h
+//  UIButton+ImageTitleStyle_yq.h
 //  Tools
 //
-//  Created by weixb on 16/10/26.
+//  Created by weixb on 16/12/19.
 //  Copyright © 2016年 weixb. All rights reserved.
 //
 
@@ -13,7 +13,8 @@ typedef NS_ENUM(NSUInteger, MKButtonEdgeInsetsStyle) {
     MKButtonEdgeInsetsStyleBottom, // image在下，label在上
     MKButtonEdgeInsetsStyleRight // image在右，label在左
 };
-@interface UIButton (ImageTitleStyle_wxb)
+
+@interface UIButton (ImageTitleStyle_yq)
 
 /**
  *  设置button的titleLabel和imageView的布局样式，及间距
@@ -21,7 +22,7 @@ typedef NS_ENUM(NSUInteger, MKButtonEdgeInsetsStyle) {
  *  @param style titleLabel和imageView的布局样式
  *  @param space titleLabel和imageView的间距
  */
-- (void)layoutButtonWithEdgeInsetsStyle:(MKButtonEdgeInsetsStyle)style
+- (void)yq_layoutButtonWithEdgeInsetsStyle:(MKButtonEdgeInsetsStyle)style
                         imageTitleSpace:(CGFloat)space;
 
 @end
