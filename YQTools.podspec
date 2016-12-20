@@ -15,7 +15,7 @@ s.dependency "YTKNetwork", "~> 2.0.3"
 s.dependency 'Bugly', '~> 2.4.2'
 s.dependency "AFNetworking", "~> 3.1.0"
 s.dependency 'FMDB', '~> 2.6.2'
-s.dependency 'SDWebImage', '~> 4.0.0'
+s.dependency 'SDWebImage', '~> 4.0.0-beta2'
 s.dependency 'Masonry', '~> 1.0.0'
 s.dependency 'MJRefresh', '~> 3.1.12'
 s.dependency 'MJExtension', '~> 3.0.13'

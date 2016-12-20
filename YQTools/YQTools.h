@@ -24,6 +24,7 @@
 #import "YQPublic.h"
 #import "YQConvert.h"
 #import "YQSandbox.h"
+#import "YQUploadAPI.h"
 
 /**
  *  Category
