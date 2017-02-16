@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UITextField+InputLimit_yq.h
 //  YQToolsDemo
 //
 //  Created by weixb on 2017/2/16.
@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@interface UITextField (InputLimit_yq)
 
-
-@interface ViewController : UIViewController
-
+@property (assign, nonatomic)  NSInteger yq_maxLength;//if <=0, no limit
 
 @end
-
