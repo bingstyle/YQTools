@@ -11,23 +11,22 @@ s.author             = { "weixb" => "183292352@qq.com" }
 s.source       = { :git => "https://github.com/weixinbing/YQTools.git", :tag => s.version }
 s.requires_arc = true
 
-
 s.source_files = 'YQTools/*'
 
 s.subspec 'Macro' do |ss|
-ss.source_files = 'YQTools/Macro/*'
+ss.source_files = 'YQTools/Macro/*.{h}'
 end
 
 s.subspec 'Public' do |ss|
-ss.source_files = 'YQTools/Public/*'
+ss.source_files = 'YQTools/Public/*.{h,m}'
 end
 
 s.subspec 'Category' do |ss|
-ss.source_files = 'YQTools/Category/*'
+ss.source_files = 'YQTools/Category/*.{h,m}'
 end
 
 s.subspec 'Notification' do |ss|
-ss.source_files = 'YQTools/Notification/*'
+ss.source_files = 'YQTools/Notification/*.{h,m}'
 end
 
 end
