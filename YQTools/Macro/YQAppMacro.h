@@ -18,23 +18,19 @@
 //APP当前语言
 #define APP_CurrentLanguage ([[NSLocale preferredLanguages] objectAtIndex:0])
 
-//设置随机颜色
-#define RandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0]
-//设置RGB颜色/设置RGBA颜色
-#define RGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
-#define RGBAColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(r)/255.0 blue:(r)/255.0 alpha:a]
 
-//获取屏幕宽度与高度
+//获取屏幕宽度, 高度, 尺寸
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREENH_HEIGHT [UIScreen mainScreen].bounds.size.height
 #define SCREEN_SIZE [UIScreen mainScreen].bounds.size
 
 //常用缩写
 #define kNotificationCenter [NSNotificationCenter defaultCenter]
-#define kUserDefaults [NSUserDefaults standardUserDefaults]
+#define kNSUserDefaults [NSUserDefaults standardUserDefaults]
 #define kAppDelegate [UIApplication sharedApplication].delegate
 #define kAPPKeyWindow [UIApplication sharedApplication].keyWindow
 
+/**************************************Log***************************************/
 //自定义高效率的NSLog
 #ifdef DEBUG
 #define NSLog(format, ...) do { \
@@ -46,20 +42,14 @@ __LINE__, __func__);\
 #else
 #define NSLog(...)
 #endif
+
 //debug输出rect，size和point的宏
 #define NSLogRect(rect) NSLog(@"%s x:%.4f, y:%.4f, w:%.4f, h:%.4f", #rect, rect.origin.x, rect.origin.y, rect.size.width, rect.size.height)
 #define NSLogSize(size) NSLog(@"%s w:%.4f, h:%.4f", #size, size.width, size.height)
 #define NSLogPoint(point) NSLog(@"%s x:%.4f, y:%.4f", #point, point.x, point.y)
 
-//设置 view 圆角和边框
-#define FUNC_BorderRadius(View, Radius, Width, Color)\
-\
-[View.layer setCornerRadius:(Radius)];\
-[View.layer setMasksToBounds:YES];\
-[View.layer setBorderWidth:(Width)];\
-[View.layer setBorderColor:[Color CGColor]]
 
-//判断当前的iPhone设备/系统版本
+/**************************************设备***************************************/
 //判断是否为iPhone
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 //判断是否为iPad
@@ -77,7 +67,8 @@ __LINE__, __func__);\
 //判断 iOS 8 或更高的系统版本
 #define IOS_VERSION_8_OR_LATER (([[[UIDevice currentDevice] systemVersion] floatValue] >=8.0)? (YES):(NO))
 
-//沙盒目录文件
+
+/**************************************沙盒目录文件***************************************/
 //获取temp
 #define kPathTemp NSTemporaryDirectory()
 //获取沙盒 Document
@@ -85,18 +76,20 @@ __LINE__, __func__);\
 //获取沙盒 Cache
 #define kPathCache [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
 
-//判断是真机还是模拟器
-#if TARGET_OS_IPHONE
-//iPhone Device
-#endif
-#if TARGET_IPHONE_SIMULATOR
-//iPhone Simulator
-#endif
 
+/**
+ *  设置 view 圆角和边框
+ */
+#define FUNC_BorderRadius(View, Radius, Width, Color)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setMasksToBounds:YES];\
+[View.layer setBorderWidth:(Width)];\
+[View.layer setBorderColor:[Color CGColor]]
 /**
  *  结束上下拉刷新
  */
-#define EndMJRefresh(tableView) \
+#define FUNC_EndMJRefresh(tableView) \
 if ([tableView.mj_header isRefreshing]) { \
 [tableView.mj_header endRefreshing]; \
 } \
