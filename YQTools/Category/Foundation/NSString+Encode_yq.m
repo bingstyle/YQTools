@@ -11,9 +11,6 @@
 #import <LocalAuthentication/LocalAuthentication.h>
 #import <UIKit/UIKit.h>
 
-#import "NSData+Encrypt_yq.h"
-#import "NSData+Base64_yq.h"
-
 @implementation NSString (Encode_yq)
 
 /**
@@ -72,48 +69,6 @@
             fail(error);
         }
     }];
-}
-
--(NSString*)yq_encryptedWithAESUsingKey:(NSString*)key andIV:(NSData*)iv {
-    NSData *encrypted = [[self dataUsingEncoding:NSUTF8StringEncoding] yq_encryptedWithAESUsingKey:key andIV:iv];
-    NSString *encryptedString = [encrypted yq_base64EncodedString];
-    
-    return encryptedString;
-}
-
-- (NSString*)yq_decryptedWithAESUsingKey:(NSString*)key andIV:(NSData*)iv {
-    NSData *decrypted = [[NSData yq_dataWithBase64EncodedString:self] yq_decryptedWithAESUsingKey:key andIV:iv];
-    NSString *decryptedString = [[NSString alloc] initWithData:decrypted encoding:NSUTF8StringEncoding];
-    
-    return decryptedString;
-}
-
-- (NSString*)yq_encryptedWithDESUsingKey:(NSString*)key andIV:(NSData*)iv {
-    NSData *encrypted = [[self dataUsingEncoding:NSUTF8StringEncoding] yq_encryptedWithDESUsingKey:key andIV:iv];
-    NSString *encryptedString = [encrypted yq_base64EncodedString];
-    
-    return encryptedString;
-}
-
-- (NSString*)yq_decryptedWithDESUsingKey:(NSString*)key andIV:(NSData*)iv {
-    NSData *decrypted = [[NSData yq_dataWithBase64EncodedString:self] yq_decryptedWithDESUsingKey:key andIV:iv];
-    NSString *decryptedString = [[NSString alloc] initWithData:decrypted encoding:NSUTF8StringEncoding];
-    
-    return decryptedString;
-}
-
-- (NSString*)yq_encryptedWith3DESUsingKey:(NSString*)key andIV:(NSData*)iv {
-    NSData *encrypted = [[self dataUsingEncoding:NSUTF8StringEncoding] yq_encryptedWith3DESUsingKey:key andIV:iv];
-    NSString *encryptedString = [encrypted yq_base64EncodedString];
-    
-    return encryptedString;
-}
-
-- (NSString*)yq_decryptedWith3DESUsingKey:(NSString*)key andIV:(NSData*)iv {
-    NSData *decrypted = [[NSData yq_dataWithBase64EncodedString:self] yq_decryptedWith3DESUsingKey:key andIV:iv];
-    NSString *decryptedString = [[NSString alloc] initWithData:decrypted encoding:NSUTF8StringEncoding];
-    
-    return decryptedString;
 }
 
 @end
