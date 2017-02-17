@@ -137,7 +137,7 @@
 }
 
 + (NSString *)yq_formatYMD:(NSDate *)date {
-    return [NSString stringWithFormat:@"%ld-%02ld-%02ld",(long)[date yq_year],(long)[date yq_month], (long)[date yq_day]];
+    return [NSString stringWithFormat:@"%tu-%02tu-%02tu",[date yq_year], [date yq_month], [date yq_day]];
 }
 
 - (NSUInteger)yq_weeksOfMonth {
