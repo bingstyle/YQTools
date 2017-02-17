@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DC407BA1E56F67100210E59 /* YQNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC407B91E56F67100210E59 /* YQNetworking.m */; };
 		2DF6E2951E5545D200C81A30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E2941E5545D200C81A30 /* main.m */; };
 		2DF6E2981E5545D200C81A30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E2971E5545D200C81A30 /* AppDelegate.m */; };
 		2DF6E29B1E5545D200C81A30 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E29A1E5545D200C81A30 /* ViewController.m */; };
@@ -110,6 +111,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2DC407B81E56F67100210E59 /* YQNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQNetworking.h; sourceTree = "<group>"; };
+		2DC407B91E56F67100210E59 /* YQNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQNetworking.m; sourceTree = "<group>"; };
 		2DF6E2901E5545D200C81A30 /* YQToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YQToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DF6E2941E5545D200C81A30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2DF6E2961E5545D200C81A30 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -314,6 +317,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DC407B71E56F67100210E59 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2DC407B81E56F67100210E59 /* YQNetworking.h */,
+				2DC407B91E56F67100210E59 /* YQNetworking.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		2DF6E2871E5545D200C81A30 = {
 			isa = PBXGroup;
 			children = (
@@ -380,6 +392,7 @@
 		2DF6E2C61E5545F600C81A30 /* YQTools */ = {
 			isa = PBXGroup;
 			children = (
+				2DC407B71E56F67100210E59 /* Networking */,
 				2DF6E5CE1E55A09A00C81A30 /* YQCategory.h */,
 				2DF6E5CD1E55A06C00C81A30 /* YQMacro.h */,
 				2DF6E2ED1E5545F600C81A30 /* YQTools.h */,
@@ -777,6 +790,7 @@
 				2DF6E5911E559C2600C81A30 /* UIButton+BackgroundColor_yq.m in Sources */,
 				2DF6E62D1E55ABEF00C81A30 /* NSString+Emoji_yq.m in Sources */,
 				2DF6E59B1E559C2600C81A30 /* UIColor+Random_yq.m in Sources */,
+				2DC407BA1E56F67100210E59 /* YQNetworking.m in Sources */,
 				2DF6E6241E55ABEF00C81A30 /* NSNotificationCenter+MainThread_yq.m in Sources */,
 				2DF6E6311E55ABEF00C81A30 /* NSString+URLEncode_yq.m in Sources */,
 				2DF6E6201E55ABEF00C81A30 /* NSDictionary+SafeAccess_yq.m in Sources */,
