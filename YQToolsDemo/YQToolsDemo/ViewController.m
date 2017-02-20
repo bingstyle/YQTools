@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "YQTools.h"
+#import "UIApplication+APNs_yq.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [UIApplication yq_registerAPNs];
 }
 
 

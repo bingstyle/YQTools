@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2DC407BA1E56F67100210E59 /* YQNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC407B91E56F67100210E59 /* YQNetworking.m */; };
+		2DEA69AE1E5A9030005F7259 /* UIApplication+APNs_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA69AD1E5A9030005F7259 /* UIApplication+APNs_yq.m */; };
 		2DF6E2951E5545D200C81A30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E2941E5545D200C81A30 /* main.m */; };
 		2DF6E2981E5545D200C81A30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E2971E5545D200C81A30 /* AppDelegate.m */; };
 		2DF6E29B1E5545D200C81A30 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E29A1E5545D200C81A30 /* ViewController.m */; };
@@ -113,6 +114,8 @@
 /* Begin PBXFileReference section */
 		2DC407B81E56F67100210E59 /* YQNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQNetworking.h; sourceTree = "<group>"; };
 		2DC407B91E56F67100210E59 /* YQNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQNetworking.m; sourceTree = "<group>"; };
+		2DEA69AC1E5A9030005F7259 /* UIApplication+APNs_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+APNs_yq.h"; sourceTree = "<group>"; };
+		2DEA69AD1E5A9030005F7259 /* UIApplication+APNs_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+APNs_yq.m"; sourceTree = "<group>"; };
 		2DF6E2901E5545D200C81A30 /* YQToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YQToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DF6E2941E5545D200C81A30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2DF6E2961E5545D200C81A30 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -430,6 +433,8 @@
 			children = (
 				2DF6E51F1E559C2600C81A30 /* CALayer+Util_yq.h */,
 				2DF6E5201E559C2600C81A30 /* CALayer+Util_yq.m */,
+				2DEA69AC1E5A9030005F7259 /* UIApplication+APNs_yq.h */,
+				2DEA69AD1E5A9030005F7259 /* UIApplication+APNs_yq.m */,
 				2DF6E5211E559C2600C81A30 /* UIBarButtonItem+Badge_yq.h */,
 				2DF6E5221E559C2600C81A30 /* UIBarButtonItem+Badge_yq.m */,
 				2DF6E5231E559C2600C81A30 /* UIButton+BackgroundColor_yq.h */,
@@ -769,6 +774,7 @@
 				2DF6E5AC1E559C2600C81A30 /* UINavigationController+Transitions_yq.m in Sources */,
 				2DF6E61B1E55ABEF00C81A30 /* NSDate+Extension_yq.m in Sources */,
 				2DF6E5AA1E559C2600C81A30 /* UILabel+AutoSize_yq.m in Sources */,
+				2DEA69AE1E5A9030005F7259 /* UIApplication+APNs_yq.m in Sources */,
 				2DF6E5A41E559C2600C81A30 /* UIImage+GIF_yq.m in Sources */,
 				2DF6E2981E5545D200C81A30 /* AppDelegate.m in Sources */,
 				2DF6E5B21E559C2600C81A30 /* UITextView+Select_yq.m in Sources */,
