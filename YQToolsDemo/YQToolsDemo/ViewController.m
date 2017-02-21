@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "YQTools.h"
-#import "UIApplication+APNs_yq.h"
 
 @interface ViewController ()
 
