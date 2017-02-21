@@ -27,8 +27,6 @@
 //常用缩写
 #define kNotificationCenter [NSNotificationCenter defaultCenter]
 #define kNSUserDefaults [NSUserDefaults standardUserDefaults]
-#define kAppDelegate [UIApplication sharedApplication].delegate
-#define kAPPKeyWindow [UIApplication sharedApplication].keyWindow
 
 /**************************************Log***************************************/
 //自定义高效率的NSLog
