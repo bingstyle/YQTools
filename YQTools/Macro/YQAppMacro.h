@@ -49,11 +49,11 @@ __LINE__, __func__);\
 
 /**************************************设备***************************************/
 //判断是否为iPhone
-#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_IPhone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 //判断是否为iPad
-#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 //判断是否为ipod
-#define IS_IPOD ([[[UIDevice currentDevice] model] isEqualToString:@"iPod touch"])
+#define IS_IPod ([[[UIDevice currentDevice] model] isEqualToString:@"iPod touch"])
 // 判断是否为 iPhone 5SE
 #define iPhone5SE [[UIScreen mainScreen] bounds].size.width == 320.0f && [[UIScreen mainScreen] bounds].size.height == 568.0f
 // 判断是否为iPhone 6/6s
