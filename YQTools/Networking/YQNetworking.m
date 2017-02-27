@@ -503,29 +503,18 @@ static inline NSString *cachePath() {
         }
         NSLog(@"uploadProgress is %lld,总字节 is %lld",uploadProgress.completedUnitCount,uploadProgress.totalUnitCount);
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSString *resultCode = [NSString stringWithFormat:@"%@",[responseObject objectForKey:@"result_code"]];
-        NSString *resultInfo = [responseObject objectForKey:@"result_info"];
-        NSLog(@"resultInfo is %@",resultInfo);
-        if ([resultCode isEqualToString:@"1"]) {
-            if (success == nil) return ;
-            [[self allTasks] removeObject:task];
-            [self successResponse:responseObject callback:success];
-            
-            if ([self isDebug]) {
-                [self logWithSuccessResponse:responseObject
-                                         url:absolute
-                                      params:params];
-            }
-        }else {
-            if (failure == nil) return ;
-            
+        [[self allTasks] removeObject:task];
+        [self successResponse:responseObject callback:success];
+        
+        if ([self isDebug]) {
+            [self logWithSuccessResponse:responseObject
+                                     url:absolute
+                                  params:params];
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        if (failure == nil) return ;
+        
         [[self allTasks] removeObject:task];
-        
         [self handleCallbackWithError:error fail:failure];
-        
         if ([self isDebug]) {
             [self logWithFailError:error url:absolute params:nil];
         }
