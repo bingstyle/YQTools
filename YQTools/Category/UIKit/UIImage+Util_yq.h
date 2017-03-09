@@ -54,4 +54,8 @@
  */
 - (UIImage*)yq_scaleToSize:(CGSize)size;
 
+//图片切成圆形
+- (instancetype)circleImage;
++ (instancetype)circleImage:(NSString *)image;
+
 @end
