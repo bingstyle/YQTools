@@ -16,7 +16,7 @@
  *  @param maskImage 水印图
  *  @param rect      水印图位置
  *
- *  @return
+ *  @return 图片
  */
 - (UIImage *)yq_addMsakImage:(UIImage *)maskImage msakRect:(CGRect)rect;
 

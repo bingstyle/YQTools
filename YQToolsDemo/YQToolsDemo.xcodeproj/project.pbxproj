@@ -114,6 +114,7 @@
 
 /* Begin PBXFileReference section */
 		11EBD51D155625E9D570DE03 /* Pods-YQToolsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YQToolsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YQToolsDemo/Pods-YQToolsDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		2D9054691E821F7E00FFEF4D /* YQAdjustScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YQAdjustScreen.h; sourceTree = "<group>"; };
 		2DC407B81E56F67100210E59 /* YQNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQNetworking.h; sourceTree = "<group>"; };
 		2DC407B91E56F67100210E59 /* YQNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQNetworking.m; sourceTree = "<group>"; };
 		2DEA69AC1E5A9030005F7259 /* UIApplication+APNs_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+APNs_yq.h"; sourceTree = "<group>"; };
@@ -546,6 +547,7 @@
 				2DF6E5D31E55A17200C81A30 /* YQPublic.m */,
 				2DF6E5D41E55A17200C81A30 /* YQSandbox.h */,
 				2DF6E5D51E55A17200C81A30 /* YQSandbox.m */,
+				2D9054691E821F7E00FFEF4D /* YQAdjustScreen.h */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";

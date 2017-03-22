@@ -13,7 +13,7 @@
 /**
  *  设置边框颜色(用于storyboard的key_value设置)
  *
- *  @param color
+ *  @param color 边框颜色
  */
 - (void)setBorderColorWithUIColor:(UIColor *)color {
     self.borderColor = color.CGColor;

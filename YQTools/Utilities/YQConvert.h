@@ -32,7 +32,7 @@
 /**
  *  base64编码字符串转换为图片
  *
- *  @param 字符串
+ *  @param base64String 字符串
  *
  *  @return 图片
  */
