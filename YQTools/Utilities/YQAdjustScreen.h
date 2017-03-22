@@ -51,9 +51,9 @@ DH_INLINE CGSize YQFlexibleSize(CGSize iphone5Size)
 DH_INLINE  CGRect YQFrameWithCenterAndSize(CGPoint iphone5Center, CGSize iphone5Size)
 {
     CGRect frame;
-    frame.origin.x = center.x - size.width/2;
-    frame.origin.y = center.y - size.height/2;
-    frame.size = size;
+    frame.origin.x = iphone5Center.x - iphone5Size.width/2;
+    frame.origin.y = iphone5Center.y - iphone5Size.height/2;
+    frame.size = iphone5Size;
     return frame;
 }
 
