@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "YQTools.h"
 
 @interface ViewController ()
 
@@ -22,6 +23,7 @@
  */
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor lightGrayColor];
     [self layoutPageSubviews];
 }
 

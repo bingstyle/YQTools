@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D2897FF1E8363AC00E8B7C2 /* UIView+Block_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2897FE1E8363AC00E8B7C2 /* UIView+Block_yq.m */; };
-		2D2898021E836DCD00E8B7C2 /* NSObject+Block_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2898011E836DCD00E8B7C2 /* NSObject+Block_yq.m */; };
-		2D2898051E836F8200E8B7C2 /* UIGestureRecognizer+Block_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2898041E836F8200E8B7C2 /* UIGestureRecognizer+Block_yq.m */; };
+		2D2898CA1E837D6500E8B7C2 /* UIView+GestureBlock_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2898C91E837D6500E8B7C2 /* UIView+GestureBlock_yq.m */; };
 		2DC407BA1E56F67100210E59 /* YQNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC407B91E56F67100210E59 /* YQNetworking.m */; };
 		2DEA69AE1E5A9030005F7259 /* UIApplication+APNs_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA69AD1E5A9030005F7259 /* UIApplication+APNs_yq.m */; };
 		2DF6E2951E5545D200C81A30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E2941E5545D200C81A30 /* main.m */; };
@@ -117,12 +115,8 @@
 
 /* Begin PBXFileReference section */
 		11EBD51D155625E9D570DE03 /* Pods-YQToolsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YQToolsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YQToolsDemo/Pods-YQToolsDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		2D2897FD1E8363AC00E8B7C2 /* UIView+Block_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Block_yq.h"; sourceTree = "<group>"; };
-		2D2897FE1E8363AC00E8B7C2 /* UIView+Block_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Block_yq.m"; sourceTree = "<group>"; };
-		2D2898001E836DCD00E8B7C2 /* NSObject+Block_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Block_yq.h"; sourceTree = "<group>"; };
-		2D2898011E836DCD00E8B7C2 /* NSObject+Block_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Block_yq.m"; sourceTree = "<group>"; };
-		2D2898031E836F8200E8B7C2 /* UIGestureRecognizer+Block_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+Block_yq.h"; sourceTree = "<group>"; };
-		2D2898041E836F8200E8B7C2 /* UIGestureRecognizer+Block_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+Block_yq.m"; sourceTree = "<group>"; };
+		2D2898C81E837D6500E8B7C2 /* UIView+GestureBlock_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GestureBlock_yq.h"; sourceTree = "<group>"; };
+		2D2898C91E837D6500E8B7C2 /* UIView+GestureBlock_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GestureBlock_yq.m"; sourceTree = "<group>"; };
 		2D9054691E821F7E00FFEF4D /* YQAdjustScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YQAdjustScreen.h; sourceTree = "<group>"; };
 		2DC407B81E56F67100210E59 /* YQNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQNetworking.h; sourceTree = "<group>"; };
 		2DC407B91E56F67100210E59 /* YQNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQNetworking.m; sourceTree = "<group>"; };
@@ -484,8 +478,6 @@
 				2DF6E53E1E559C2600C81A30 /* UIControl+Sound_yq.m */,
 				2DF6E53F1E559C2600C81A30 /* UIDevice+Hardware_yq.h */,
 				2DF6E5401E559C2600C81A30 /* UIDevice+Hardware_yq.m */,
-				2D2898031E836F8200E8B7C2 /* UIGestureRecognizer+Block_yq.h */,
-				2D2898041E836F8200E8B7C2 /* UIGestureRecognizer+Block_yq.m */,
 				2DF6E5411E559C2600C81A30 /* UIImage+Alpha_yq.h */,
 				2DF6E5421E559C2600C81A30 /* UIImage+Alpha_yq.m */,
 				2DF6E5431E559C2600C81A30 /* UIImage+Capture_yq.h */,
@@ -524,8 +516,8 @@
 				2DF6E5641E559C2600C81A30 /* UITextView+InputLimit_yq.m */,
 				2DF6E5651E559C2600C81A30 /* UITextView+Select_yq.h */,
 				2DF6E5661E559C2600C81A30 /* UITextView+Select_yq.m */,
-				2D2897FD1E8363AC00E8B7C2 /* UIView+Block_yq.h */,
-				2D2897FE1E8363AC00E8B7C2 /* UIView+Block_yq.m */,
+				2D2898C81E837D6500E8B7C2 /* UIView+GestureBlock_yq.h */,
+				2D2898C91E837D6500E8B7C2 /* UIView+GestureBlock_yq.m */,
 				2DF6E5671E559C2600C81A30 /* UIView+Find_yq.h */,
 				2DF6E5681E559C2600C81A30 /* UIView+Find_yq.m */,
 				2DF6E5691E559C2600C81A30 /* UIView+Screenshot_yq.h */,
@@ -600,8 +592,6 @@
 				2DF6E5F71E55ABEF00C81A30 /* NSNumber+Round_yq.m */,
 				2DF6E5F81E55ABEF00C81A30 /* NSObject+AppInfo_yq.h */,
 				2DF6E5F91E55ABEF00C81A30 /* NSObject+AppInfo_yq.m */,
-				2D2898001E836DCD00E8B7C2 /* NSObject+Block_yq.h */,
-				2D2898011E836DCD00E8B7C2 /* NSObject+Block_yq.m */,
 				2DF6E5FA1E55ABEF00C81A30 /* NSObject+Reflection_yq.h */,
 				2DF6E5FB1E55ABEF00C81A30 /* NSObject+Reflection_yq.m */,
 				2DF6E5FC1E55ABEF00C81A30 /* NSObject+Runtime_yq.h */,
@@ -848,6 +838,7 @@
 				2DF6E6231E55ABEF00C81A30 /* NSIndexPath+Offset_yq.m in Sources */,
 				2DF6E5A71E559C2600C81A30 /* UIImage+Util_yq.m in Sources */,
 				2DF6E62A1E55ABEF00C81A30 /* NSString+Base64_yq.m in Sources */,
+				2D2898CA1E837D6500E8B7C2 /* UIView+GestureBlock_yq.m in Sources */,
 				2DF6E6261E55ABEF00C81A30 /* NSNumber+Round_yq.m in Sources */,
 				2DF6E5941E559C2600C81A30 /* UIButton+CountDown_yq.m in Sources */,
 				2DF6E6361E55ABEF00C81A30 /* NSUserDefaults+SafeAccess_yq.m in Sources */,
@@ -859,9 +850,7 @@
 				2DF6E62C1E55ABEF00C81A30 /* NSString+Dictionary_yq.m in Sources */,
 				2DF6E61F1E55ABEF00C81A30 /* NSDictionary+Merge_yq.m in Sources */,
 				2DF6E5B01E559C2600C81A30 /* UITextField+Select_yq.m in Sources */,
-				2D2897FF1E8363AC00E8B7C2 /* UIView+Block_yq.m in Sources */,
 				2DF6E5A81E559C2600C81A30 /* UIImageView+Addition_yq.m in Sources */,
-				2D2898021E836DCD00E8B7C2 /* NSObject+Block_yq.m in Sources */,
 				2DF6E5A31E559C2600C81A30 /* UIImage+FileName_yq.m in Sources */,
 				2DF6E61A1E55ABEF00C81A30 /* NSData+Base64_yq.m in Sources */,
 				2DF6E6301E55ABEF00C81A30 /* NSString+Size_yq.m in Sources */,
@@ -922,7 +911,6 @@
 				2DF6E5A21E559C2600C81A30 /* UIImage+Color_yq.m in Sources */,
 				2DF6E5901E559C2600C81A30 /* UIBarButtonItem+Badge_yq.m in Sources */,
 				2DF6E6251E55ABEF00C81A30 /* NSNumber+CGFloat_yq.m in Sources */,
-				2D2898051E836F8200E8B7C2 /* UIGestureRecognizer+Block_yq.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
