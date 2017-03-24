@@ -5,6 +5,7 @@
 //  Created by weixb on 2017/3/23.
 //  Copyright © 2017年 weixb. All rights reserved.
 //
+/* https://github.com/weixinbing/YQTools */
 
 #import <UIKit/UIKit.h>
 
@@ -48,11 +49,15 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)yq_whenSwipedWithTouches:(NSUInteger)numberOfTouches direction:(UISwipeGestureRecognizerDirection)direction block:(void(^)(UISwipeGestureRecognizer *swipeGesture))block;
 /**
- *  @brief  单指轻扫手势
+ *  @brief  单指轻扫
  *
  *  @param block 回调
  */
 - (void)yq_whenSwipedWithDirection:(UISwipeGestureRecognizerDirection)direction block:(void(^)(UISwipeGestureRecognizer *swipeGesture))block;
+- (void)yq_whenSwipedLeft:(void(^)(UISwipeGestureRecognizer *swipeGesture))block;
+- (void)yq_whenSwipedRight:(void(^)(UISwipeGestureRecognizer *swipeGesture))block;
+- (void)yq_whenSwipedUp:(void(^)(UISwipeGestureRecognizer *swipeGesture))block;
+- (void)yq_whenSwipedDown:(void(^)(UISwipeGestureRecognizer *swipeGesture))block;
 
 /**
  *  @brief  捏合手势

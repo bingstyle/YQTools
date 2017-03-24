@@ -90,6 +90,18 @@ static char yq_kActionHandlerLongPressBlockKey;
 - (void)yq_whenSwipedWithDirection:(UISwipeGestureRecognizerDirection)direction block:(void (^)(UISwipeGestureRecognizer * _Nonnull))block {
     [self yq_whenSwipedWithTouches:1 direction:direction block:block];
 }
+- (void)yq_whenSwipedLeft:(void (^)(UISwipeGestureRecognizer * _Nonnull))block {
+    [self yq_whenSwipedWithDirection:UISwipeGestureRecognizerDirectionLeft block:block];
+}
+- (void)yq_whenSwipedRight:(void (^)(UISwipeGestureRecognizer * _Nonnull))block {
+    [self yq_whenSwipedWithDirection:UISwipeGestureRecognizerDirectionRight block:block];
+}
+- (void)yq_whenSwipedUp:(void (^)(UISwipeGestureRecognizer * _Nonnull))block {
+    [self yq_whenSwipedWithDirection:UISwipeGestureRecognizerDirectionUp block:block];
+}
+- (void)yq_whenSwipedDown:(void (^)(UISwipeGestureRecognizer * _Nonnull))block {
+    [self yq_whenSwipedWithDirection:UISwipeGestureRecognizerDirectionDown block:block];
+}
 
 - (void)yq_handleActionForSwipeGesture:(UISwipeGestureRecognizer*)gesture
 {
