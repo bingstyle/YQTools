@@ -13,10 +13,10 @@
 //合成加半透明水印
 - (UIImage *)yq_addMsakImage:(UIImage *)maskImage msakRect:(CGRect)rect
 {
-    UIGraphicsBeginImageContext(self.size);
+    // 开启图形上下文
+    UIGraphicsBeginImageContextWithOptions(self.size,NO,0);
     [self drawInRect:CGRectMake(0, 0, self.size.width, self.size.height)];
     
-    //四个参数为水印图片的位置
     [maskImage drawInRect:rect];
     UIImage *resultingImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
@@ -26,7 +26,7 @@
 //压缩图片
 - (UIImage *)yq_compressImage
 {
-    //UIImageJPEGRepresentation第二个参数为压缩比率
+    // UIImageJPEGRepresentation第二个参数为压缩比率
     NSData *data=UIImageJPEGRepresentation(self, 1.0);
     if (data.length>100*1024) {
         if (data.length>1024*1024) {//1M以及以上
@@ -108,21 +108,31 @@
     return scaledImage;
 }
 //图片切成圆形
-- (instancetype)circleImage
+- (instancetype)yq_circleImage
 {
-    UIGraphicsBeginImageContext(self.size);
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
-    CGContextAddEllipseInRect(ctx, rect);
-    CGContextClip(ctx);
-    [self drawInRect:rect];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    // 1.开启图形上下文
+    UIGraphicsBeginImageContextWithOptions(self.size,NO,0);
+    
+    // 2.描述圆形路径
+    UIBezierPath*path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0,0,self.size.width,self.size.height)];
+    
+    // 3.设置裁剪区域
+    [path addClip];
+    
+    // 4.画图
+    [self drawAtPoint:CGPointZero];
+    
+    // 5.取出图片
+    UIImage*image =UIGraphicsGetImageFromCurrentImageContext();
+    
+    // 6.关闭上下文
     UIGraphicsEndImageContext();
+    
     return image;
 }
-+ (instancetype)circleImage:(NSString *)image
++ (instancetype)yq_circleImage:(NSString *)image
 {
-    return [[self imageNamed:image] circleImage];
+    return [[self imageNamed:image] yq_circleImage];
 }
 
 
