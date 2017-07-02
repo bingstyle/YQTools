@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D0DE7321F090BC600B1365D /* UIButton+MiddleAligning_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D0DE7311F090BC600B1365D /* UIButton+MiddleAligning_yq.m */; };
 		2D2898CA1E837D6500E8B7C2 /* UIView+GestureBlock_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2898C91E837D6500E8B7C2 /* UIView+GestureBlock_yq.m */; };
 		2DC407BA1E56F67100210E59 /* YQNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC407B91E56F67100210E59 /* YQNetworking.m */; };
 		2DEA69AE1E5A9030005F7259 /* UIApplication+APNs_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA69AD1E5A9030005F7259 /* UIApplication+APNs_yq.m */; };
@@ -57,7 +58,6 @@
 		2DF6E5B21E559C2600C81A30 /* UITextView+Select_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5661E559C2600C81A30 /* UITextView+Select_yq.m */; };
 		2DF6E5B31E559C2600C81A30 /* UIView+Find_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5681E559C2600C81A30 /* UIView+Find_yq.m */; };
 		2DF6E5B41E559C2600C81A30 /* UIView+Screenshot_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E56A1E559C2600C81A30 /* UIView+Screenshot_yq.m */; };
-		2DF6E5B51E559C2600C81A30 /* UIView+Toast_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E56C1E559C2600C81A30 /* UIView+Toast_yq.m */; };
 		2DF6E5B61E559C2600C81A30 /* UIView+Util_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E56E1E559C2600C81A30 /* UIView+Util_yq.m */; };
 		2DF6E5D61E55A17200C81A30 /* YQConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5D11E55A17200C81A30 /* YQConvert.m */; };
 		2DF6E5D71E55A17200C81A30 /* YQPublic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5D31E55A17200C81A30 /* YQPublic.m */; };
@@ -115,6 +115,8 @@
 
 /* Begin PBXFileReference section */
 		11EBD51D155625E9D570DE03 /* Pods-YQToolsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YQToolsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YQToolsDemo/Pods-YQToolsDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		2D0DE7301F090BC600B1365D /* UIButton+MiddleAligning_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+MiddleAligning_yq.h"; sourceTree = "<group>"; };
+		2D0DE7311F090BC600B1365D /* UIButton+MiddleAligning_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+MiddleAligning_yq.m"; sourceTree = "<group>"; };
 		2D2898C81E837D6500E8B7C2 /* UIView+GestureBlock_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GestureBlock_yq.h"; sourceTree = "<group>"; };
 		2D2898C91E837D6500E8B7C2 /* UIView+GestureBlock_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GestureBlock_yq.m"; sourceTree = "<group>"; };
 		2D9054691E821F7E00FFEF4D /* YQAdjustScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YQAdjustScreen.h; sourceTree = "<group>"; };
@@ -217,8 +219,6 @@
 		2DF6E5681E559C2600C81A30 /* UIView+Find_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Find_yq.m"; sourceTree = "<group>"; };
 		2DF6E5691E559C2600C81A30 /* UIView+Screenshot_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot_yq.h"; sourceTree = "<group>"; };
 		2DF6E56A1E559C2600C81A30 /* UIView+Screenshot_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot_yq.m"; sourceTree = "<group>"; };
-		2DF6E56B1E559C2600C81A30 /* UIView+Toast_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast_yq.h"; sourceTree = "<group>"; };
-		2DF6E56C1E559C2600C81A30 /* UIView+Toast_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast_yq.m"; sourceTree = "<group>"; };
 		2DF6E56D1E559C2600C81A30 /* UIView+Util_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Util_yq.h"; sourceTree = "<group>"; };
 		2DF6E56E1E559C2600C81A30 /* UIView+Util_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Util_yq.m"; sourceTree = "<group>"; };
 		2DF6E5B71E559D4700C81A30 /* YQFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YQFoundation.h; sourceTree = "<group>"; };
@@ -458,6 +458,8 @@
 				2DF6E52A1E559C2600C81A30 /* UIButton+CountDown_yq.m */,
 				2DF6E52B1E559C2600C81A30 /* UIButton+ImagePosition_yq.h */,
 				2DF6E52C1E559C2600C81A30 /* UIButton+ImagePosition_yq.m */,
+				2D0DE7301F090BC600B1365D /* UIButton+MiddleAligning_yq.h */,
+				2D0DE7311F090BC600B1365D /* UIButton+MiddleAligning_yq.m */,
 				2DF6E52D1E559C2600C81A30 /* UIButton+Indicator_yq.h */,
 				2DF6E52E1E559C2600C81A30 /* UIButton+Indicator_yq.m */,
 				2DF6E52F1E559C2600C81A30 /* UIButton+Submitting_yq.h */,
@@ -522,8 +524,6 @@
 				2DF6E5681E559C2600C81A30 /* UIView+Find_yq.m */,
 				2DF6E5691E559C2600C81A30 /* UIView+Screenshot_yq.h */,
 				2DF6E56A1E559C2600C81A30 /* UIView+Screenshot_yq.m */,
-				2DF6E56B1E559C2600C81A30 /* UIView+Toast_yq.h */,
-				2DF6E56C1E559C2600C81A30 /* UIView+Toast_yq.m */,
 				2DF6E56D1E559C2600C81A30 /* UIView+Util_yq.h */,
 				2DF6E56E1E559C2600C81A30 /* UIView+Util_yq.m */,
 			);
@@ -864,7 +864,6 @@
 				2DF6E5971E559C2600C81A30 /* UIButton+Submitting_yq.m in Sources */,
 				2DF6E59E1E559C2600C81A30 /* UIControl+Sound_yq.m in Sources */,
 				2DF6E61E1E55ABEF00C81A30 /* NSDictionary+JSONString_yq.m in Sources */,
-				2DF6E5B51E559C2600C81A30 /* UIView+Toast_yq.m in Sources */,
 				2DF6E5921E559C2600C81A30 /* UIButton+Badge_yq.m in Sources */,
 				2DF6E6341E55ABEF00C81A30 /* NSURL+Param_yq.m in Sources */,
 				2DF6E5AF1E559C2600C81A30 /* UITextField+InputLimit_yq.m in Sources */,
@@ -881,6 +880,7 @@
 				2DF6E59B1E559C2600C81A30 /* UIColor+Random_yq.m in Sources */,
 				2DC407BA1E56F67100210E59 /* YQNetworking.m in Sources */,
 				2DF6E6241E55ABEF00C81A30 /* NSNotificationCenter+MainThread_yq.m in Sources */,
+				2D0DE7321F090BC600B1365D /* UIButton+MiddleAligning_yq.m in Sources */,
 				2DF6E6311E55ABEF00C81A30 /* NSString+URLEncode_yq.m in Sources */,
 				2DF6E6201E55ABEF00C81A30 /* NSDictionary+SafeAccess_yq.m in Sources */,
 				2DF6E5981E559C2600C81A30 /* UIColor+Gradient_yq.m in Sources */,

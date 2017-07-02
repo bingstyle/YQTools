@@ -19,15 +19,15 @@
     // 2.初始化通知
     UILocalNotification *notification = [[UILocalNotification alloc  ]init];
     // 3.配置通知
-    notification.fireDate = [NSDate dateWithTimeIntervalSinceNow:15];
+    notification.fireDate = date;
     // 设置通知声音
     notification.soundName = UILocalNotificationDefaultSoundName;
     // 设置弹出框的标题
-    notification.alertTitle = @"尊敬的先生:";
+    notification.alertTitle = title;
     // 设置icon图标badgeValue
     notification.applicationIconBadgeNumber++;
     // 设置显示的内容
-    notification.alertBody = [NSString stringWithFormat:@"您当前有%@条未读消息,请查看.",@(notification.applicationIconBadgeNumber)];
+    notification.alertBody = alertBody;
     // 设定通知的userInfo，用来标识该通知
     notification.userInfo = userInfo;
     // 4. 添加通知

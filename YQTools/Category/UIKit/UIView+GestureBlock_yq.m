@@ -64,11 +64,8 @@ static char yq_kActionHandlerLongPressBlockKey;
 }
 - (void)yq_handleActionForLongPressGesture:(UILongPressGestureRecognizer*)gesture
 {
-    if (gesture.state == UIGestureRecognizerStateRecognized)
-    {
-        void(^block)(UILongPressGestureRecognizer *) = objc_getAssociatedObject(self, &yq_kActionHandlerLongPressBlockKey);
-        if (block) block(gesture);
-    }
+    void(^block)(UILongPressGestureRecognizer *) = objc_getAssociatedObject(self, &yq_kActionHandlerLongPressBlockKey);
+    if (block) block(gesture);
 }
 
 /* 轻扫手势key */

@@ -12,8 +12,8 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-#define ORIGIN_WIDTH 320
-#define ORIGIN_HEIGHT 568
+#define ORIGIN_WIDTH 375
+#define ORIGIN_HEIGHT 667
 #define SCREEN_SIZE [UIScreen mainScreen].bounds.size
 
 #define DH_INLINE static inline
@@ -26,34 +26,34 @@ DH_INLINE CGFloat YQVerticalMutiplier()
 /**
  *  屏幕水平方向的比例
  *
- *  @return 屏幕宽:iphone5宽
+ *  @return 屏幕宽:iphone6宽
  */
 DH_INLINE CGFloat YQHorizentalMutiplier()
 {
     return SCREEN_SIZE.width/ORIGIN_WIDTH;
 }
 
-DH_INLINE CGPoint YQFlexibleCenter (CGPoint iphone5Center)
+DH_INLINE CGPoint YQFlexibleCenter (CGPoint iphone6Center)
 {
-    CGFloat x = iphone5Center.x * YQHorizentalMutiplier();
-    CGFloat y = iphone5Center.y * YQVerticalMutiplier();
+    CGFloat x = iphone6Center.x * YQHorizentalMutiplier();
+    CGFloat y = iphone6Center.y * YQVerticalMutiplier();
     return CGPointMake(x, y);
 }
 
-DH_INLINE CGSize YQFlexibleSize(CGSize iphone5Size)
+DH_INLINE CGSize YQFlexibleSize(CGSize iphone6Size)
 {
-    CGFloat width = iphone5Size.width * YQHorizentalMutiplier();
-    CGFloat height = iphone5Size.height *YQVerticalMutiplier();
+    CGFloat width = iphone6Size.width * YQHorizentalMutiplier();
+    CGFloat height = iphone6Size.height *YQVerticalMutiplier();
     return CGSizeMake(width, height);
     
 }
 
-DH_INLINE  CGRect YQFrameWithCenterAndSize(CGPoint iphone5Center, CGSize iphone5Size)
+DH_INLINE  CGRect YQFrameWithCenterAndSize(CGPoint iphone6Center, CGSize iphone6Size)
 {
     CGRect frame;
-    frame.origin.x = iphone5Center.x - iphone5Size.width/2;
-    frame.origin.y = iphone5Center.y - iphone5Size.height/2;
-    frame.size = iphone5Size;
+    frame.origin.x = iphone6Center.x - iphone6Size.width/2;
+    frame.origin.y = iphone6Center.y - iphone6Size.height/2;
+    frame.size = iphone6Size;
     return frame;
 }
 
@@ -65,14 +65,14 @@ DH_INLINE CGPoint YQCenterFromFrame(CGRect frame)
     return center;
 }
 
-DH_INLINE CGRect YQFlexibleFrame(CGRect iphone5Frame)
+DH_INLINE CGRect YQFlexibleFrame(CGRect iphone6Frame)
 {
-    // 拿到iPhone5 frame的center
-    CGPoint center = YQCenterFromFrame(iphone5Frame);
+    // 拿到iphone6 frame的center
+    CGPoint center = YQCenterFromFrame(iphone6Frame);
     // 对center进行等比例缩放
     CGPoint flexibleCenter = YQFlexibleCenter(center);
     // 对size进行等比例缩放
-    CGSize flexibleSize = YQFlexibleSize(iphone5Frame.size);
+    CGSize flexibleSize = YQFlexibleSize(iphone6Frame.size);
     // 通过center和size合成frame
     return YQFrameWithCenterAndSize(flexibleCenter, flexibleSize);
 }

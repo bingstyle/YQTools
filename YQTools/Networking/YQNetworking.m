@@ -492,9 +492,19 @@ static inline NSString *cachePath() {
             NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
             formatter.dateFormat=@"yyyyMMddHHmmss";
             NSString *str=[formatter stringFromDate:[NSDate date]];
-            NSString *fileName=[NSString stringWithFormat:@"%@.jpg",str];
+            NSString *fileName=[NSString stringWithFormat:@"%@.png",str];
             UIImage *image = photos[i];
-            NSData *imageData = UIImageJPEGRepresentation(image, 0.28);
+            NSData *imageData = UIImageJPEGRepresentation(image, 1.0f);
+            //压缩图片
+            if (imageData.length>100*1024) {
+                if (imageData.length>1024*1024) {//1M以及以上
+                    imageData = UIImageJPEGRepresentation(image, 0.1f);
+                }else if (imageData.length>512*1024) {//0.5M-1M
+                    imageData = UIImageJPEGRepresentation(image, 0.2f);
+                }else if (imageData.length>200*1024) {//0.25M-0.5M
+                    imageData = UIImageJPEGRepresentation(image, 0.3f);
+                }
+            }
             [formData appendPartWithFileData:imageData name:[NSString stringWithFormat:@"upload%d",i+1] fileName:fileName mimeType:@"image/jpeg"];
         }
     } progress:^(NSProgress * _Nonnull uploadProgress) {
