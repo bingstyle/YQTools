@@ -14,10 +14,11 @@ static const void *JKTextFieldInputLimitMaxLength = &JKTextFieldInputLimitMaxLen
 @implementation UITextField (InputLimit_yq)
 
 - (NSInteger)yq_maxLength {
-    return [objc_getAssociatedObject(self, JKTextFieldInputLimitMaxLength) integerValue];
+    NSNumber *length = objc_getAssociatedObject(self, JKTextFieldInputLimitMaxLength);
+    return length.integerValue;
 }
 - (void)setYq_maxLength:(NSInteger)maxLength {
-    objc_setAssociatedObject(self, JKTextFieldInputLimitMaxLength, @(maxLength), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, JKTextFieldInputLimitMaxLength, @(maxLength), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     [self addTarget:self action:@selector(yq_textFieldTextDidChange) forControlEvents:UIControlEventEditingChanged];
 }
 - (void)yq_textFieldTextDidChange {

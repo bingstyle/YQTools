@@ -23,6 +23,27 @@
 
 @implementation UIDevice (Hardware_yq)
 
++ (NSString *)yq_name {
+    return [[UIDevice currentDevice] name];
+}
+
++ (NSString *)yq_mode {
+    return [[UIDevice currentDevice] model];
+}
+
++ (NSString *)yq_localizedModel {
+    return [[UIDevice currentDevice] localizedModel];
+}
+
++ (NSString *)yq_systemName {
+    return [[UIDevice currentDevice] systemName];
+}
+
++ (NSString *)yq_systemVersion
+{
+    return [[UIDevice currentDevice] systemVersion];
+}
+
 + (NSString *)yq_platform{
     size_t size;
     sysctlbyname("hw.machine", NULL, &size, NULL, 0);
@@ -146,10 +167,6 @@
     return outstring;
 }
 
-+ (NSString *)yq_systemVersion
-{
-    return [[UIDevice currentDevice] systemVersion];
-}
 + (BOOL)yq_hasCamera
 {
     return [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];

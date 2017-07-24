@@ -11,6 +11,11 @@
 
 @interface UIDevice (Hardware_yq)
 
++ (NSString *)yq_name;
++ (NSString *)yq_mode;
++ (NSString *)yq_localizedModel;
++ (NSString *)yq_systemName;
++ (NSString *)yq_systemVersion;
 + (NSString *)yq_platform;
 + (NSString *)yq_platformString;
 
@@ -27,8 +32,7 @@
 + (NSUInteger)yq_cpuNumber;
 //Return the current device total memory
 
-/// 获取iOS系统的版本号
-+ (NSString *)yq_systemVersion;
+
 /// 判断当前系统是否有摄像头
 + (BOOL)yq_hasCamera;
 /// 获取手机内存总量, 返回的是字节数
