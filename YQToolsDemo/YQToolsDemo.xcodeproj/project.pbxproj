@@ -96,6 +96,7 @@
 		2DF6E6341E55ABEF00C81A30 /* NSURL+Param_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E6131E55ABEF00C81A30 /* NSURL+Param_yq.m */; };
 		2DF6E6351E55ABEF00C81A30 /* NSUserDefaults+iCloudSync_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E6151E55ABEF00C81A30 /* NSUserDefaults+iCloudSync_yq.m */; };
 		2DF6E6361E55ABEF00C81A30 /* NSUserDefaults+SafeAccess_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E6171E55ABEF00C81A30 /* NSUserDefaults+SafeAccess_yq.m */; };
+		2DFBDE0B1F29E1F3000A57D4 /* YQBaseArchiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFBDE0A1F29E1F3000A57D4 /* YQBaseArchiveModel.m */; };
 		89A14034BD0BD9857A27A17E /* libPods-YQToolsDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE1189A84DAE599F566C319 /* libPods-YQToolsDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -308,6 +309,8 @@
 		2DF6E6151E55ABEF00C81A30 /* NSUserDefaults+iCloudSync_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+iCloudSync_yq.m"; sourceTree = "<group>"; };
 		2DF6E6161E55ABEF00C81A30 /* NSUserDefaults+SafeAccess_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+SafeAccess_yq.h"; sourceTree = "<group>"; };
 		2DF6E6171E55ABEF00C81A30 /* NSUserDefaults+SafeAccess_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+SafeAccess_yq.m"; sourceTree = "<group>"; };
+		2DFBDE091F29E1F3000A57D4 /* YQBaseArchiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQBaseArchiveModel.h; sourceTree = "<group>"; };
+		2DFBDE0A1F29E1F3000A57D4 /* YQBaseArchiveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQBaseArchiveModel.m; sourceTree = "<group>"; };
 		6AE1189A84DAE599F566C319 /* libPods-YQToolsDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YQToolsDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD8F36A155A6BA94B82AA91F /* Pods-YQToolsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YQToolsDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YQToolsDemo/Pods-YQToolsDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -516,6 +519,7 @@
 				2DF6E5CE1E55A09A00C81A30 /* YQCategory.h */,
 				2DF6E5CD1E55A06C00C81A30 /* YQMacro.h */,
 				2DF6E2ED1E5545F600C81A30 /* YQTools.h */,
+				2DFBDE081F29E1CE000A57D4 /* Base */,
 				2DF6E5BB1E559FE800C81A30 /* Macro */,
 				2DF6E3F01E5581B800C81A30 /* Category */,
 				2DF6E5CF1E55A17200C81A30 /* Utilities */,
@@ -639,6 +643,15 @@
 				2DF6E6171E55ABEF00C81A30 /* NSUserDefaults+SafeAccess_yq.m */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		2DFBDE081F29E1CE000A57D4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2DFBDE091F29E1F3000A57D4 /* YQBaseArchiveModel.h */,
+				2DFBDE0A1F29E1F3000A57D4 /* YQBaseArchiveModel.m */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		2E7C3EF15B4705737607E4A4 /* Pods */ = {
@@ -899,6 +912,7 @@
 				2DF6E62D1E55ABEF00C81A30 /* NSString+Emoji_yq.m in Sources */,
 				2DC407BA1E56F67100210E59 /* YQNetworking.m in Sources */,
 				2D4BA64F1F25ECE600F29512 /* UIButton+Indicator_yq.m in Sources */,
+				2DFBDE0B1F29E1F3000A57D4 /* YQBaseArchiveModel.m in Sources */,
 				2D4BA6551F25ECE600F29512 /* UIColor+Random_yq.m in Sources */,
 				2DF6E6241E55ABEF00C81A30 /* NSNotificationCenter+MainThread_yq.m in Sources */,
 				2DF6E6311E55ABEF00C81A30 /* NSString+URLEncode_yq.m in Sources */,
