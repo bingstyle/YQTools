@@ -9,6 +9,9 @@
 #import "YQNetworking.h"
 
 #import <CommonCrypto/CommonDigest.h>
+NSString *const YQNetworkStatus = @"networkStatus";
+
+
 @interface NSString (md5)
 
 + (NSString *)wxbnetworking_md5:(NSString *)string;
@@ -951,40 +954,40 @@ static inline NSString *cachePath() {
     
     //2.监听网络状态的改变
     [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        NSString *network = @"未知";
         switch (status) {
             case AFNetworkReachabilityStatusUnknown:
-                NSLog(@"未知");
+                network = @"未知";
                 break;
             case AFNetworkReachabilityStatusNotReachable:
-                NSLog(@"没有网络");
-                alertSureInfo(@"当前没有网络！");
+                network = @"没有网络";
+//                alertSureInfo(@"当前没有网络！");
                 break;
             case AFNetworkReachabilityStatusReachableViaWWAN:
-                NSLog(@"3G");
-                alertSureInfo(@"正在使用手机流量！");
+                network = @"2G/3G/4G";
+//                alertSureInfo(@"正在使用手机流量！");
                 break;
             case AFNetworkReachabilityStatusReachableViaWiFi:
-                NSLog(@"WIFI");
-                alertSureInfo(@"已连接到WiFi网络！");
-                break;
-                
-            default:
+                network = @"WIFI";
+//                alertSureInfo(@"已连接到WiFi网络！");
                 break;
         }
+        NSLog(@"%@", network);
+        [[NSUserDefaults standardUserDefaults] setObject:network forKey:YQNetworkStatus];
     }];
     
     //3.开始监听
     [manager startMonitoring];
 }
-static inline void alertSureInfo(NSString *content) {
-    [[UIApplication sharedApplication].keyWindow.rootViewController.presentedViewController dismissViewControllerAnimated:YES completion:nil];
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:content preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-        
-    }];
-    [alert addAction:sure];
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
-}
+//static inline void alertSureInfo(NSString *content) {
+//    [[UIApplication sharedApplication].keyWindow.rootViewController.presentedViewController dismissViewControllerAnimated:YES completion:nil];
+//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:content preferredStyle:UIAlertControllerStyleAlert];
+//    UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+//        
+//    }];
+//    [alert addAction:sure];
+//    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+//}
 
 
 @end

@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+UIKIT_EXTERN NSString *const YQNetworkStatus;
+
 // 请勿直接使用NSURLSessionDataTask,以减少对第三方的依赖
 // 所有接口返回的类型都是基类NSURLSessionTask，若要接收返回值且处理，请转换成对应的子类类型
 typedef NSURLSessionTask WXBURLSessionTask;
