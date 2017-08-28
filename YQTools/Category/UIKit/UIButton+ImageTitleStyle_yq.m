@@ -10,7 +10,7 @@
 
 @implementation UIButton (ImageTitleStyle_yq)
 
--(void)yq_buttonImageTitleStyle:(ButtonImageTitleStyle)style padding:(CGFloat)padding
+-(void)yq_buttonImageTitleStyle:(YQButtonImageTitleStyle)style padding:(CGFloat)padding
 {
     if (self.imageView.image != nil && self.titleLabel.text != nil)
     {
@@ -27,7 +27,7 @@
         CGFloat selfWidth = self.frame.size.width;
         
         switch (style) {
-            case ButtonImageTitleStyleLeft:
+            case YQButtonImageTitleStyleLeft:
                 if (padding != 0)
                 {
                     self.titleEdgeInsets = UIEdgeInsetsMake(0,
@@ -41,7 +41,7 @@
                                                             padding/2);
                 }
                 break;
-            case ButtonImageTitleStyleRight:
+            case YQButtonImageTitleStyleRight:
             {
                 //图片在右，文字在左
                 self.titleEdgeInsets = UIEdgeInsetsMake(0,
@@ -55,7 +55,7 @@
                                                         -(titleRect.size.width+ padding/2));
             }
                 break;
-            case ButtonImageTitleStyleTop:
+            case YQButtonImageTitleStyleTop:
             {
                 //图片在上，文字在下
                 self.titleEdgeInsets = UIEdgeInsetsMake(((selfHeight - totalHeight)/2 + imageRect.size.height + padding - titleRect.origin.y),
@@ -70,7 +70,7 @@
                 
             }
                 break;
-            case ButtonImageTitleStyleBottom:
+            case YQButtonImageTitleStyleBottom:
             {
                 //图片在下，文字在上。
                 self.titleEdgeInsets = UIEdgeInsetsMake(((selfHeight - totalHeight)/2 - titleRect.origin.y),
@@ -84,7 +84,7 @@
                                                         -(selfWidth /2 - imageRect.origin.x - imageRect.size.width / 2));
             }
                 break;
-            case ButtonImageTitleStyleCenterTop:
+            case YQButtonImageTitleStyleCenterTop:
             {
                 self.titleEdgeInsets = UIEdgeInsetsMake(-(titleRect.origin.y - padding),
                                                         (selfWidth / 2 -  titleRect.origin.x - titleRect.size.width / 2) - (selfWidth - titleRect.size.width) / 2,
@@ -97,7 +97,7 @@
                                                         -(selfWidth / 2 - imageRect.origin.x - imageRect.size.width / 2));
             }
                 break;
-            case ButtonImageTitleStyleCenterBottom:
+            case YQButtonImageTitleStyleCenterBottom:
             {
                 self.titleEdgeInsets = UIEdgeInsetsMake((selfHeight - padding - titleRect.origin.y - titleRect.size.height),
                                                         (selfWidth / 2 -  titleRect.origin.x - titleRect.size.width / 2) - (selfWidth - titleRect.size.width) / 2,
@@ -110,7 +110,7 @@
                                                         -(selfWidth / 2 - imageRect.origin.x - imageRect.size.width / 2));
             }
                 break;
-            case ButtonImageTitleStyleCenterUp:
+            case YQButtonImageTitleStyleCenterUp:
             {
                 self.titleEdgeInsets = UIEdgeInsetsMake(-(titleRect.origin.y + titleRect.size.height - imageRect.origin.y + padding),
                                                         (selfWidth / 2 -  titleRect.origin.x - titleRect.size.width / 2) - (selfWidth - titleRect.size.width) / 2,
@@ -123,7 +123,7 @@
                                                         -(selfWidth / 2 - imageRect.origin.x - imageRect.size.width / 2));
             }
                 break;
-            case ButtonImageTitleStyleCenterDown:
+            case YQButtonImageTitleStyleCenterDown:
             {
                 self.titleEdgeInsets = UIEdgeInsetsMake((imageRect.origin.y + imageRect.size.height - titleRect.origin.y + padding),
                                                         (selfWidth / 2 -  titleRect.origin.x - titleRect.size.width / 2) - (selfWidth - titleRect.size.width) / 2,
@@ -136,7 +136,7 @@
                                                         -(selfWidth / 2 - imageRect.origin.x - imageRect.size.width / 2));
             }
                 break;
-            case ButtonImageTitleStyleRightLeft:
+            case YQButtonImageTitleStyleRightLeft:
             {
                 //图片在右，文字在左，距离按钮两边边距
                 
@@ -153,7 +153,7 @@
                 
                 break;
                 
-            case ButtonImageTitleStyleLeftRight:
+            case YQButtonImageTitleStyleLeftRight:
             {
                 //图片在左，文字在右，距离按钮两边边距
                 
