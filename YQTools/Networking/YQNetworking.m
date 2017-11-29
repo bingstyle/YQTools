@@ -540,6 +540,66 @@ static inline NSString *cachePath() {
     return session;
 }
 
++ (WXBURLSessionTask *)uploadDataWithURL:(NSString *)url
+                                    data:(NSData *)data
+                                  params:(NSDictionary *)params
+                                progress:(WXBUploadProgress)progress
+                                 success:(SuccessBlock)success
+                                 failure:(FailureBlock)failure
+{
+    if ([self baseUrl] == nil) {
+        if ([NSURL URLWithString:url] == nil) {
+            WXBAppLog(@"URLString无效，无法生成URL。可能是URL中有中文，请尝试Encode URL");
+            return nil;
+        }
+    } else {
+        if ([NSURL URLWithString:[NSString stringWithFormat:@"%@%@", [self baseUrl], url]] == nil) {
+            WXBAppLog(@"URLString无效，无法生成URL。可能是URL中有中文，请尝试Encode URL");
+            return nil;
+        }
+    }
+    
+    if ([self shouldEncode]) {
+        url = [self encodeUrl:url];
+    }
+    
+    NSString *absolute = [self absoluteUrlWithPath:url];
+    
+    AFHTTPSessionManager *manager = [self manager];
+    manager.requestSerializer.timeoutInterval = 60.0f;
+    WXBURLSessionTask *session = [manager POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        [formData appendPartWithFileData:data name:@"dataFile" fileName:@"video.mp4" mimeType:@".mp4"];
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        if (progress) {
+            progress(uploadProgress.completedUnitCount, uploadProgress.totalUnitCount);
+        }
+        NSLog(@"uploadProgress is %lld,总字节 is %lld",uploadProgress.completedUnitCount,uploadProgress.totalUnitCount);
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [[self allTasks] removeObject:task];
+        [self successResponse:responseObject callback:success];
+        
+        if ([self isDebug]) {
+            [self logWithSuccessResponse:responseObject
+                                     url:absolute
+                                  params:params];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        [[self allTasks] removeObject:task];
+        [self handleCallbackWithError:error fail:failure];
+        if ([self isDebug]) {
+            [self logWithFailError:error url:absolute params:nil];
+        }
+    }];
+    [session resume];
+    if (session) {
+        [[self allTasks] addObject:session];
+    }
+    
+    return session;
+}
+
 + (WXBURLSessionTask *)uploadFileWithUrl:(NSString *)url
                            uploadingFile:(NSString *)uploadingFile
                                 progress:(WXBUploadProgress)progress
@@ -570,7 +630,7 @@ static inline NSString *cachePath() {
     NSURLRequest *request = [NSURLRequest requestWithURL:uploadURL];
     WXBURLSessionTask *session = nil;
     
-    [manager uploadTaskWithRequest:request fromFile:[NSURL URLWithString:uploadingFile] progress:^(NSProgress * _Nonnull uploadProgress) {
+    NSURLSessionUploadTask *task = [manager uploadTaskWithRequest:request fromFile:[NSURL URLWithString:uploadingFile] progress:^(NSProgress * _Nonnull uploadProgress) {
         if (progress) {
             progress(uploadProgress.completedUnitCount, uploadProgress.totalUnitCount);
         }
@@ -593,7 +653,7 @@ static inline NSString *cachePath() {
             }
         }
     }];
-    
+    [task resume];
     if (session) {
         [[self allTasks] addObject:session];
     }
@@ -964,7 +1024,7 @@ static inline NSString *cachePath() {
 //                alertSureInfo(@"当前没有网络！");
                 break;
             case AFNetworkReachabilityStatusReachableViaWWAN:
-                network = @"2G/3G/4G";
+                network = @"3G";
 //                alertSureInfo(@"正在使用手机流量！");
                 break;
             case AFNetworkReachabilityStatusReachableViaWiFi:
@@ -979,15 +1039,15 @@ static inline NSString *cachePath() {
     //3.开始监听
     [manager startMonitoring];
 }
-//static inline void alertSureInfo(NSString *content) {
-//    [[UIApplication sharedApplication].keyWindow.rootViewController.presentedViewController dismissViewControllerAnimated:YES completion:nil];
-//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:content preferredStyle:UIAlertControllerStyleAlert];
-//    UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-//        
-//    }];
-//    [alert addAction:sure];
-//    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
-//}
+static inline void alertSureInfo(NSString *content) {
+    [[UIApplication sharedApplication].keyWindow.rootViewController.presentedViewController dismissViewControllerAnimated:YES completion:nil];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:content preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    [alert addAction:sure];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alert animated:YES completion:nil];
+}
 
 
 @end

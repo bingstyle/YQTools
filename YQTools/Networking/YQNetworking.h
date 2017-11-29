@@ -127,6 +127,13 @@ typedef void (^WXBUploadProgress)(int64_t bytesWritten,
                                  progress:(WXBUploadProgress)progress
                                   success:(SuccessBlock)success
                                   failure:(FailureBlock)failure;
+//上传data数据
++ (WXBURLSessionTask *)uploadDataWithURL:(NSString *)url
+                                    data:(NSData *)data
+                                  params:(NSDictionary *)params
+                                progress:(WXBUploadProgress)progress
+                                 success:(SuccessBlock)success
+                                 failure:(FailureBlock)failure;
 /**
  *  上传文件操作
  *

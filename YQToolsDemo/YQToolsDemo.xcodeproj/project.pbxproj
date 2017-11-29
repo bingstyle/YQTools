@@ -53,6 +53,7 @@
 		2D4BA6751F25ED2300F29512 /* UIWindow+Util_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA6741F25ED2300F29512 /* UIWindow+Util_yq.m */; };
 		2D4BA6781F25EE3200F29512 /* UIButton+ImageTitleStyle_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA6771F25EE3200F29512 /* UIButton+ImageTitleStyle_yq.m */; };
 		2DC407BA1E56F67100210E59 /* YQNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC407B91E56F67100210E59 /* YQNetworking.m */; };
+		2DE97E3A1FCE5A9000BC6FA6 /* UIButton+ImagePosition_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE97E391FCE5A8F00BC6FA6 /* UIButton+ImagePosition_yq.m */; };
 		2DF6E2951E5545D200C81A30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E2941E5545D200C81A30 /* main.m */; };
 		2DF6E2981E5545D200C81A30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E2971E5545D200C81A30 /* AppDelegate.m */; };
 		2DF6E29B1E5545D200C81A30 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E29A1E5545D200C81A30 /* ViewController.m */; };
@@ -212,6 +213,8 @@
 		2D9054691E821F7E00FFEF4D /* YQAdjustScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YQAdjustScreen.h; sourceTree = "<group>"; };
 		2DC407B81E56F67100210E59 /* YQNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQNetworking.h; sourceTree = "<group>"; };
 		2DC407B91E56F67100210E59 /* YQNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQNetworking.m; sourceTree = "<group>"; };
+		2DE97E381FCE5A8F00BC6FA6 /* UIButton+ImagePosition_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImagePosition_yq.h"; sourceTree = "<group>"; };
+		2DE97E391FCE5A8F00BC6FA6 /* UIButton+ImagePosition_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImagePosition_yq.m"; sourceTree = "<group>"; };
 		2DF6E2901E5545D200C81A30 /* YQToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YQToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DF6E2941E5545D200C81A30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2DF6E2961E5545D200C81A30 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -364,6 +367,8 @@
 				2D4BA6021F25ECE500F29512 /* UIButton+MiddleAligning_yq.m */,
 				2D4BA6761F25EE3200F29512 /* UIButton+ImageTitleStyle_yq.h */,
 				2D4BA6771F25EE3200F29512 /* UIButton+ImageTitleStyle_yq.m */,
+				2DE97E381FCE5A8F00BC6FA6 /* UIButton+ImagePosition_yq.h */,
+				2DE97E391FCE5A8F00BC6FA6 /* UIButton+ImagePosition_yq.m */,
 				2D4BA6031F25ECE500F29512 /* UIButton+Submitting_yq.h */,
 				2D4BA6041F25ECE500F29512 /* UIButton+Submitting_yq.m */,
 				2D4BA6051F25ECE500F29512 /* UIColor+Gradient_yq.h */,
@@ -872,6 +877,7 @@
 				2DF6E6361E55ABEF00C81A30 /* NSUserDefaults+SafeAccess_yq.m in Sources */,
 				2D4BA6651F25ECE600F29512 /* UINavigationController+StackManager_yq.m in Sources */,
 				2DF6E6211E55ABEF00C81A30 /* NSDictionary+URL_yq.m in Sources */,
+				2DE97E3A1FCE5A9000BC6FA6 /* UIButton+ImagePosition_yq.m in Sources */,
 				2DF6E6351E55ABEF00C81A30 /* NSUserDefaults+iCloudSync_yq.m in Sources */,
 				2DF6E62C1E55ABEF00C81A30 /* NSString+Dictionary_yq.m in Sources */,
 				2D4BA6541F25ECE600F29512 /* UIColor+Modify_yq.m in Sources */,

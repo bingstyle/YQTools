@@ -25,6 +25,7 @@
 #import "UIButton+Block_yq.h"
 #import "UIButton+CountDown_yq.h"
 #import "UIButton+ImageTitleStyle_yq.h"
+#import "UIButton+ImagePosition_yq.h"
 #import "UIButton+MiddleAligning_yq.h"
 #import "UIButton+Indicator_yq.h"
 #import "UIButton+Submitting_yq.h"
