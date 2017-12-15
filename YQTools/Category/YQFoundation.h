@@ -29,6 +29,7 @@
 #import "NSDictionary+Merge_yq.h"
 #import "NSDictionary+SafeAccess_yq.h"
 #import "NSDictionary+URL_yq.h"
+#import "NSDictionary+JSON_yq.h"
 // NSNumber
 #import "NSNumber+CGFloat_yq.h"
 #import "NSNumber+Round_yq.h"

@@ -10,6 +10,15 @@
 
 @implementation UIView (Util_yq)
 
+- (CGPoint)origin {
+    return self.frame.origin;
+}
+
+- (void)setOrigin:(CGPoint)aPoint {
+    CGRect newFrame = self.frame;
+    newFrame.origin = aPoint;
+    self.frame = newFrame;
+}
 - (CGFloat)x{
     return self.frame.origin.x;
 }
@@ -30,26 +39,6 @@
     self.frame = frame;
 }
 
-- (CGPoint)origin {
-    return self.frame.origin;
-}
-
-- (void)setOrigin:(CGPoint)aPoint {
-    CGRect newFrame = self.frame;
-    newFrame.origin = aPoint;
-    self.frame = newFrame;
-}
-
-- (CGSize)size {
-    return self.frame.size;
-}
-
-- (void)setSize:(CGSize)asize {
-    CGRect newFrame = self.frame;
-    newFrame.size =asize;
-    self.frame = newFrame;
-}
-
 - (CGPoint)bottomRight {
     CGFloat x= self.frame.origin.x + self.frame.size.width;
     CGFloat y =self.frame.origin.y + self.frame.size.height;
@@ -66,6 +55,17 @@
     CGFloat x= self.frame.origin.x + self.frame.size.width;
     CGFloat y =self.frame.origin.y;
     return CGPointMake(x, y);
+}
+
+#pragma mark - size
+- (CGSize)size {
+    return self.frame.size;
+}
+
+- (void)setSize:(CGSize)asize {
+    CGRect newFrame = self.frame;
+    newFrame.size =asize;
+    self.frame = newFrame;
 }
 
 - (CGFloat)height {
@@ -88,6 +88,7 @@
     self.frame = newframe;
 }
 
+#pragma mark - edges
 - (CGFloat)top {
     return self.frame.origin.y;
 }
@@ -129,25 +130,19 @@
     self.frame =newframe;
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark - center
 - (CGFloat)centerX {
     return self.center.x;
 }
 
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)setCenterX:(CGFloat)centerX {
     self.center = CGPointMake(centerX, self.center.y);
 }
 
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
 - (CGFloat)centerY {
     return self.center.y;
 }
 
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)setCenterY:(CGFloat)centerY {
     self.center = CGPointMake(self.center.x, centerY);
 }

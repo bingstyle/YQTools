@@ -52,6 +52,8 @@
 		2D4BA6721F25ECE600F29512 /* UIView+Util_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA6461F25ECE500F29512 /* UIView+Util_yq.m */; };
 		2D4BA6751F25ED2300F29512 /* UIWindow+Util_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA6741F25ED2300F29512 /* UIWindow+Util_yq.m */; };
 		2D4BA6781F25EE3200F29512 /* UIButton+ImageTitleStyle_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA6771F25EE3200F29512 /* UIButton+ImageTitleStyle_yq.m */; };
+		2D58F4361FE366BF0080B02E /* NSDictionary+JSON_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D58F4351FE366BF0080B02E /* NSDictionary+JSON_yq.m */; };
+		2D58F4391FE374E10080B02E /* UIView+Present_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D58F4381FE374E10080B02E /* UIView+Present_yq.m */; };
 		2DC407BA1E56F67100210E59 /* YQNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC407B91E56F67100210E59 /* YQNetworking.m */; };
 		2DE97E3A1FCE5A9000BC6FA6 /* UIButton+ImagePosition_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE97E391FCE5A8F00BC6FA6 /* UIButton+ImagePosition_yq.m */; };
 		2DF6E2951E5545D200C81A30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E2941E5545D200C81A30 /* main.m */; };
@@ -210,6 +212,10 @@
 		2D4BA6741F25ED2300F29512 /* UIWindow+Util_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Util_yq.m"; sourceTree = "<group>"; };
 		2D4BA6761F25EE3200F29512 /* UIButton+ImageTitleStyle_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleStyle_yq.h"; sourceTree = "<group>"; };
 		2D4BA6771F25EE3200F29512 /* UIButton+ImageTitleStyle_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleStyle_yq.m"; sourceTree = "<group>"; };
+		2D58F4341FE366BF0080B02E /* NSDictionary+JSON_yq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSON_yq.h"; sourceTree = "<group>"; };
+		2D58F4351FE366BF0080B02E /* NSDictionary+JSON_yq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSON_yq.m"; sourceTree = "<group>"; };
+		2D58F4371FE374E10080B02E /* UIView+Present_yq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Present_yq.h"; sourceTree = "<group>"; };
+		2D58F4381FE374E10080B02E /* UIView+Present_yq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Present_yq.m"; sourceTree = "<group>"; };
 		2D9054691E821F7E00FFEF4D /* YQAdjustScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YQAdjustScreen.h; sourceTree = "<group>"; };
 		2DC407B81E56F67100210E59 /* YQNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQNetworking.h; sourceTree = "<group>"; };
 		2DC407B91E56F67100210E59 /* YQNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQNetworking.m; sourceTree = "<group>"; };
@@ -437,6 +443,8 @@
 				2D4BA6441F25ECE500F29512 /* UIView+Screenshot_yq.m */,
 				2D4BA6451F25ECE500F29512 /* UIView+Util_yq.h */,
 				2D4BA6461F25ECE500F29512 /* UIView+Util_yq.m */,
+				2D58F4371FE374E10080B02E /* UIView+Present_yq.h */,
+				2D58F4381FE374E10080B02E /* UIView+Present_yq.m */,
 				2D4BA6731F25ED2300F29512 /* UIWindow+Util_yq.h */,
 				2D4BA6741F25ED2300F29512 /* UIWindow+Util_yq.m */,
 			);
@@ -598,6 +606,8 @@
 				2DF6E5E51E55ABEF00C81A30 /* NSDecimalNumber+Extension_yq.m */,
 				2DF6E5E61E55ABEF00C81A30 /* NSDictionary+JSONString_yq.h */,
 				2DF6E5E71E55ABEF00C81A30 /* NSDictionary+JSONString_yq.m */,
+				2D58F4341FE366BF0080B02E /* NSDictionary+JSON_yq.h */,
+				2D58F4351FE366BF0080B02E /* NSDictionary+JSON_yq.m */,
 				2DF6E5E81E55ABEF00C81A30 /* NSDictionary+Merge_yq.h */,
 				2DF6E5E91E55ABEF00C81A30 /* NSDictionary+Merge_yq.m */,
 				2DF6E5EA1E55ABEF00C81A30 /* NSDictionary+SafeAccess_yq.h */,
@@ -817,13 +827,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YQToolsDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		74517542D84C7578DF8C920A /* [CP] Embed Pods Frameworks */ = {
@@ -883,9 +896,11 @@
 				2D4BA6541F25ECE600F29512 /* UIColor+Modify_yq.m in Sources */,
 				2D4BA66D1F25ECE600F29512 /* UIView+Badge_yq.m in Sources */,
 				2DF6E61F1E55ABEF00C81A30 /* NSDictionary+Merge_yq.m in Sources */,
+				2D58F4391FE374E10080B02E /* UIView+Present_yq.m in Sources */,
 				2DF6E61A1E55ABEF00C81A30 /* NSData+Base64_yq.m in Sources */,
 				2DF6E6301E55ABEF00C81A30 /* NSString+Size_yq.m in Sources */,
 				2D4BA66A1F25ECE600F29512 /* UITextField+Select_yq.m in Sources */,
+				2D58F4361FE366BF0080B02E /* NSDictionary+JSON_yq.m in Sources */,
 				2DF6E61B1E55ABEF00C81A30 /* NSDate+Extension_yq.m in Sources */,
 				2D4BA6621F25ECE600F29512 /* UIImageView+Addition_yq.m in Sources */,
 				2D4BA64B1F25ECE500F29512 /* UIButton+Badge_yq.m in Sources */,

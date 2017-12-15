@@ -17,34 +17,35 @@
 
 @implementation ViewController
 
-#pragma mark - life cycle
-/* 1.viewDidAppear里面做Notification的监听之类的事情
- 2.属性的初始化，则交给getter去做
- */
+#pragma mark - Init
+/* init, dealloc */
+
+
+#pragma mark - Life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor lightGrayColor];
-    [self layoutPageSubviews];
+    [self setup];
+    [self autoLayout];
 }
 
-/* add constraints */
-- (void)layoutPageSubviews {
-    
-}
 #pragma mark - Delegate
-/* 每一个delegate都把对应的protocol名字带上,
- 比如: UITableViewDelegate的方法集就老老实实写上#pragma mark - UITableViewDelegate
- */
 
-#pragma mark - event response
+
+#pragma mark - Event response
 /* 所有button、gestureRecognizer的响应事件都放在这个区域里面 */
 
-#pragma mark - private methods
-/* 关于private methods，正常情况下ViewController里面不应该写,
- 要么把它写成一个category，要么把他做成一个模块，哪怕这个模块只有一个函数也行。
- */
 
-#pragma mark - getters and setters
+#pragma mark - Private methods
+- (void)setup {
+    
+}
+
+- (void)autoLayout {
+    
+}
+
+#pragma mark - Getters and setters
+
 
 
 @end
