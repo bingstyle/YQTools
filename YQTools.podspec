@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
 s.name         = "YQTools"
-s.version      = "1.1.6"
+s.version      = "1.2.0"
 s.ios.deployment_target = '8.0'
 s.summary      = "some utilities"
 s.homepage     = "https://github.com/weixinbing/YQTools"
@@ -36,6 +36,10 @@ end
 
 s.subspec 'Utilities' do |ss|
 ss.source_files = 'YQTools/Utilities/*.{h,m}'
+end
+
+s.subspec 'Settings' do |ss|
+ss.source_files = 'YQTools/Settings/*.{h,m}'
 end
 
 end

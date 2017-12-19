@@ -32,12 +32,4 @@
 - (UIImage *)yq_transparentBorderImage:(NSUInteger)borderSize;
 
 
-//http://stackoverflow.com/questions/6521987/crop-uiimage-to-alpha?answertab=oldest#tab-top
-/**
- *  @brief  裁切含透明图片为最小大小
- *
- *  @return 裁切后的图片
- */
-- (UIImage *)yq_trimmedBetterSize;
-
 @end

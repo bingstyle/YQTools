@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "YQTools.h"
+#import "YQSettings.h"
 
 @interface ViewController ()
 
@@ -26,6 +27,8 @@
     [super viewDidLoad];
     [self setup];
     [self autoLayout];
+    YQSettingsTableView *tableview = [[YQSettingsTableView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:tableview];
 }
 
 #pragma mark - Delegate

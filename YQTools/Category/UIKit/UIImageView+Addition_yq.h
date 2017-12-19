@@ -11,14 +11,6 @@
 @interface UIImageView (Addition_yq)
 
 /**
- *  @brief  根据bundle中的图片名创建imageview
- *
- *  @param imageName bundle中的图片名
- *
- *  @return imageview
- */
-+ (id)yq_imageViewWithImageNamed:(NSString*)imageName;
-/**
  *  @brief  根据frame创建imageview
  *
  *  @param frame imageview frame
@@ -28,15 +20,7 @@
 + (id)yq_imageViewWithFrame:(CGRect)frame;
 
 + (id)yq_imageViewWithStretchableImage:(NSString*)imageName Frame:(CGRect)frame;
-/**
- *  @brief  创建imageview动画
- *
- *  @param imageArray 图片名称数组
- *  @param duration   动画时间
- *
- *  @return imageview
- */
-+ (id)yq_imageViewWithImageArray:(NSArray*)imageArray duration:(NSTimeInterval)duration;
+
 - (void)yq_setImageWithStretchableImage:(NSString*)imageName;
 
 

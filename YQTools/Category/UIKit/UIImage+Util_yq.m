@@ -51,21 +51,6 @@
     return scaledImage;
 }
 
-//截取部分图像
-- (UIImage*)yq_clipSubImage:(CGRect)rect
-{
-    CGImageRef subImageRef = CGImageCreateWithImageInRect(self.CGImage, rect);
-    CGRect smallBounds = CGRectMake(0, 0, CGImageGetWidth(subImageRef), CGImageGetHeight(subImageRef));
-    
-    UIGraphicsBeginImageContext(smallBounds.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextDrawImage(context, smallBounds, subImageRef);
-    UIImage* smallImage = [UIImage imageWithCGImage:subImageRef];
-    UIGraphicsEndImageContext();
-    
-    return smallImage;
-}
-
 //等比例缩放
 - (UIImage*)yq_scaleToSize:(CGSize)size
 {

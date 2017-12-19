@@ -37,15 +37,6 @@
 - (UIImage *)yq_changeImageSize:(CGSize)size;
 
 /**
- *  截取部分图像
- *
- *  @param rect 截取位置
- *
- *  @return 截取后的图片
- */
-- (UIImage*)yq_clipSubImage:(CGRect)rect;
-
-/**
  *  等比例缩放
  *
  *  @param size 缩放尺寸

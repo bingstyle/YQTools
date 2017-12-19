@@ -18,14 +18,7 @@
  *  @return 纯色图片
  */
 + (UIImage *)yq_imageWithColor:(UIColor *)color;
-/**
- *  @brief  取图片某一点的颜色
- *
- *  @param point 某一点
- *
- *  @return 颜色
- */
-- (UIColor *)yq_colorAtPoint:(CGPoint )point;
+
 //more accurate method ,colorAtPixel 1x1 pixel
 /**
  *  @brief  取某一像素的颜色
@@ -35,6 +28,7 @@
  *  @return 颜色
  */
 - (UIColor *)yq_colorAtPixel:(CGPoint)point;
+
 /**
  *  @brief  返回该图片是否有透明度通道
  *
