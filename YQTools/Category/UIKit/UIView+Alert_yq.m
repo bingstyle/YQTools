@@ -187,10 +187,10 @@
     }
     self.alpha = 0;
     _alertView.transform = CGAffineTransformScale(_alertView.transform,0.1,0.1);
-    [UIView animateWithDuration:0.3 animations:^{
+    [UIView animateWithDuration:0.3f delay:0 usingSpringWithDamping:0.9f initialSpringVelocity:20 options:UIViewAnimationOptionCurveEaseOut animations:^{
         _alertView.transform = CGAffineTransformIdentity;
         self.alpha = 1;
-    }];
+    } completion:nil];
     
 }
 
