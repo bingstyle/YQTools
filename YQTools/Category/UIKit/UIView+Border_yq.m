@@ -12,25 +12,25 @@
 
 @dynamic yq_borderType;
 /** 设置边框类型 */
-- (void)setYq_borderType:(WXBViewBorderType)yq_borderType {
+- (void)setYq_borderType:(YQViewBorderType)yq_borderType {
     CGFloat bh = self.layer.borderWidth;
-    if (yq_borderType & WXBViewBorderBottom) {
+    if (yq_borderType & YQViewBorderBottom) {
         [self addBottomBorder:self borderHeight:bh];
     }
-    if (yq_borderType & WXBViewBorderLeft) {
+    if (yq_borderType & YQViewBorderLeft) {
         [self addLeftBorder:self borderHeight:bh];
     }
-    if (yq_borderType & WXBViewBorderRight) {
+    if (yq_borderType & YQViewBorderRight) {
         [self addRightBorder:self borderHeight:bh];
     }
-    if (yq_borderType & WXBViewBorderTop) {
+    if (yq_borderType & YQViewBorderTop) {
         [self addTopBorder:self borderHeight:bh];
     }
-    if (yq_borderType & WXBViewBorderLeftAndBottom) {
+    if (yq_borderType & YQViewBorderLeftAndBottom) {
         [self addBottomBorder:self borderHeight:bh];
         [self addLeftBorder:self borderHeight:bh];
     }
-    if (yq_borderType & WXBViewBorderRightAndBottom) {
+    if (yq_borderType & YQViewBorderRightAndBottom) {
         [self addBottomBorder:self borderHeight:bh];
         [self addRightBorder:self borderHeight:bh];
     }

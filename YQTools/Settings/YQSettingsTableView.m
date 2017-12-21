@@ -38,7 +38,6 @@
 }
 
 - (void)config {
-    _model = [YQSettingsModel sharedSettins];
     //设置列表的代理
     __weak __typeof(self)weakSelf = self;
     _delegator = [[YQSettingsTableDelegate alloc] initWithTableData:^NSArray *{
@@ -55,7 +54,7 @@
     NSNumber *headerHeight    = @0.01f;
     NSNumber *detailFont      = @13;
     NSString *switchCellClass = DefaultSwitchClass;
-    YQSettingsModel *model = _model;
+    YQSettingsModel *model = self.model;
     return @[
              @{
                  HeaderHeight:@1,
@@ -173,6 +172,14 @@
     if ([self.delegater respondsToSelector:@selector(refreshTableView:)]) {
         [self.delegater refreshTableView:self];
     }
+}
+
+#pragma mark - getter
+- (YQSettingsModel *)model {
+    if (!_model) {
+        _model = [YQSettingsModel sharedSettins];
+    }
+    return _model;
 }
 
 @end
