@@ -8,12 +8,14 @@
 
 #import "YQSettingsTableView.h"
 #import "YQSettings.h"
+#import "YQSettingsModel.h"
 #import "YQSettingsTimeRangView.h"
 #import "UIView+Alert_YQSettings.h"
 
 @interface YQSettingsTableView ()
 
 @property (nonatomic, strong) YQSettingsTableDelegate *delegator;
+@property (nonatomic, strong) YQSettingsModel *model;
 
 @end
 
@@ -30,7 +32,6 @@
         self.rowHeight = UITableViewAutomaticDimension;
         self.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 0.01f)];
         self.tableFooterView = [UIView new];
-        self.backgroundColor = [UIColor clearColor];
         self.layoutMargins = UIEdgeInsetsZero;
         [self config];
     }
@@ -53,7 +54,7 @@
 - (NSArray *)defaultListData {
     NSNumber *headerHeight    = @0.01f;
     NSNumber *detailFont      = @13;
-    NSString *switchCellClass = DefaultSwitchClass;
+    NSString *switchCellClass = YQSettingsSwitchCellClass;
     YQSettingsModel *model = self.model;
     return @[
              @{
@@ -177,7 +178,7 @@
 #pragma mark - getter
 - (YQSettingsModel *)model {
     if (!_model) {
-        _model = [YQSettingsModel sharedSettins];
+        _model = [YQSettingsModel sharedSettings];
     }
     return _model;
 }

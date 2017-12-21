@@ -13,7 +13,7 @@
 static id instance; // 单例（全局变量）
 
 /** 单例方法 */
-+ (instancetype)sharedSettins {
++ (instancetype)sharedSettings {
     // 使用GCD确保只进行一次
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

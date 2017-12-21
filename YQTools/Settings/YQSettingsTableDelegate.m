@@ -64,7 +64,9 @@
     cell.layoutMargins      = UIEdgeInsetsZero;
     cell.separatorInset     = UIEdgeInsetsZero;
     cell.selectionStyle  = UITableViewCellSelectionStyleNone;
-    cell.backgroundColor = [UIColor clearColor];
+    if ([tableView.backgroundColor isEqual:[UIColor clearColor]]) {
+        cell.backgroundColor = [UIColor clearColor];
+    }
 }
 
 #pragma mark - UITableViewDelegate
@@ -147,7 +149,6 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
     
-    view.tintColor = [UIColor clearColor];
     YQSettingsTableSection *tableSection = self.data[section];
     if (tableSection.headerTitle.length) {
         UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;

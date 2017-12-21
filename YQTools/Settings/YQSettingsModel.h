@@ -22,6 +22,6 @@
 @property (nonatomic, assign) NSInteger systemMessageInform;//是否开启系统消息推送
 
 /** 单例方法 */
-+ (instancetype)sharedSettins;
++ (instancetype)sharedSettings;
 
 @end

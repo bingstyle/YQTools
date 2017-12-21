@@ -16,7 +16,6 @@
 #import "YQSettingsTableDelegate.h"
 #import "YQSettingsCellDelegate.h"
 #import "YQSettingsSwitchCell.h"
-#import "YQSettingsModel.h"
 #import "YQSettingsTableView.h"
 
 
@@ -30,7 +29,7 @@ _Pragma("clang diagnostic pop") \
 } while (0)
 
 /** 默认开关类名 */
-static NSString *const DefaultSwitchClass = @"YQSettingsSwitchCell";
+static NSString *const YQSettingsSwitchCellClass = @"YQSettingsSwitchCell";
 /** 十六进制颜色 */
 static inline UIColor *YQSettingsColorWithHex(UInt32 hex) {
     return [UIColor colorWithRed:((hex >> 16) & 0xFF)/255.0

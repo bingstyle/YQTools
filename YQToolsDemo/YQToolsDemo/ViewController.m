@@ -29,6 +29,7 @@
     [self autoLayout];
     YQSettingsTableView *tableview = [[YQSettingsTableView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:tableview];
+    self.view.backgroundColor = [UIColor yq_randomColor];
 }
 
 #pragma mark - Delegate

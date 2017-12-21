@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class YQSettingsModel, YQSettingsTableView;
+@class YQSettingsTableView;
 
 @protocol YQSettingsTableViewDelegate <NSObject>
 
@@ -22,7 +22,6 @@
 
 @interface YQSettingsTableView : UITableView
 
-@property (nonatomic, strong) YQSettingsModel *model;
 @property (nonatomic, weak) id<YQSettingsTableViewDelegate> delegater;
 
 /* 默认列表数据 */
