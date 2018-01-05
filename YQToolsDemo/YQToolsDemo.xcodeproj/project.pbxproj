@@ -360,8 +360,6 @@
 		2DAC10E51FFF8809003A17DB /* YQBaseArchiveModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DFBDE091F29E1F3000A57D4 /* YQBaseArchiveModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC10E61FFF8809003A17DB /* YQBaseArchiveModel.m in Headers */ = {isa = PBXBuildFile; fileRef = 2DFBDE0A1F29E1F3000A57D4 /* YQBaseArchiveModel.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC10E81FFF883A003A17DB /* YQBaseArchiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFBDE0A1F29E1F3000A57D4 /* YQBaseArchiveModel.m */; };
-		2DAC10E91FFF8994003A17DB /* YQNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DC407B81E56F67100210E59 /* YQNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DAC10EA1FFF89A3003A17DB /* YQNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC407B91E56F67100210E59 /* YQNetworking.m */; };
 		2DC407BA1E56F67100210E59 /* YQNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC407B91E56F67100210E59 /* YQNetworking.m */; };
 		2DE97E3A1FCE5A9000BC6FA6 /* UIButton+ImagePosition_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE97E391FCE5A8F00BC6FA6 /* UIButton+ImagePosition_yq.m */; };
 		2DF6E2951E5545D200C81A30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E2941E5545D200C81A30 /* main.m */; };
@@ -1403,7 +1401,6 @@
 				2DAC10831FFF848B003A17DB /* YQFoundation.h in Headers */,
 				2DAC10841FFF848B003A17DB /* YQUIKit.h in Headers */,
 				2DAC10E51FFF8809003A17DB /* YQBaseArchiveModel.h in Headers */,
-				2DAC10E91FFF8994003A17DB /* YQNetworking.h in Headers */,
 				2DAC10E61FFF8809003A17DB /* YQBaseArchiveModel.m in Headers */,
 				2DAC0FC01FFF844B003A17DB /* YQMacro.h in Headers */,
 				2DAC0FC11FFF844B003A17DB /* YQTools.h in Headers */,
@@ -1666,7 +1663,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DAC10EA1FFF89A3003A17DB /* YQNetworking.m in Sources */,
 				2DAC10E81FFF883A003A17DB /* YQBaseArchiveModel.m in Sources */,
 				2DAC10851FFF84B4003A17DB /* UIView+Alert_YQSettings.m in Sources */,
 				2DAC10861FFF84B4003A17DB /* UIView+AutoLayout_YQSettings.m in Sources */,
