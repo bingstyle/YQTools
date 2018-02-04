@@ -11,6 +11,8 @@
 
 //APP名字
 #define APP_NAME ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"])
+//APP的BundleID
+#define APP_BundleID ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"])
 //APP版本号
 #define APP_VERSION ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"])
 //APP构建版本号

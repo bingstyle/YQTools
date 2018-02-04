@@ -10,27 +10,28 @@
 
 @interface UIView (Util_yq)
 
-@property CGPoint origin;
-@property (nonatomic,assign)CGFloat x;
-@property (nonatomic,assign)CGFloat y;
-@property (readonly)CGPoint bottomLeft;
-@property (readonly)CGPoint bottomRight;
-@property (readonly)CGPoint topRight;
+@property (nonatomic) CGFloat left;        ///< Shortcut for frame.origin.x.
+@property (nonatomic) CGFloat top;         ///< Shortcut for frame.origin.y
+@property (nonatomic) CGFloat right;       ///< Shortcut for frame.origin.x + frame.size.width
+@property (nonatomic) CGFloat bottom;      ///< Shortcut for frame.origin.y + frame.size.height
 
-@property CGSize size;
-@property CGFloat height;
-@property CGFloat width;
+@property (nonatomic) CGFloat width;       ///< Shortcut for frame.size.width.
+@property (nonatomic) CGFloat height;      ///< Shortcut for frame.size.height.
+@property (nonatomic) CGSize  size;        ///< Shortcut for frame.size.
 
-@property CGFloat top;
-@property CGFloat left;
-@property CGFloat bottom;
-@property CGFloat right;
+@property (nonatomic) CGFloat centerX;     ///< Shortcut for center.x
+@property (nonatomic) CGFloat centerY;     ///< Shortcut for center.y
+@property (nonatomic) CGPoint origin;      ///< Shortcut for frame.origin.
+@property (nonatomic) CGFloat x;           ///< Shortcut for frame.origin.x.
+@property (nonatomic) CGFloat y;           ///< Shortcut for frame.origin.y.
 
+@property (nonatomic, readonly) CGPoint bottomLeft;
+@property (nonatomic, readonly) CGPoint bottomRight;
+@property (nonatomic, readonly) CGPoint topRight;
 
-@property (nonatomic) CGFloat centerX;
-@property (nonatomic) CGFloat centerY;
-
-//找到自己的vc
-- (UIViewController *)viewController;
+/**
+ Returns the view's viewController (may be nil).
+ */
+@property (nullable, nonatomic, readonly) UIViewController *viewController;
 
 @end

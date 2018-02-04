@@ -18,5 +18,13 @@
 - (void)setBorderColorWithUIColor:(UIColor *)color {
     self.borderColor = color.CGColor;
 }
+- (void)setLayerShadow:(UIColor*)color offset:(CGSize)offset radius:(CGFloat)radius {
+    self.shadowColor = color.CGColor;
+    self.shadowOffset = offset;
+    self.shadowRadius = radius;
+    self.shadowOpacity = 1;
+    self.shouldRasterize = YES;
+    self.rasterizationScale = [UIScreen mainScreen].scale;
+}
 
 @end

@@ -34,7 +34,6 @@
 #import "NSNumber+CGFloat_yq.h"
 #import "NSNumber+Round_yq.h"
 // NSObject
-#import "NSObject+AppInfo_yq.h"
 #import "NSObject+Reflection_yq.h"
 #import "NSObject+Runtime_yq.h"
 // NSUserDefaults

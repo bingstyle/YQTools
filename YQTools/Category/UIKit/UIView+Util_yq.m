@@ -10,84 +10,6 @@
 
 @implementation UIView (Util_yq)
 
-- (CGPoint)origin {
-    return self.frame.origin;
-}
-
-- (void)setOrigin:(CGPoint)aPoint {
-    CGRect newFrame = self.frame;
-    newFrame.origin = aPoint;
-    self.frame = newFrame;
-}
-- (CGFloat)x{
-    return self.frame.origin.x;
-}
-
-- (void)setX:(CGFloat)x{
-    CGRect frame = self.frame;
-    frame.origin.x = x;
-    self.frame = frame;
-}
-
-- (CGFloat)y {
-    return self.frame.origin.y;
-}
-
-- (void)setY:(CGFloat)y{
-    CGRect frame = self.frame;
-    frame.origin.y = y;
-    self.frame = frame;
-}
-
-- (CGPoint)bottomRight {
-    CGFloat x= self.frame.origin.x + self.frame.size.width;
-    CGFloat y =self.frame.origin.y + self.frame.size.height;
-    return CGPointMake(x, y);
-}
-
-- (CGPoint)bottomLeft {
-    CGFloat x= self.frame.origin.x;
-    CGFloat y =self.frame.origin.y + self.frame.size.height;
-    return CGPointMake(x, y);
-}
-
-- (CGPoint)topRight {
-    CGFloat x= self.frame.origin.x + self.frame.size.width;
-    CGFloat y =self.frame.origin.y;
-    return CGPointMake(x, y);
-}
-
-#pragma mark - size
-- (CGSize)size {
-    return self.frame.size;
-}
-
-- (void)setSize:(CGSize)asize {
-    CGRect newFrame = self.frame;
-    newFrame.size =asize;
-    self.frame = newFrame;
-}
-
-- (CGFloat)height {
-    return self.frame.size.height;
-}
-
-- (void)setHeight:(CGFloat)newHeight {
-    CGRect newframe = self.frame;
-    newframe.size.height = newHeight;
-    self.frame = newframe;
-}
-
-- (CGFloat)width {
-    return self.frame.size.width;
-}
-
-- (void)setWidth:(CGFloat)newWidth {
-    CGRect newframe = self.frame;
-    newframe.size.width = newWidth;
-    self.frame = newframe;
-}
-
 #pragma mark - edges
 - (CGFloat)top {
     return self.frame.origin.y;
@@ -130,6 +52,37 @@
     self.frame =newframe;
 }
 
+#pragma mark - size
+- (CGSize)size {
+    return self.frame.size;
+}
+
+- (void)setSize:(CGSize)asize {
+    CGRect newFrame = self.frame;
+    newFrame.size =asize;
+    self.frame = newFrame;
+}
+
+- (CGFloat)height {
+    return self.frame.size.height;
+}
+
+- (void)setHeight:(CGFloat)newHeight {
+    CGRect newframe = self.frame;
+    newframe.size.height = newHeight;
+    self.frame = newframe;
+}
+
+- (CGFloat)width {
+    return self.frame.size.width;
+}
+
+- (void)setWidth:(CGFloat)newWidth {
+    CGRect newframe = self.frame;
+    newframe.size.width = newWidth;
+    self.frame = newframe;
+}
+
 #pragma mark - center
 - (CGFloat)centerX {
     return self.center.x;
@@ -147,11 +100,61 @@
     self.center = CGPointMake(self.center.x, centerY);
 }
 
-- (UIViewController *)viewController{
-    for (UIView* next = self; next; next = next.superview) {
-        UIResponder* nextResponder = [next nextResponder];
+- (CGPoint)origin {
+    return self.frame.origin;
+}
+
+- (void)setOrigin:(CGPoint)aPoint {
+    CGRect newFrame = self.frame;
+    newFrame.origin = aPoint;
+    self.frame = newFrame;
+}
+
+- (CGFloat)x{
+    return self.frame.origin.x;
+}
+
+- (void)setX:(CGFloat)x{
+    CGRect frame = self.frame;
+    frame.origin.x = x;
+    self.frame = frame;
+}
+
+- (CGFloat)y {
+    return self.frame.origin.y;
+}
+
+- (void)setY:(CGFloat)y{
+    CGRect frame = self.frame;
+    frame.origin.y = y;
+    self.frame = frame;
+}
+
+- (CGPoint)bottomRight {
+    CGFloat x= self.frame.origin.x + self.frame.size.width;
+    CGFloat y =self.frame.origin.y + self.frame.size.height;
+    return CGPointMake(x, y);
+}
+
+- (CGPoint)bottomLeft {
+    CGFloat x= self.frame.origin.x;
+    CGFloat y =self.frame.origin.y + self.frame.size.height;
+    return CGPointMake(x, y);
+}
+
+- (CGPoint)topRight {
+    CGFloat x= self.frame.origin.x + self.frame.size.width;
+    CGFloat y =self.frame.origin.y;
+    return CGPointMake(x, y);
+}
+
+#pragma mark - viewController
+
+- (UIViewController *)viewController {
+    for (UIView *view = self; view; view = view.superview) {
+        UIResponder *nextResponder = [view nextResponder];
         if ([nextResponder isKindOfClass:[UIViewController class]]) {
-            return (UIViewController*)nextResponder;
+            return (UIViewController *)nextResponder;
         }
     }
     return nil;

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2D4BA6471F25ECE500F29512 /* CALayer+Util_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA5F01F25ECE500F29512 /* CALayer+Util_yq.m */; };
-		2D4BA6481F25ECE500F29512 /* UIApplication+APNs_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA5F21F25ECE500F29512 /* UIApplication+APNs_yq.m */; };
 		2D4BA6491F25ECE500F29512 /* UIBarButtonItem+Badge_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA5F41F25ECE500F29512 /* UIBarButtonItem+Badge_yq.m */; };
 		2D4BA64A1F25ECE500F29512 /* UIButton+BackgroundColor_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA5F61F25ECE500F29512 /* UIButton+BackgroundColor_yq.m */; };
 		2D4BA64B1F25ECE500F29512 /* UIButton+Badge_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA5F81F25ECE500F29512 /* UIButton+Badge_yq.m */; };
@@ -63,6 +62,7 @@
 		2D7ACC291FE8FD3F00C411E7 /* YQSettingsTableDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACC1F1FE8FD3F00C411E7 /* YQSettingsTableDelegate.m */; };
 		2D7ACC2A1FE8FD3F00C411E7 /* YQSettingsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACC211FE8FD3F00C411E7 /* YQSettingsTableView.m */; };
 		2D7ACC2B1FE8FD3F00C411E7 /* YQSettingsTimeRangView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACC231FE8FD3F00C411E7 /* YQSettingsTimeRangView.m */; };
+		2D97934F202706D100A254B7 /* UIApplication+Util_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D97934E202706D100A254B7 /* UIApplication+Util_yq.m */; };
 		2DAC0ED61FFF8386003A17DB /* YQToolsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DAC0ECD1FFF8386003A17DB /* YQToolsSDK.framework */; };
 		2DAC0EDD1FFF8386003A17DB /* YQToolsSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAC0EDC1FFF8386003A17DB /* YQToolsSDKTests.m */; };
 		2DAC0EE21FFF8386003A17DB /* YQToolsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DAC0ECD1FFF8386003A17DB /* YQToolsSDK.framework */; };
@@ -180,8 +180,6 @@
 		2DAC102D1FFF8472003A17DB /* UIButton+Submitting_yq.m in Headers */ = {isa = PBXBuildFile; fileRef = 2D4BA6041F25ECE500F29512 /* UIButton+Submitting_yq.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC102E1FFF8472003A17DB /* CALayer+Util_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D4BA5EF1F25ECE500F29512 /* CALayer+Util_yq.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC102F1FFF8472003A17DB /* CALayer+Util_yq.m in Headers */ = {isa = PBXBuildFile; fileRef = 2D4BA5F01F25ECE500F29512 /* CALayer+Util_yq.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DAC10301FFF8472003A17DB /* UIApplication+APNs_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D4BA5F11F25ECE500F29512 /* UIApplication+APNs_yq.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DAC10311FFF8472003A17DB /* UIApplication+APNs_yq.m in Headers */ = {isa = PBXBuildFile; fileRef = 2D4BA5F21F25ECE500F29512 /* UIApplication+APNs_yq.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC10321FFF8472003A17DB /* UIBarButtonItem+Badge_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D4BA5F31F25ECE500F29512 /* UIBarButtonItem+Badge_yq.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC10331FFF8472003A17DB /* UIBarButtonItem+Badge_yq.m in Headers */ = {isa = PBXBuildFile; fileRef = 2D4BA5F41F25ECE500F29512 /* UIBarButtonItem+Badge_yq.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC10341FFF8472003A17DB /* UIDevice+Hardware_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D4BA6131F25ECE500F29512 /* UIDevice+Hardware_yq.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -222,8 +220,6 @@
 		2DAC10571FFF8472003A17DB /* NSNumber+CGFloat_yq.m in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5F51E55ABEF00C81A30 /* NSNumber+CGFloat_yq.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC10581FFF8472003A17DB /* NSNumber+Round_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5F61E55ABEF00C81A30 /* NSNumber+Round_yq.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC10591FFF8472003A17DB /* NSNumber+Round_yq.m in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5F71E55ABEF00C81A30 /* NSNumber+Round_yq.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DAC105A1FFF8472003A17DB /* NSObject+AppInfo_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5F81E55ABEF00C81A30 /* NSObject+AppInfo_yq.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DAC105B1FFF8472003A17DB /* NSObject+AppInfo_yq.m in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5F91E55ABEF00C81A30 /* NSObject+AppInfo_yq.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC105C1FFF8472003A17DB /* NSObject+Reflection_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5FA1E55ABEF00C81A30 /* NSObject+Reflection_yq.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC105D1FFF8472003A17DB /* NSObject+Reflection_yq.m in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5FB1E55ABEF00C81A30 /* NSObject+Reflection_yq.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC105E1FFF8472003A17DB /* NSObject+Runtime_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5FC1E55ABEF00C81A30 /* NSObject+Runtime_yq.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -316,7 +312,6 @@
 		2DAC10B51FFF84B4003A17DB /* UIButton+ImagePosition_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE97E391FCE5A8F00BC6FA6 /* UIButton+ImagePosition_yq.m */; };
 		2DAC10B61FFF84B4003A17DB /* UIButton+Submitting_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA6041F25ECE500F29512 /* UIButton+Submitting_yq.m */; };
 		2DAC10B71FFF84B4003A17DB /* CALayer+Util_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA5F01F25ECE500F29512 /* CALayer+Util_yq.m */; };
-		2DAC10B81FFF84B4003A17DB /* UIApplication+APNs_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA5F21F25ECE500F29512 /* UIApplication+APNs_yq.m */; };
 		2DAC10B91FFF84B4003A17DB /* UIBarButtonItem+Badge_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA5F41F25ECE500F29512 /* UIBarButtonItem+Badge_yq.m */; };
 		2DAC10BA1FFF84B4003A17DB /* UIDevice+Hardware_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA6141F25ECE500F29512 /* UIDevice+Hardware_yq.m */; };
 		2DAC10BB1FFF84B4003A17DB /* UILabel+AutoSize_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA62A1F25ECE500F29512 /* UILabel+AutoSize_yq.m */; };
@@ -337,7 +332,6 @@
 		2DAC10CA1FFF84B4003A17DB /* NSNotificationCenter+MainThread_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5F31E55ABEF00C81A30 /* NSNotificationCenter+MainThread_yq.m */; };
 		2DAC10CB1FFF84B4003A17DB /* NSNumber+CGFloat_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5F51E55ABEF00C81A30 /* NSNumber+CGFloat_yq.m */; };
 		2DAC10CC1FFF84B4003A17DB /* NSNumber+Round_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5F71E55ABEF00C81A30 /* NSNumber+Round_yq.m */; };
-		2DAC10CD1FFF84B4003A17DB /* NSObject+AppInfo_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5F91E55ABEF00C81A30 /* NSObject+AppInfo_yq.m */; };
 		2DAC10CE1FFF84B4003A17DB /* NSObject+Reflection_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5FB1E55ABEF00C81A30 /* NSObject+Reflection_yq.m */; };
 		2DAC10CF1FFF84B4003A17DB /* NSObject+Runtime_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5FD1E55ABEF00C81A30 /* NSObject+Runtime_yq.m */; };
 		2DAC10D01FFF84B4003A17DB /* NSString+Base64_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5FF1E55ABEF00C81A30 /* NSString+Base64_yq.m */; };
@@ -389,7 +383,6 @@
 		2DF6E6241E55ABEF00C81A30 /* NSNotificationCenter+MainThread_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5F31E55ABEF00C81A30 /* NSNotificationCenter+MainThread_yq.m */; };
 		2DF6E6251E55ABEF00C81A30 /* NSNumber+CGFloat_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5F51E55ABEF00C81A30 /* NSNumber+CGFloat_yq.m */; };
 		2DF6E6261E55ABEF00C81A30 /* NSNumber+Round_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5F71E55ABEF00C81A30 /* NSNumber+Round_yq.m */; };
-		2DF6E6271E55ABEF00C81A30 /* NSObject+AppInfo_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5F91E55ABEF00C81A30 /* NSObject+AppInfo_yq.m */; };
 		2DF6E6281E55ABEF00C81A30 /* NSObject+Reflection_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5FB1E55ABEF00C81A30 /* NSObject+Reflection_yq.m */; };
 		2DF6E6291E55ABEF00C81A30 /* NSObject+Runtime_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5FD1E55ABEF00C81A30 /* NSObject+Runtime_yq.m */; };
 		2DF6E62A1E55ABEF00C81A30 /* NSString+Base64_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5FF1E55ABEF00C81A30 /* NSString+Base64_yq.m */; };
@@ -465,8 +458,6 @@
 		11EBD51D155625E9D570DE03 /* Pods-YQToolsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YQToolsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YQToolsDemo/Pods-YQToolsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		2D4BA5EF1F25ECE500F29512 /* CALayer+Util_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Util_yq.h"; sourceTree = "<group>"; };
 		2D4BA5F01F25ECE500F29512 /* CALayer+Util_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Util_yq.m"; sourceTree = "<group>"; };
-		2D4BA5F11F25ECE500F29512 /* UIApplication+APNs_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+APNs_yq.h"; sourceTree = "<group>"; };
-		2D4BA5F21F25ECE500F29512 /* UIApplication+APNs_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+APNs_yq.m"; sourceTree = "<group>"; };
 		2D4BA5F31F25ECE500F29512 /* UIBarButtonItem+Badge_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Badge_yq.h"; sourceTree = "<group>"; };
 		2D4BA5F41F25ECE500F29512 /* UIBarButtonItem+Badge_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Badge_yq.m"; sourceTree = "<group>"; };
 		2D4BA5F51F25ECE500F29512 /* UIButton+BackgroundColor_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+BackgroundColor_yq.h"; sourceTree = "<group>"; };
@@ -578,6 +569,8 @@
 		2D7ACC221FE8FD3F00C411E7 /* YQSettingsTimeRangView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQSettingsTimeRangView.h; sourceTree = "<group>"; };
 		2D7ACC231FE8FD3F00C411E7 /* YQSettingsTimeRangView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQSettingsTimeRangView.m; sourceTree = "<group>"; };
 		2D9054691E821F7E00FFEF4D /* YQAdjustScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YQAdjustScreen.h; sourceTree = "<group>"; };
+		2D97934D202706D100A254B7 /* UIApplication+Util_yq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Util_yq.h"; sourceTree = "<group>"; };
+		2D97934E202706D100A254B7 /* UIApplication+Util_yq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Util_yq.m"; sourceTree = "<group>"; };
 		2DAC0ECD1FFF8386003A17DB /* YQToolsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YQToolsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DAC0ED01FFF8386003A17DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DAC0ED51FFF8386003A17DB /* YQToolsSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YQToolsSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -652,8 +645,6 @@
 		2DF6E5F51E55ABEF00C81A30 /* NSNumber+CGFloat_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+CGFloat_yq.m"; sourceTree = "<group>"; };
 		2DF6E5F61E55ABEF00C81A30 /* NSNumber+Round_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Round_yq.h"; sourceTree = "<group>"; };
 		2DF6E5F71E55ABEF00C81A30 /* NSNumber+Round_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Round_yq.m"; sourceTree = "<group>"; };
-		2DF6E5F81E55ABEF00C81A30 /* NSObject+AppInfo_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AppInfo_yq.h"; sourceTree = "<group>"; };
-		2DF6E5F91E55ABEF00C81A30 /* NSObject+AppInfo_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AppInfo_yq.m"; sourceTree = "<group>"; };
 		2DF6E5FA1E55ABEF00C81A30 /* NSObject+Reflection_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Reflection_yq.h"; sourceTree = "<group>"; };
 		2DF6E5FB1E55ABEF00C81A30 /* NSObject+Reflection_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Reflection_yq.m"; sourceTree = "<group>"; };
 		2DF6E5FC1E55ABEF00C81A30 /* NSObject+Runtime_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Runtime_yq.h"; sourceTree = "<group>"; };
@@ -747,8 +738,8 @@
 				2D7ACBF51FE8BA0600C411E7 /* UIButton */,
 				2D4BA5EF1F25ECE500F29512 /* CALayer+Util_yq.h */,
 				2D4BA5F01F25ECE500F29512 /* CALayer+Util_yq.m */,
-				2D4BA5F11F25ECE500F29512 /* UIApplication+APNs_yq.h */,
-				2D4BA5F21F25ECE500F29512 /* UIApplication+APNs_yq.m */,
+				2D97934D202706D100A254B7 /* UIApplication+Util_yq.h */,
+				2D97934E202706D100A254B7 /* UIApplication+Util_yq.m */,
 				2D4BA5F31F25ECE500F29512 /* UIBarButtonItem+Badge_yq.h */,
 				2D4BA5F41F25ECE500F29512 /* UIBarButtonItem+Badge_yq.m */,
 				2D4BA6131F25ECE500F29512 /* UIDevice+Hardware_yq.h */,
@@ -1135,8 +1126,6 @@
 				2DF6E5F51E55ABEF00C81A30 /* NSNumber+CGFloat_yq.m */,
 				2DF6E5F61E55ABEF00C81A30 /* NSNumber+Round_yq.h */,
 				2DF6E5F71E55ABEF00C81A30 /* NSNumber+Round_yq.m */,
-				2DF6E5F81E55ABEF00C81A30 /* NSObject+AppInfo_yq.h */,
-				2DF6E5F91E55ABEF00C81A30 /* NSObject+AppInfo_yq.m */,
 				2DF6E5FA1E55ABEF00C81A30 /* NSObject+Reflection_yq.h */,
 				2DF6E5FB1E55ABEF00C81A30 /* NSObject+Reflection_yq.m */,
 				2DF6E5FC1E55ABEF00C81A30 /* NSObject+Runtime_yq.h */,
@@ -1290,8 +1279,6 @@
 				2DAC102D1FFF8472003A17DB /* UIButton+Submitting_yq.m in Headers */,
 				2DAC102E1FFF8472003A17DB /* CALayer+Util_yq.h in Headers */,
 				2DAC102F1FFF8472003A17DB /* CALayer+Util_yq.m in Headers */,
-				2DAC10301FFF8472003A17DB /* UIApplication+APNs_yq.h in Headers */,
-				2DAC10311FFF8472003A17DB /* UIApplication+APNs_yq.m in Headers */,
 				2DAC10321FFF8472003A17DB /* UIBarButtonItem+Badge_yq.h in Headers */,
 				2DAC10331FFF8472003A17DB /* UIBarButtonItem+Badge_yq.m in Headers */,
 				2DAC10341FFF8472003A17DB /* UIDevice+Hardware_yq.h in Headers */,
@@ -1332,8 +1319,6 @@
 				2DAC10571FFF8472003A17DB /* NSNumber+CGFloat_yq.m in Headers */,
 				2DAC10581FFF8472003A17DB /* NSNumber+Round_yq.h in Headers */,
 				2DAC10591FFF8472003A17DB /* NSNumber+Round_yq.m in Headers */,
-				2DAC105A1FFF8472003A17DB /* NSObject+AppInfo_yq.h in Headers */,
-				2DAC105B1FFF8472003A17DB /* NSObject+AppInfo_yq.m in Headers */,
 				2DAC105C1FFF8472003A17DB /* NSObject+Reflection_yq.h in Headers */,
 				2DAC105D1FFF8472003A17DB /* NSObject+Reflection_yq.m in Headers */,
 				2DAC105E1FFF8472003A17DB /* NSObject+Runtime_yq.h in Headers */,
@@ -1715,7 +1700,6 @@
 				2DAC10B51FFF84B4003A17DB /* UIButton+ImagePosition_yq.m in Sources */,
 				2DAC10B61FFF84B4003A17DB /* UIButton+Submitting_yq.m in Sources */,
 				2DAC10B71FFF84B4003A17DB /* CALayer+Util_yq.m in Sources */,
-				2DAC10B81FFF84B4003A17DB /* UIApplication+APNs_yq.m in Sources */,
 				2DAC10B91FFF84B4003A17DB /* UIBarButtonItem+Badge_yq.m in Sources */,
 				2DAC10BA1FFF84B4003A17DB /* UIDevice+Hardware_yq.m in Sources */,
 				2DAC10BB1FFF84B4003A17DB /* UILabel+AutoSize_yq.m in Sources */,
@@ -1736,7 +1720,6 @@
 				2DAC10CA1FFF84B4003A17DB /* NSNotificationCenter+MainThread_yq.m in Sources */,
 				2DAC10CB1FFF84B4003A17DB /* NSNumber+CGFloat_yq.m in Sources */,
 				2DAC10CC1FFF84B4003A17DB /* NSNumber+Round_yq.m in Sources */,
-				2DAC10CD1FFF84B4003A17DB /* NSObject+AppInfo_yq.m in Sources */,
 				2DAC10CE1FFF84B4003A17DB /* NSObject+Reflection_yq.m in Sources */,
 				2DAC10CF1FFF84B4003A17DB /* NSObject+Runtime_yq.m in Sources */,
 				2DAC10D01FFF84B4003A17DB /* NSString+Base64_yq.m in Sources */,
@@ -1801,6 +1784,7 @@
 				2DF6E61B1E55ABEF00C81A30 /* NSDate+Extension_yq.m in Sources */,
 				2D4BA6621F25ECE600F29512 /* UIImageView+Addition_yq.m in Sources */,
 				2D4BA64B1F25ECE500F29512 /* UIButton+Badge_yq.m in Sources */,
+				2D97934F202706D100A254B7 /* UIApplication+Util_yq.m in Sources */,
 				2DF6E2981E5545D200C81A30 /* AppDelegate.m in Sources */,
 				2D4BA66F1F25ECE600F29512 /* UIView+Find_yq.m in Sources */,
 				2D4BA65D1F25ECE600F29512 /* UIImage+FileName_yq.m in Sources */,
@@ -1821,12 +1805,10 @@
 				2DF6E2951E5545D200C81A30 /* main.m in Sources */,
 				2D4BA64C1F25ECE600F29512 /* UIButton+Block_yq.m in Sources */,
 				2D4BA6691F25ECE600F29512 /* UITextField+InputLimit_yq.m in Sources */,
-				2D4BA6481F25ECE500F29512 /* UIApplication+APNs_yq.m in Sources */,
 				2D4BA65A1F25ECE600F29512 /* UIImage+Alpha_yq.m in Sources */,
 				2DF6E5D71E55A17200C81A30 /* YQPublic.m in Sources */,
 				2D4BA6721F25ECE600F29512 /* UIView+Util_yq.m in Sources */,
 				2D4BA6501F25ECE600F29512 /* UIButton+MiddleAligning_yq.m in Sources */,
-				2DF6E6271E55ABEF00C81A30 /* NSObject+AppInfo_yq.m in Sources */,
 				2D7ACC251FE8FD3F00C411E7 /* UIView+AutoLayout_YQSettings.m in Sources */,
 				2D4BA65B1F25ECE600F29512 /* UIImage+Capture_yq.m in Sources */,
 				2D4BA6531F25ECE600F29512 /* UIColor+Hex_yq.m in Sources */,

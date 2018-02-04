@@ -11,4 +11,13 @@
 
 @interface CALayer (Util_yq)
 
+/**
+ Shortcut to set the layer's shadow
+ 
+ @param color  Shadow Color
+ @param offset Shadow offset
+ @param radius Shadow radius
+ */
+- (void)setLayerShadow:(nullable UIColor*)color offset:(CGSize)offset radius:(CGFloat)radius;
+
 @end
