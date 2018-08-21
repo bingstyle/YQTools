@@ -25,8 +25,8 @@
 //手机号码验证
 + (BOOL)yq_validateMobile:(NSString *)data
 {
-    //手机号以13， 15，18开头，八个 \d 数字字符
-    NSString *RegEx = @"^((17[0-9])|(13[0-9])|(15[^4,\\D])|(18[0,0-9]))\\d{8}$";
+    //手机号以1开头，10个 \d 数字字符
+    NSString *RegEx = @"^(1)\\d{10}$";
     return [self yq_baseValidateForRegEx:RegEx data:data];
 }
 
