@@ -51,6 +51,12 @@
 		2D4BA6721F25ECE600F29512 /* UIView+Util_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA6461F25ECE500F29512 /* UIView+Util_yq.m */; };
 		2D4BA6751F25ED2300F29512 /* UIWindow+Util_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA6741F25ED2300F29512 /* UIWindow+Util_yq.m */; };
 		2D4BA6781F25EE3200F29512 /* UIButton+ImageTitleStyle_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA6771F25EE3200F29512 /* UIButton+ImageTitleStyle_yq.m */; };
+		2D52F7A3212C159F00154D85 /* IAP.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D52F79E212C159F00154D85 /* IAP.plist */; };
+		2D52F7A4212C159F00154D85 /* MLIAPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D52F7A0212C159F00154D85 /* MLIAPManager.m */; };
+		2D52F7A5212C159F00154D85 /* YQIAPStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D52F7A2212C159F00154D85 /* YQIAPStore.m */; };
+		2D52F7AB212C2DBB00154D85 /* SAMKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D52F7A8212C2DBB00154D85 /* SAMKeychain.m */; };
+		2D52F7AC212C2DBB00154D85 /* SAMKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D52F7AA212C2DBB00154D85 /* SAMKeychainQuery.m */; };
+		2D52F7AF212C35BE00154D85 /* YQIAPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D52F7AE212C35BD00154D85 /* YQIAPModel.m */; };
 		2D58F4361FE366BF0080B02E /* NSDictionary+JSON_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D58F4351FE366BF0080B02E /* NSDictionary+JSON_yq.m */; };
 		2D7ACC001FE8BC9E00C411E7 /* UIView+AutoLayout_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACBFF1FE8BC9E00C411E7 /* UIView+AutoLayout_yq.m */; };
 		2D7ACC031FE8BD1600C411E7 /* UIView+Alert_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACC021FE8BD1600C411E7 /* UIView+Alert_yq.m */; };
@@ -545,6 +551,17 @@
 		2D4BA6741F25ED2300F29512 /* UIWindow+Util_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Util_yq.m"; sourceTree = "<group>"; };
 		2D4BA6761F25EE3200F29512 /* UIButton+ImageTitleStyle_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleStyle_yq.h"; sourceTree = "<group>"; };
 		2D4BA6771F25EE3200F29512 /* UIButton+ImageTitleStyle_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleStyle_yq.m"; sourceTree = "<group>"; };
+		2D52F79E212C159F00154D85 /* IAP.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = IAP.plist; sourceTree = "<group>"; };
+		2D52F79F212C159F00154D85 /* MLIAPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLIAPManager.h; sourceTree = "<group>"; };
+		2D52F7A0212C159F00154D85 /* MLIAPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLIAPManager.m; sourceTree = "<group>"; };
+		2D52F7A1212C159F00154D85 /* YQIAPStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQIAPStore.h; sourceTree = "<group>"; };
+		2D52F7A2212C159F00154D85 /* YQIAPStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQIAPStore.m; sourceTree = "<group>"; };
+		2D52F7A7212C2DBB00154D85 /* SAMKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMKeychain.h; sourceTree = "<group>"; };
+		2D52F7A8212C2DBB00154D85 /* SAMKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMKeychain.m; sourceTree = "<group>"; };
+		2D52F7A9212C2DBB00154D85 /* SAMKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMKeychainQuery.h; sourceTree = "<group>"; };
+		2D52F7AA212C2DBB00154D85 /* SAMKeychainQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMKeychainQuery.m; sourceTree = "<group>"; };
+		2D52F7AD212C35BD00154D85 /* YQIAPModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YQIAPModel.h; sourceTree = "<group>"; };
+		2D52F7AE212C35BD00154D85 /* YQIAPModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQIAPModel.m; sourceTree = "<group>"; };
 		2D58F4341FE366BF0080B02E /* NSDictionary+JSON_yq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSON_yq.h"; sourceTree = "<group>"; };
 		2D58F4351FE366BF0080B02E /* NSDictionary+JSON_yq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSON_yq.m"; sourceTree = "<group>"; };
 		2D7ACBFE1FE8BC9E00C411E7 /* UIView+AutoLayout_yq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout_yq.h"; sourceTree = "<group>"; };
@@ -753,6 +770,32 @@
 				2D4BA6741F25ED2300F29512 /* UIWindow+Util_yq.m */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		2D52F79D212C159F00154D85 /* IAP */ = {
+			isa = PBXGroup;
+			children = (
+				2D52F7A6212C2DBB00154D85 /* SAMKeychain */,
+				2D52F79E212C159F00154D85 /* IAP.plist */,
+				2D52F79F212C159F00154D85 /* MLIAPManager.h */,
+				2D52F7A0212C159F00154D85 /* MLIAPManager.m */,
+				2D52F7A1212C159F00154D85 /* YQIAPStore.h */,
+				2D52F7A2212C159F00154D85 /* YQIAPStore.m */,
+				2D52F7AD212C35BD00154D85 /* YQIAPModel.h */,
+				2D52F7AE212C35BD00154D85 /* YQIAPModel.m */,
+			);
+			path = IAP;
+			sourceTree = "<group>";
+		};
+		2D52F7A6212C2DBB00154D85 /* SAMKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				2D52F7A7212C2DBB00154D85 /* SAMKeychain.h */,
+				2D52F7A8212C2DBB00154D85 /* SAMKeychain.m */,
+				2D52F7A9212C2DBB00154D85 /* SAMKeychainQuery.h */,
+				2D52F7AA212C2DBB00154D85 /* SAMKeychainQuery.m */,
+			);
+			path = SAMKeychain;
 			sourceTree = "<group>";
 		};
 		2D7ACBF41FE8B9BB00C411E7 /* UIView */ = {
@@ -1090,6 +1133,7 @@
 				2DF6E5D41E55A17200C81A30 /* YQSandbox.h */,
 				2DF6E5D51E55A17200C81A30 /* YQSandbox.m */,
 				2D9054691E821F7E00FFEF4D /* YQAdjustScreen.h */,
+				2D52F79D212C159F00154D85 /* IAP */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1576,6 +1620,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DF6E2A31E5545D200C81A30 /* LaunchScreen.storyboard in Resources */,
+				2D52F7A3212C159F00154D85 /* IAP.plist in Resources */,
 				2DF6E2A01E5545D200C81A30 /* Assets.xcassets in Resources */,
 				2DF6E29E1E5545D200C81A30 /* Main.storyboard in Resources */,
 			);
@@ -1763,12 +1808,14 @@
 				2DF6E29B1E5545D200C81A30 /* ViewController.m in Sources */,
 				2DF6E61D1E55ABEF00C81A30 /* NSDecimalNumber+Extension_yq.m in Sources */,
 				2DF6E62F1E55ABEF00C81A30 /* NSString+RegEx_yq.m in Sources */,
+				2D52F7AC212C2DBB00154D85 /* SAMKeychainQuery.m in Sources */,
 				2DF6E6231E55ABEF00C81A30 /* NSIndexPath+Offset_yq.m in Sources */,
 				2D4BA6751F25ED2300F29512 /* UIWindow+Util_yq.m in Sources */,
 				2D4BA6601F25ECE600F29512 /* UIImage+SuperCompress_yq.m in Sources */,
 				2DF6E62A1E55ABEF00C81A30 /* NSString+Base64_yq.m in Sources */,
 				2D4BA6681F25ECE600F29512 /* UIScrollView+Pages_yq.m in Sources */,
 				2D7ACC271FE8FD3F00C411E7 /* YQSettingsSwitchCell.m in Sources */,
+				2D52F7A5212C159F00154D85 /* YQIAPStore.m in Sources */,
 				2D4BA6611F25ECE600F29512 /* UIImage+Util_yq.m in Sources */,
 				2DF6E6261E55ABEF00C81A30 /* NSNumber+Round_yq.m in Sources */,
 				2DF6E6361E55ABEF00C81A30 /* NSUserDefaults+SafeAccess_yq.m in Sources */,
@@ -1782,6 +1829,7 @@
 				2D7ACC291FE8FD3F00C411E7 /* YQSettingsTableDelegate.m in Sources */,
 				2DF6E61F1E55ABEF00C81A30 /* NSDictionary+Merge_yq.m in Sources */,
 				2DF6E61A1E55ABEF00C81A30 /* NSData+Base64_yq.m in Sources */,
+				2D52F7A4212C159F00154D85 /* MLIAPManager.m in Sources */,
 				2DF6E6301E55ABEF00C81A30 /* NSString+Size_yq.m in Sources */,
 				2D4BA66A1F25ECE600F29512 /* UITextField+Select_yq.m in Sources */,
 				2D7ACC031FE8BD1600C411E7 /* UIView+Alert_yq.m in Sources */,
@@ -1794,6 +1842,7 @@
 				2DF6E2981E5545D200C81A30 /* AppDelegate.m in Sources */,
 				2D4BA66F1F25ECE600F29512 /* UIView+Find_yq.m in Sources */,
 				2D4BA65D1F25ECE600F29512 /* UIImage+FileName_yq.m in Sources */,
+				2D52F7AF212C35BE00154D85 /* YQIAPModel.m in Sources */,
 				2D4BA6661F25ECE600F29512 /* UINavigationController+Transitions_yq.m in Sources */,
 				2D7ACC261FE8FD3F00C411E7 /* YQSettingsModel.m in Sources */,
 				2D4BA6701F25ECE600F29512 /* UIView+GestureBlock_yq.m in Sources */,
@@ -1854,6 +1903,7 @@
 				2DF6E6331E55ABEF00C81A30 /* NSTimer+Addition_yq.m in Sources */,
 				2DF6E6191E55ABEF00C81A30 /* NSBundle+AppIcon_yq.m in Sources */,
 				2D7ACC001FE8BC9E00C411E7 /* UIView+AutoLayout_yq.m in Sources */,
+				2D52F7AB212C2DBB00154D85 /* SAMKeychain.m in Sources */,
 				2DF6E6221E55ABEF00C81A30 /* NSFileManager+Path_yq.m in Sources */,
 				2DF6E6251E55ABEF00C81A30 /* NSNumber+CGFloat_yq.m in Sources */,
 			);
