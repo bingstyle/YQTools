@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "YQIAPModel.h"
 
-@interface MLIAPManager : NSObject
+@interface YQIAPManager : NSObject
 
 /** 获取IAP商品 */
 + (void)requestProducts;

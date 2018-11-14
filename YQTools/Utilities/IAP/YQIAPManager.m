@@ -6,14 +6,14 @@
 //  Copyright © 2017年 YQHD. All rights reserved.
 //
 
-#import "MLIAPManager.h"
+#import "YQIAPManager.h"
 #import "YQIAPStore.h"
 //#import <SVProgressHUD.h>
 #import "SAMKeychain.h"
 #import "SAMKeychainQuery.h"
 
 
-@implementation MLIAPManager
+@implementation YQIAPManager
 
 #pragma mark - public
 /** 获取IAP商品 */

@@ -52,7 +52,7 @@
 		2D4BA6751F25ED2300F29512 /* UIWindow+Util_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA6741F25ED2300F29512 /* UIWindow+Util_yq.m */; };
 		2D4BA6781F25EE3200F29512 /* UIButton+ImageTitleStyle_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA6771F25EE3200F29512 /* UIButton+ImageTitleStyle_yq.m */; };
 		2D52F7A3212C159F00154D85 /* IAP.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D52F79E212C159F00154D85 /* IAP.plist */; };
-		2D52F7A4212C159F00154D85 /* MLIAPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D52F7A0212C159F00154D85 /* MLIAPManager.m */; };
+		2D52F7A4212C159F00154D85 /* YQIAPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D52F7A0212C159F00154D85 /* YQIAPManager.m */; };
 		2D52F7A5212C159F00154D85 /* YQIAPStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D52F7A2212C159F00154D85 /* YQIAPStore.m */; };
 		2D52F7AB212C2DBB00154D85 /* SAMKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D52F7A8212C2DBB00154D85 /* SAMKeychain.m */; };
 		2D52F7AC212C2DBB00154D85 /* SAMKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D52F7AA212C2DBB00154D85 /* SAMKeychainQuery.m */; };
@@ -552,8 +552,8 @@
 		2D4BA6761F25EE3200F29512 /* UIButton+ImageTitleStyle_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleStyle_yq.h"; sourceTree = "<group>"; };
 		2D4BA6771F25EE3200F29512 /* UIButton+ImageTitleStyle_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleStyle_yq.m"; sourceTree = "<group>"; };
 		2D52F79E212C159F00154D85 /* IAP.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = IAP.plist; sourceTree = "<group>"; };
-		2D52F79F212C159F00154D85 /* MLIAPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLIAPManager.h; sourceTree = "<group>"; };
-		2D52F7A0212C159F00154D85 /* MLIAPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLIAPManager.m; sourceTree = "<group>"; };
+		2D52F79F212C159F00154D85 /* YQIAPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQIAPManager.h; sourceTree = "<group>"; };
+		2D52F7A0212C159F00154D85 /* YQIAPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQIAPManager.m; sourceTree = "<group>"; };
 		2D52F7A1212C159F00154D85 /* YQIAPStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQIAPStore.h; sourceTree = "<group>"; };
 		2D52F7A2212C159F00154D85 /* YQIAPStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQIAPStore.m; sourceTree = "<group>"; };
 		2D52F7A7212C2DBB00154D85 /* SAMKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMKeychain.h; sourceTree = "<group>"; };
@@ -777,8 +777,8 @@
 			children = (
 				2D52F7A6212C2DBB00154D85 /* SAMKeychain */,
 				2D52F79E212C159F00154D85 /* IAP.plist */,
-				2D52F79F212C159F00154D85 /* MLIAPManager.h */,
-				2D52F7A0212C159F00154D85 /* MLIAPManager.m */,
+				2D52F79F212C159F00154D85 /* YQIAPManager.h */,
+				2D52F7A0212C159F00154D85 /* YQIAPManager.m */,
 				2D52F7A1212C159F00154D85 /* YQIAPStore.h */,
 				2D52F7A2212C159F00154D85 /* YQIAPStore.m */,
 				2D52F7AD212C35BD00154D85 /* YQIAPModel.h */,
@@ -1829,7 +1829,7 @@
 				2D7ACC291FE8FD3F00C411E7 /* YQSettingsTableDelegate.m in Sources */,
 				2DF6E61F1E55ABEF00C81A30 /* NSDictionary+Merge_yq.m in Sources */,
 				2DF6E61A1E55ABEF00C81A30 /* NSData+Base64_yq.m in Sources */,
-				2D52F7A4212C159F00154D85 /* MLIAPManager.m in Sources */,
+				2D52F7A4212C159F00154D85 /* YQIAPManager.m in Sources */,
 				2DF6E6301E55ABEF00C81A30 /* NSString+Size_yq.m in Sources */,
 				2D4BA66A1F25ECE600F29512 /* UITextField+Select_yq.m in Sources */,
 				2D7ACC031FE8BD1600C411E7 /* UIView+Alert_yq.m in Sources */,

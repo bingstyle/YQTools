@@ -89,7 +89,7 @@ static id instance; // 单例（全局变量）
 
 #pragma mark ==== 购买商品
 - (void)buyProduct:(NSString *)productIdentifier success:(YQIAPSuccessBlock)success fail:(YQIAPFailBlock)fail {
-    [self buyProduct:productIdentifier user:nil success:success fail:fail];
+    [self buyProduct:productIdentifier account:nil success:success fail:fail];
 }
 
 - (void)buyProduct:(NSString *)productIdentifier account:(NSString *)account success:(YQIAPSuccessBlock)success fail:(YQIAPFailBlock)fail {
