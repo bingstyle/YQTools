@@ -188,7 +188,7 @@
     self.alpha = 0;
     _alertView.transform = CGAffineTransformScale(_alertView.transform,0.1,0.1);
     [UIView animateWithDuration:0.3f delay:0 usingSpringWithDamping:0.9f initialSpringVelocity:20 options:UIViewAnimationOptionCurveEaseOut animations:^{
-        _alertView.transform = CGAffineTransformIdentity;
+        self->_alertView.transform = CGAffineTransformIdentity;
         self.alpha = 1;
     } completion:nil];
 }
@@ -197,7 +197,7 @@
 {
     if (self.superview) {
         [UIView animateWithDuration:0.3 animations:^{
-            _alertView.transform = CGAffineTransformScale(_alertView.transform,0.1,0.1);
+            self->_alertView.transform = CGAffineTransformScale(self->_alertView.transform,0.1,0.1);
             self.alpha = 0;
         } completion:^(BOOL finished) {
             [self removeFromSuperview];

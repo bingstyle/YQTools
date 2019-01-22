@@ -1025,7 +1025,7 @@ static inline NSString *cachePath() {
                 break;
             case AFNetworkReachabilityStatusReachableViaWWAN:
                 network = @"3G";
-//                alertSureInfo(@"正在使用手机流量！");
+                alertSureInfo(@"正在使用手机流量！");
                 break;
             case AFNetworkReachabilityStatusReachableViaWiFi:
                 network = @"WIFI";

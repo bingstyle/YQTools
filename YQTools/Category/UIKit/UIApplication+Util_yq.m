@@ -23,37 +23,52 @@
     [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
 }
 
-- (NSURL *)documentsURL {
-    return [[[NSFileManager defaultManager]
-             URLsForDirectory:NSDocumentDirectory
-             inDomains:NSUserDomainMask] lastObject];
++ (UIImage *)yq_launchImage {
+    
+    UIImage               *lauchImage      = nil;
+    NSString              *viewOrientation = nil;
+    CGSize                 viewSize        = [UIScreen mainScreen].bounds.size;
+    UIInterfaceOrientation orientation     = [[UIApplication sharedApplication] statusBarOrientation];
+    
+    if (orientation == UIInterfaceOrientationLandscapeLeft || orientation == UIInterfaceOrientationLandscapeRight) {
+        
+        viewOrientation = @"Landscape";
+        
+    } else {
+        
+        viewOrientation = @"Portrait";
+    }
+    
+    NSArray *imagesDictionary = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"UILaunchImages"];
+    for (NSDictionary *dict in imagesDictionary) {
+        
+        CGSize imageSize = CGSizeFromString(dict[@"UILaunchImageSize"]);
+        if (CGSizeEqualToSize(imageSize, viewSize) && [viewOrientation isEqualToString:dict[@"UILaunchImageOrientation"]]) {
+            
+            lauchImage = [UIImage imageNamed:dict[@"UILaunchImageName"]];
+        }
+    }
+    
+    return lauchImage;
 }
 
-- (NSString *)documentsPath {
-    return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+- (NSString *)yq_appBundleName {
+    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"];
 }
 
-- (NSURL *)cachesURL {
-    return [[[NSFileManager defaultManager]
-             URLsForDirectory:NSCachesDirectory
-             inDomains:NSUserDomainMask] lastObject];
+- (NSString *)yq_appBundleID {
+    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"];
 }
 
-- (NSString *)cachesPath {
-    return [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+- (NSString *)yq_appVersion {
+    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
 }
 
-- (NSURL *)libraryURL {
-    return [[[NSFileManager defaultManager]
-             URLsForDirectory:NSLibraryDirectory
-             inDomains:NSUserDomainMask] lastObject];
+- (NSString *)yq_appBuildVersion {
+    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
 }
 
-- (NSString *)libraryPath {
-    return [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject];
-}
-
-- (BOOL)isPirated {
+- (BOOL)yq_isPirated {
     if (TARGET_OS_SIMULATOR) return YES; // Simulator is not from appstore
     
     if (getgid() <= 10) return YES; // process ID shouldn't be root
@@ -81,23 +96,7 @@
     return [[NSFileManager defaultManager] fileExistsAtPath:path];
 }
 
-- (NSString *)appBundleName {
-    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"];
-}
-
-- (NSString *)appBundleID {
-    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"];
-}
-
-- (NSString *)appVersion {
-    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
-}
-
-- (NSString *)appBuildVersion {
-    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
-}
-
-- (BOOL)isBeingDebugged {
+- (BOOL)yq_isBeingDebugged {
     size_t size = sizeof(struct kinfo_proc);
     struct kinfo_proc info;
     int ret = 0, name[4];
@@ -113,7 +112,7 @@
     return (info.kp_proc.p_flag & P_TRACED) ? YES : NO;
 }
 
-- (int64_t)memoryUsage {
+- (int64_t)yq_memoryUsage {
     struct task_basic_info info;
     mach_msg_type_number_t size = sizeof(info);
     kern_return_t kern = task_info(mach_task_self(), TASK_BASIC_INFO, (task_info_t)&info, &size);
@@ -121,7 +120,7 @@
     return info.resident_size;
 }
 
-- (float)cpuUsage {
+- (float)yq_cpuUsage {
     kern_return_t kr;
     task_info_data_t tinfo;
     mach_msg_type_number_t task_info_count;

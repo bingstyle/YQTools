@@ -26,6 +26,7 @@ static NSUInteger const YQPaymentTransactionModelVerifyWarningCount = 10; // 最
     if (errorString) {
         // 报告错误.
         NSError *error = [NSError errorWithDomain:YQWalletErrorDomain code:0 userInfo:@{NSLocalizedDescriptionKey : errorString}];
+        NSLog(@"%@", error);
     }
     self = [super init];
     if (self) {
@@ -44,6 +45,7 @@ static NSUInteger const YQPaymentTransactionModelVerifyWarningCount = 10; // 最
         // 报告错误.
         NSString *errorString = [NSString stringWithFormat:@"验证次数超过最大验证次数: %@", self];
         NSError *error = [NSError errorWithDomain:YQWalletErrorDomain code:0 userInfo:@{NSLocalizedDescriptionKey : errorString}];
+        NSLog(@"%@", error);
         // todo
     }
 }

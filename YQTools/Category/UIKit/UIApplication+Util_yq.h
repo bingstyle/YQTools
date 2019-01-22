@@ -17,41 +17,36 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)yq_registerAPNs;
 
-/// "Documents" folder in this app's sandbox.
-@property (nonatomic, readonly) NSURL *documentsURL;
-@property (nonatomic, readonly) NSString *documentsPath;
-
-/// "Caches" folder in this app's sandbox.
-@property (nonatomic, readonly) NSURL *cachesURL;
-@property (nonatomic, readonly) NSString *cachesPath;
-
-/// "Library" folder in this app's sandbox.
-@property (nonatomic, readonly) NSURL *libraryURL;
-@property (nonatomic, readonly) NSString *libraryPath;
+/**
+ *  获取启动页图片
+ *
+ *  @return 启动页图片
+ */
++ (UIImage *)yq_launchImage;
 
 /// Application's Bundle Name (show in SpringBoard).
-@property (nullable, nonatomic, readonly) NSString *appBundleName;
+@property (nullable, nonatomic, readonly) NSString *yq_appBundleName;
 
 /// Application's Bundle ID.  e.g. "com.ibireme.MyApp"
-@property (nullable, nonatomic, readonly) NSString *appBundleID;
+@property (nullable, nonatomic, readonly) NSString *yq_appBundleID;
 
 /// Application's Version.  e.g. "1.2.0"
-@property (nullable, nonatomic, readonly) NSString *appVersion;
+@property (nullable, nonatomic, readonly) NSString *yq_appVersion;
 
 /// Application's Build number. e.g. "123"
-@property (nullable, nonatomic, readonly) NSString *appBuildVersion;
+@property (nullable, nonatomic, readonly) NSString *yq_appBuildVersion;
 
 /// Whether this app is pirated (not install from appstore).
-@property (nonatomic, readonly) BOOL isPirated;
+@property (nonatomic, readonly) BOOL yq_isPirated;
 
 /// Whether this app is being debugged (debugger attached).
-@property (nonatomic, readonly) BOOL isBeingDebugged;
+@property (nonatomic, readonly) BOOL yq_isBeingDebugged;
 
 /// Current thread real memory used in byte. (-1 when error occurs)
-@property (nonatomic, readonly) int64_t memoryUsage;
+@property (nonatomic, readonly) int64_t yq_memoryUsage;
 
 /// Current thread CPU usage, 1.0 means 100%. (-1 when error occurs)
-@property (nonatomic, readonly) float cpuUsage;
+@property (nonatomic, readonly) float yq_cpuUsage;
 
 
 @end

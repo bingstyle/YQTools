@@ -145,9 +145,9 @@
 - (void)DNDTimeAction {
     YQSettingsTimeRangView *view = [[YQSettingsTimeRangView alloc] initStartRow:_model.distrubTimeStart endRow:_model.distrubTimeEnd];
     view.sureBtnBlock = ^(NSString *value, NSInteger startH, NSInteger endH) {
-        _model.DNDTime = value;
-        _model.distrubTimeStart = startH;
-        _model.distrubTimeEnd = endH;
+        self->_model.DNDTime = value;
+        self->_model.distrubTimeStart = startH;
+        self->_model.distrubTimeEnd = endH;
         [self refresh];
     };
     [view showInWindowWithBackgoundTapDismissEnable:YES];

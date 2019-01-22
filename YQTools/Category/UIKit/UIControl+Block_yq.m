@@ -9,6 +9,8 @@
 #import "UIControl+Block_yq.h"
 #import <objc/runtime.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 // UIControlEventTouchDown           = 1 <<  0,      // on all touch downs
 // UIControlEventTouchDownRepeat     = 1 <<  1,      // on multiple touchdowns
 // (tap count > 1)
@@ -50,6 +52,9 @@ block();                                                                \
 }                                                                           \
 }
 @implementation UIControl (Block_yq)
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wstrict-prototypes"
 yq_UICONTROL_EVENT(yq_touchDown, TouchDown)
 yq_UICONTROL_EVENT(yq_touchDownRepeat, TouchDownRepeat)
 yq_UICONTROL_EVENT(yq_touchDragInside, TouchDragInside)
@@ -64,4 +69,8 @@ yq_UICONTROL_EVENT(yq_editingDidBegin, EditingDidBegin)
 yq_UICONTROL_EVENT(yq_editingChanged, EditingChanged)
 yq_UICONTROL_EVENT(yq_editingDidEnd, EditingDidEnd)
 yq_UICONTROL_EVENT(yq_editingDidEndOnExit, EditingDidEndOnExit)
+#pragma clang diagnostic pop
+
 @end
+
+NS_ASSUME_NONNULL_END

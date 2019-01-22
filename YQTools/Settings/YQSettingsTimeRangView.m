@@ -165,7 +165,7 @@
 - (void)initializeData {
     data = [NSMutableArray arrayWithCapacity:24];
     for (int i =  0; i < 24; ++i) {
-        NSString *str = [NSString stringWithFormat:@"%zd：00",i];
+        NSString *str = [NSString stringWithFormat:@"%d：00",i];
         [data addObject:str];
     }
     pickerWidth = (self.bounds.size.width - 40)/3;
