@@ -11,6 +11,9 @@
 
 @interface UIDevice (Hardware_yq)
 
+/** 是否s为iPhone X系列设备 */
++ (BOOL)isIPhoneXSeries;
+
 + (NSString *)yq_name;
 + (NSString *)yq_mode;
 + (NSString *)yq_localizedModel;
