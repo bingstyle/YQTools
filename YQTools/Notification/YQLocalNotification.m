@@ -23,7 +23,11 @@
     // 设置通知声音
     notification.soundName = UILocalNotificationDefaultSoundName;
     // 设置弹出框的标题
-    notification.alertTitle = title;
+    if (@available(iOS 8.2, *)) {
+        notification.alertTitle = title;
+    } else {
+        // Fallback on earlier versions
+    }
     // 设置icon图标badgeValue
     notification.applicationIconBadgeNumber++;
     // 设置显示的内容
