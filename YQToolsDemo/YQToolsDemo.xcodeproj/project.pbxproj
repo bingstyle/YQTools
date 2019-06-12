@@ -58,6 +58,7 @@
 		2D52F7AC212C2DBB00154D85 /* SAMKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D52F7AA212C2DBB00154D85 /* SAMKeychainQuery.m */; };
 		2D52F7AF212C35BE00154D85 /* YQIAPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D52F7AE212C35BD00154D85 /* YQIAPModel.m */; };
 		2D58F4361FE366BF0080B02E /* NSDictionary+JSON_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D58F4351FE366BF0080B02E /* NSDictionary+JSON_yq.m */; };
+		2D5A795A22A7AD50007C4CD5 /* UIDevice+Util_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5A795922A7AD50007C4CD5 /* UIDevice+Util_yq.m */; };
 		2D7ACC001FE8BC9E00C411E7 /* UIView+AutoLayout_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACBFF1FE8BC9E00C411E7 /* UIView+AutoLayout_yq.m */; };
 		2D7ACC031FE8BD1600C411E7 /* UIView+Alert_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACC021FE8BD1600C411E7 /* UIView+Alert_yq.m */; };
 		2D7ACC241FE8FD3F00C411E7 /* UIView+Alert_YQSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACC131FE8FD3F00C411E7 /* UIView+Alert_YQSettings.m */; };
@@ -360,6 +361,7 @@
 		2DAC10E51FFF8809003A17DB /* YQBaseArchiveModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DFBDE091F29E1F3000A57D4 /* YQBaseArchiveModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC10E61FFF8809003A17DB /* YQBaseArchiveModel.m in Headers */ = {isa = PBXBuildFile; fileRef = 2DFBDE0A1F29E1F3000A57D4 /* YQBaseArchiveModel.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC10E81FFF883A003A17DB /* YQBaseArchiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFBDE0A1F29E1F3000A57D4 /* YQBaseArchiveModel.m */; };
+		2DB486CA22A7B5FE00291B30 /* UIDevice+WiFi_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB486C922A7B5FE00291B30 /* UIDevice+WiFi_yq.m */; };
 		2DC407BA1E56F67100210E59 /* YQNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC407B91E56F67100210E59 /* YQNetworking.m */; };
 		2DD57E3621F6B9380044C9B5 /* UIApplication+Service_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD57E3521F6B9380044C9B5 /* UIApplication+Service_yq.m */; };
 		2DD57E3721F6BFC20044C9B5 /* UIApplication+Util_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D97934D202706D100A254B7 /* UIApplication+Util_yq.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -369,6 +371,7 @@
 		2DD57E3B21F6BFC20044C9B5 /* NSObject+Unicode_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DE23D582057ACC0002FBF2F /* NSObject+Unicode_yq.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DD57E3C21F6BFC20044C9B5 /* NSObject+Unicode_yq.m in Headers */ = {isa = PBXBuildFile; fileRef = 2DE23D592057ACC0002FBF2F /* NSObject+Unicode_yq.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DE23D5A2057ACC0002FBF2F /* NSObject+Unicode_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE23D592057ACC0002FBF2F /* NSObject+Unicode_yq.m */; };
+		2DE8B98122B08AC500608618 /* UIView+Mask_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8B98022B08AC500608618 /* UIView+Mask_yq.m */; };
 		2DE97E3A1FCE5A9000BC6FA6 /* UIButton+ImagePosition_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE97E391FCE5A8F00BC6FA6 /* UIButton+ImagePosition_yq.m */; };
 		2DF6E2951E5545D200C81A30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E2941E5545D200C81A30 /* main.m */; };
 		2DF6E2981E5545D200C81A30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E2971E5545D200C81A30 /* AppDelegate.m */; };
@@ -571,6 +574,8 @@
 		2D52F7AE212C35BD00154D85 /* YQIAPModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQIAPModel.m; sourceTree = "<group>"; };
 		2D58F4341FE366BF0080B02E /* NSDictionary+JSON_yq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSON_yq.h"; sourceTree = "<group>"; };
 		2D58F4351FE366BF0080B02E /* NSDictionary+JSON_yq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSON_yq.m"; sourceTree = "<group>"; };
+		2D5A795822A7AD50007C4CD5 /* UIDevice+Util_yq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Util_yq.h"; sourceTree = "<group>"; };
+		2D5A795922A7AD50007C4CD5 /* UIDevice+Util_yq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Util_yq.m"; sourceTree = "<group>"; };
 		2D7ACBFE1FE8BC9E00C411E7 /* UIView+AutoLayout_yq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout_yq.h"; sourceTree = "<group>"; };
 		2D7ACBFF1FE8BC9E00C411E7 /* UIView+AutoLayout_yq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout_yq.m"; sourceTree = "<group>"; };
 		2D7ACC011FE8BD1600C411E7 /* UIView+Alert_yq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Alert_yq.h"; sourceTree = "<group>"; };
@@ -601,12 +606,17 @@
 		2DAC0ED51FFF8386003A17DB /* YQToolsSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YQToolsSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DAC0EDC1FFF8386003A17DB /* YQToolsSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQToolsSDKTests.m; sourceTree = "<group>"; };
 		2DAC0EDE1FFF8386003A17DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DB486C822A7B5FE00291B30 /* UIDevice+WiFi_yq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+WiFi_yq.h"; sourceTree = "<group>"; };
+		2DB486C922A7B5FE00291B30 /* UIDevice+WiFi_yq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+WiFi_yq.m"; sourceTree = "<group>"; };
+		2DB486CB22A7BD0B00291B30 /* YQToolsDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YQToolsDemo.entitlements; sourceTree = "<group>"; };
 		2DC407B81E56F67100210E59 /* YQNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQNetworking.h; sourceTree = "<group>"; };
 		2DC407B91E56F67100210E59 /* YQNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQNetworking.m; sourceTree = "<group>"; };
 		2DD57E3421F6B9380044C9B5 /* UIApplication+Service_yq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Service_yq.h"; sourceTree = "<group>"; };
 		2DD57E3521F6B9380044C9B5 /* UIApplication+Service_yq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Service_yq.m"; sourceTree = "<group>"; };
 		2DE23D582057ACC0002FBF2F /* NSObject+Unicode_yq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Unicode_yq.h"; sourceTree = "<group>"; };
 		2DE23D592057ACC0002FBF2F /* NSObject+Unicode_yq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Unicode_yq.m"; sourceTree = "<group>"; };
+		2DE8B97F22B08AC500608618 /* UIView+Mask_yq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Mask_yq.h"; sourceTree = "<group>"; };
+		2DE8B98022B08AC500608618 /* UIView+Mask_yq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Mask_yq.m"; sourceTree = "<group>"; };
 		2DE97E381FCE5A8F00BC6FA6 /* UIButton+ImagePosition_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImagePosition_yq.h"; sourceTree = "<group>"; };
 		2DE97E391FCE5A8F00BC6FA6 /* UIButton+ImagePosition_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImagePosition_yq.m"; sourceTree = "<group>"; };
 		2DF6E2901E5545D200C81A30 /* YQToolsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YQToolsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -766,12 +776,11 @@
 				2D7ACBF71FE8BA4F00C411E7 /* UIImage */,
 				2D7ACBF61FE8BA3400C411E7 /* UIColor */,
 				2D7ACBF51FE8BA0600C411E7 /* UIButton */,
+				2D5A795722A7A9C6007C4CD5 /* UIDevice */,
 				2D4BA5EF1F25ECE500F29512 /* CALayer+Util_yq.h */,
 				2D4BA5F01F25ECE500F29512 /* CALayer+Util_yq.m */,
 				2D4BA5F31F25ECE500F29512 /* UIBarButtonItem+Badge_yq.h */,
 				2D4BA5F41F25ECE500F29512 /* UIBarButtonItem+Badge_yq.m */,
-				2D4BA6131F25ECE500F29512 /* UIDevice+Hardware_yq.h */,
-				2D4BA6141F25ECE500F29512 /* UIDevice+Hardware_yq.m */,
 				2D4BA6291F25ECE500F29512 /* UILabel+AutoSize_yq.h */,
 				2D4BA62A1F25ECE500F29512 /* UILabel+AutoSize_yq.m */,
 				2D4BA6731F25ED2300F29512 /* UIWindow+Util_yq.h */,
@@ -806,6 +815,19 @@
 			path = SAMKeychain;
 			sourceTree = "<group>";
 		};
+		2D5A795722A7A9C6007C4CD5 /* UIDevice */ = {
+			isa = PBXGroup;
+			children = (
+				2D4BA6131F25ECE500F29512 /* UIDevice+Hardware_yq.h */,
+				2D4BA6141F25ECE500F29512 /* UIDevice+Hardware_yq.m */,
+				2D5A795822A7AD50007C4CD5 /* UIDevice+Util_yq.h */,
+				2D5A795922A7AD50007C4CD5 /* UIDevice+Util_yq.m */,
+				2DB486C822A7B5FE00291B30 /* UIDevice+WiFi_yq.h */,
+				2DB486C922A7B5FE00291B30 /* UIDevice+WiFi_yq.m */,
+			);
+			name = UIDevice;
+			sourceTree = "<group>";
+		};
 		2D7ACBF41FE8B9BB00C411E7 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
@@ -813,6 +835,8 @@
 				2D4BA63C1F25ECE500F29512 /* UIView+Badge_yq.m */,
 				2D4BA63D1F25ECE500F29512 /* UIView+Border_yq.h */,
 				2D4BA63E1F25ECE500F29512 /* UIView+Border_yq.m */,
+				2DE8B97F22B08AC500608618 /* UIView+Mask_yq.h */,
+				2DE8B98022B08AC500608618 /* UIView+Mask_yq.m */,
 				2D4BA63F1F25ECE500F29512 /* UIView+Find_yq.h */,
 				2D4BA6401F25ECE500F29512 /* UIView+Find_yq.m */,
 				2D4BA6411F25ECE500F29512 /* UIView+GestureBlock_yq.h */,
@@ -1052,6 +1076,7 @@
 		2DF6E2921E5545D200C81A30 /* YQToolsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2DB486CB22A7BD0B00291B30 /* YQToolsDemo.entitlements */,
 				2DF6E2961E5545D200C81A30 /* AppDelegate.h */,
 				2DF6E2971E5545D200C81A30 /* AppDelegate.m */,
 				2DF6E2991E5545D200C81A30 /* ViewController.h */,
@@ -1123,8 +1148,8 @@
 			children = (
 				2DF6E5B71E559D4700C81A30 /* YQFoundation.h */,
 				2DF6E5B81E559ECD00C81A30 /* YQUIKit.h */,
-				2D4BA5EE1F25ECE500F29512 /* UIKit */,
 				2DF6E5D91E55ABEF00C81A30 /* Foundation */,
+				2D4BA5EE1F25ECE500F29512 /* UIKit */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1584,8 +1609,13 @@
 					};
 					2DF6E28F1E5545D200C81A30 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 77393G83KM;
+						DevelopmentTeam = J5A2JUBNR9;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.AccessWiFi = {
+								enabled = 1;
+							};
+						};
 					};
 					2DF6E2A81E5545D200C81A30 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1839,6 +1869,7 @@
 				2D4BA6661F25ECE600F29512 /* UINavigationController+Transitions_yq.m in Sources */,
 				2D7ACC261FE8FD3F00C411E7 /* YQSettingsModel.m in Sources */,
 				2D4BA6701F25ECE600F29512 /* UIView+GestureBlock_yq.m in Sources */,
+				2DB486CA22A7B5FE00291B30 /* UIDevice+WiFi_yq.m in Sources */,
 				2D4BA6641F25ECE600F29512 /* UILabel+AutoSize_yq.m in Sources */,
 				2D4BA65E1F25ECE600F29512 /* UIImage+GIF_yq.m in Sources */,
 				2D4BA6471F25ECE500F29512 /* CALayer+Util_yq.m in Sources */,
@@ -1866,6 +1897,7 @@
 				2DFBDE0B1F29E1F3000A57D4 /* YQBaseArchiveModel.m in Sources */,
 				2D4BA6551F25ECE600F29512 /* UIColor+Random_yq.m in Sources */,
 				2DF6E6241E55ABEF00C81A30 /* NSNotificationCenter+MainThread_yq.m in Sources */,
+				2D5A795A22A7AD50007C4CD5 /* UIDevice+Util_yq.m in Sources */,
 				2DF6E6311E55ABEF00C81A30 /* NSString+URLEncode_yq.m in Sources */,
 				2D4BA6521F25ECE600F29512 /* UIColor+Gradient_yq.m in Sources */,
 				2DF6E6201E55ABEF00C81A30 /* NSDictionary+SafeAccess_yq.m in Sources */,
@@ -1895,6 +1927,7 @@
 				2DF6E5D61E55A17200C81A30 /* YQConvert.m in Sources */,
 				2DF6E62B1E55ABEF00C81A30 /* NSString+Contains_yq.m in Sources */,
 				2DF6E6331E55ABEF00C81A30 /* NSTimer+Addition_yq.m in Sources */,
+				2DE8B98122B08AC500608618 /* UIView+Mask_yq.m in Sources */,
 				2DF6E6191E55ABEF00C81A30 /* NSBundle+AppIcon_yq.m in Sources */,
 				2D7ACC001FE8BC9E00C411E7 /* UIView+AutoLayout_yq.m in Sources */,
 				2D52F7AB212C2DBB00154D85 /* SAMKeychain.m in Sources */,
@@ -2205,8 +2238,9 @@
 			baseConfigurationReference = 11EBD51D155625E9D570DE03 /* Pods-YQToolsDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = YQToolsDemo/YQToolsDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 77393G83KM;
+				DEVELOPMENT_TEAM = J5A2JUBNR9;
 				INFOPLIST_FILE = YQToolsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2220,8 +2254,9 @@
 			baseConfigurationReference = FD8F36A155A6BA94B82AA91F /* Pods-YQToolsDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = YQToolsDemo/YQToolsDemo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 77393G83KM;
+				DEVELOPMENT_TEAM = J5A2JUBNR9;
 				INFOPLIST_FILE = YQToolsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

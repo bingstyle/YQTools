@@ -17,7 +17,7 @@
 #import "UIApplication+Service_yq.h"
 
 #import "UIBarButtonItem+Badge_yq.h"
-#import "UIDevice+Hardware_yq.h"
+
 #import "UILabel+AutoSize_yq.h"
 // UINavigationController
 #import "UINavigationController+Transitions_yq.h"
@@ -41,6 +41,10 @@
 // UIControl
 #import "UIControl+Block_yq.h"
 #import "UIControl+Sound_yq.h"
+// UIDevice
+#import "UIDevice+Hardware_yq.h"
+#import "UIDevice+Util_yq.h"
+#import "UIDevice+WiFi_yq.h"
 // UIImage
 #import "UIImage+Alpha_yq.h"
 #import "UIImage+Capture_yq.h"
@@ -65,6 +69,7 @@
 // UIView
 #import "UIView+Badge_yq.h"
 #import "UIView+Border_yq.h"
+#import "UIView+Mask_yq.h"
 #import "UIView+GestureBlock_yq.h"
 #import "UIView+Find_yq.h"
 #import "UIView+Screenshot_yq.h"
