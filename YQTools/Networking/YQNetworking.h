@@ -135,13 +135,13 @@ typedef void (^WXBUploadProgress)(int64_t bytesWritten,
                                  success:(SuccessBlock)success
                                  failure:(FailureBlock)failure;
 /**
- *  上传文件操作
+ *  上传文件
  *
- *  @param url                      上传路径
+ *  @param url              上传路径
  *  @param uploadingFile    待上传文件的路径
  *  @param progress         上传进度
- *  @param success              上传成功回调
- *  @param fail                 上传失败回调
+ *  @param success          上传成功回调
+ *  @param fail             上传失败回调
  *
  *  @return 返回的对象中有可取消请求的API
  */
@@ -154,16 +154,14 @@ typedef void (^WXBUploadProgress)(int64_t bytesWritten,
  *  下载文件
  *
  *  @param url           下载URL
- *  @param saveToPath    下载到哪个路径下
  *  @param progressBlock 下载进度
  *  @param success       下载成功后的回调
  *  @param failure       下载失败后的回调
  *  @return 返回NSURLSessionDownloadTask实例，可用于暂停继续，暂停调用suspend方法，重新开启下载调用resume方法
  */
 + (WXBURLSessionTask *)downloadWithUrl:(NSString *)url
-                            saveToPath:(NSString *)saveToPath
                               progress:(WXBDownloadProgress)progressBlock
-                               success:(SuccessBlock)success
+                               success:(void(^)(NSURL *fileUrl))success
                                failure:(FailureBlock)failure;
 
 /**

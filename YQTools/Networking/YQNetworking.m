@@ -662,9 +662,8 @@ static inline NSString *cachePath() {
 }
 
 + (WXBURLSessionTask *)downloadWithUrl:(NSString *)url
-                            saveToPath:(NSString *)saveToPath
                               progress:(WXBDownloadProgress)progressBlock
-                               success:(SuccessBlock)success
+                               success:(void(^)(NSURL *fileUrl))success
                                failure:(FailureBlock)failure {
     if ([self baseUrl] == nil) {
         if ([NSURL URLWithString:url] == nil) {
@@ -687,14 +686,18 @@ static inline NSString *cachePath() {
         if (progressBlock) {
             progressBlock(downloadProgress.completedUnitCount, downloadProgress.totalUnitCount);
         }
-    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-        return [NSURL URLWithString:saveToPath];
-    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+    } destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+        
+        NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+        return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
+        
+    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+        NSLog(@"File downloaded to: %@", filePath);
         [[self allTasks] removeObject:session];
         
         if (error == nil) {
             if (success) {
-                success(filePath.absoluteString);
+                success(filePath);
             }
             
             if ([self isDebug]) {
@@ -711,7 +714,6 @@ static inline NSString *cachePath() {
             }
         }
     }];
-    
     [session resume];
     if (session) {
         [[self allTasks] addObject:session];
