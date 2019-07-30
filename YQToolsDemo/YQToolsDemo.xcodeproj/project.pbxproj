@@ -58,14 +58,14 @@
 		2D52F7AB212C2DBB00154D85 /* SAMKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D52F7A8212C2DBB00154D85 /* SAMKeychain.m */; };
 		2D52F7AC212C2DBB00154D85 /* SAMKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D52F7AA212C2DBB00154D85 /* SAMKeychainQuery.m */; };
 		2D52F7AF212C35BE00154D85 /* YQIAPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D52F7AE212C35BD00154D85 /* YQIAPModel.m */; };
-		2D58385022EFF03A003FDFBF /* UIView+Mask_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DE8B97F22B08AC500608618 /* UIView+Mask_yq.h */; };
-		2D58385122EFF03A003FDFBF /* UIView+Mask_yq.m in Headers */ = {isa = PBXBuildFile; fileRef = 2DE8B98022B08AC500608618 /* UIView+Mask_yq.m */; };
-		2D58385222EFF03A003FDFBF /* UIDevice+Util_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D5A795822A7AD50007C4CD5 /* UIDevice+Util_yq.h */; };
-		2D58385322EFF03A003FDFBF /* UIDevice+Util_yq.m in Headers */ = {isa = PBXBuildFile; fileRef = 2D5A795922A7AD50007C4CD5 /* UIDevice+Util_yq.m */; };
-		2D58385422EFF03A003FDFBF /* UIDevice+WiFi_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DB486C822A7B5FE00291B30 /* UIDevice+WiFi_yq.h */; };
-		2D58385522EFF03A003FDFBF /* UIDevice+WiFi_yq.m in Headers */ = {isa = PBXBuildFile; fileRef = 2DB486C922A7B5FE00291B30 /* UIDevice+WiFi_yq.m */; };
-		2D58385622EFF03A003FDFBF /* WXBNavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D001D1622EFEE1B00ED9F61 /* WXBNavigationBar.h */; };
-		2D58385722EFF03A003FDFBF /* WXBNavigationBar.m in Headers */ = {isa = PBXBuildFile; fileRef = 2D001D1722EFEE1B00ED9F61 /* WXBNavigationBar.m */; };
+		2D58385022EFF03A003FDFBF /* UIView+Mask_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DE8B97F22B08AC500608618 /* UIView+Mask_yq.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D58385122EFF03A003FDFBF /* UIView+Mask_yq.m in Headers */ = {isa = PBXBuildFile; fileRef = 2DE8B98022B08AC500608618 /* UIView+Mask_yq.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D58385222EFF03A003FDFBF /* UIDevice+Util_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D5A795822A7AD50007C4CD5 /* UIDevice+Util_yq.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D58385322EFF03A003FDFBF /* UIDevice+Util_yq.m in Headers */ = {isa = PBXBuildFile; fileRef = 2D5A795922A7AD50007C4CD5 /* UIDevice+Util_yq.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D58385422EFF03A003FDFBF /* UIDevice+WiFi_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DB486C822A7B5FE00291B30 /* UIDevice+WiFi_yq.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D58385522EFF03A003FDFBF /* UIDevice+WiFi_yq.m in Headers */ = {isa = PBXBuildFile; fileRef = 2DB486C922A7B5FE00291B30 /* UIDevice+WiFi_yq.m */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D58385622EFF03A003FDFBF /* WXBNavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D001D1622EFEE1B00ED9F61 /* WXBNavigationBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D58385722EFF03A003FDFBF /* WXBNavigationBar.m in Headers */ = {isa = PBXBuildFile; fileRef = 2D001D1722EFEE1B00ED9F61 /* WXBNavigationBar.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D58F4361FE366BF0080B02E /* NSDictionary+JSON_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D58F4351FE366BF0080B02E /* NSDictionary+JSON_yq.m */; };
 		2D5A795A22A7AD50007C4CD5 /* UIDevice+Util_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5A795922A7AD50007C4CD5 /* UIDevice+Util_yq.m */; };
 		2D7ACC001FE8BC9E00C411E7 /* UIView+AutoLayout_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACBFF1FE8BC9E00C411E7 /* UIView+AutoLayout_yq.m */; };
@@ -773,15 +773,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2D001D1522EFEE1B00ED9F61 /* WXBNavigationBar */ = {
-			isa = PBXGroup;
-			children = (
-				2D001D1622EFEE1B00ED9F61 /* WXBNavigationBar.h */,
-				2D001D1722EFEE1B00ED9F61 /* WXBNavigationBar.m */,
-			);
-			path = WXBNavigationBar;
-			sourceTree = "<group>";
-		};
 		2D4BA5EE1F25ECE500F29512 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1197,7 +1188,8 @@
 				2DF6E5D41E55A17200C81A30 /* YQSandbox.h */,
 				2DF6E5D51E55A17200C81A30 /* YQSandbox.m */,
 				2D9054691E821F7E00FFEF4D /* YQAdjustScreen.h */,
-				2D001D1522EFEE1B00ED9F61 /* WXBNavigationBar */,
+				2D001D1622EFEE1B00ED9F61 /* WXBNavigationBar.h */,
+				2D001D1722EFEE1B00ED9F61 /* WXBNavigationBar.m */,
 				2D52F79D212C159F00154D85 /* IAP */,
 			);
 			path = Utilities;

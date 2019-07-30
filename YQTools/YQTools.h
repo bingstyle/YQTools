@@ -36,5 +36,4 @@
 #import "WXBNavigationBar.h"
 
 
-
 #endif /* YQTools_h */
