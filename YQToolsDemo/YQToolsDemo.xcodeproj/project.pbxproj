@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D001D1822EFEE1B00ED9F61 /* WXBNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D001D1722EFEE1B00ED9F61 /* WXBNavigationBar.m */; };
 		2D4BA6471F25ECE500F29512 /* CALayer+Util_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA5F01F25ECE500F29512 /* CALayer+Util_yq.m */; };
 		2D4BA6491F25ECE500F29512 /* UIBarButtonItem+Badge_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA5F41F25ECE500F29512 /* UIBarButtonItem+Badge_yq.m */; };
 		2D4BA64A1F25ECE500F29512 /* UIButton+BackgroundColor_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA5F61F25ECE500F29512 /* UIButton+BackgroundColor_yq.m */; };
@@ -57,6 +58,14 @@
 		2D52F7AB212C2DBB00154D85 /* SAMKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D52F7A8212C2DBB00154D85 /* SAMKeychain.m */; };
 		2D52F7AC212C2DBB00154D85 /* SAMKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D52F7AA212C2DBB00154D85 /* SAMKeychainQuery.m */; };
 		2D52F7AF212C35BE00154D85 /* YQIAPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D52F7AE212C35BD00154D85 /* YQIAPModel.m */; };
+		2D58385022EFF03A003FDFBF /* UIView+Mask_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DE8B97F22B08AC500608618 /* UIView+Mask_yq.h */; };
+		2D58385122EFF03A003FDFBF /* UIView+Mask_yq.m in Headers */ = {isa = PBXBuildFile; fileRef = 2DE8B98022B08AC500608618 /* UIView+Mask_yq.m */; };
+		2D58385222EFF03A003FDFBF /* UIDevice+Util_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D5A795822A7AD50007C4CD5 /* UIDevice+Util_yq.h */; };
+		2D58385322EFF03A003FDFBF /* UIDevice+Util_yq.m in Headers */ = {isa = PBXBuildFile; fileRef = 2D5A795922A7AD50007C4CD5 /* UIDevice+Util_yq.m */; };
+		2D58385422EFF03A003FDFBF /* UIDevice+WiFi_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DB486C822A7B5FE00291B30 /* UIDevice+WiFi_yq.h */; };
+		2D58385522EFF03A003FDFBF /* UIDevice+WiFi_yq.m in Headers */ = {isa = PBXBuildFile; fileRef = 2DB486C922A7B5FE00291B30 /* UIDevice+WiFi_yq.m */; };
+		2D58385622EFF03A003FDFBF /* WXBNavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D001D1622EFEE1B00ED9F61 /* WXBNavigationBar.h */; };
+		2D58385722EFF03A003FDFBF /* WXBNavigationBar.m in Headers */ = {isa = PBXBuildFile; fileRef = 2D001D1722EFEE1B00ED9F61 /* WXBNavigationBar.m */; };
 		2D58F4361FE366BF0080B02E /* NSDictionary+JSON_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D58F4351FE366BF0080B02E /* NSDictionary+JSON_yq.m */; };
 		2D5A795A22A7AD50007C4CD5 /* UIDevice+Util_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5A795922A7AD50007C4CD5 /* UIDevice+Util_yq.m */; };
 		2D7ACC001FE8BC9E00C411E7 /* UIView+AutoLayout_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACBFF1FE8BC9E00C411E7 /* UIView+AutoLayout_yq.m */; };
@@ -473,6 +482,8 @@
 
 /* Begin PBXFileReference section */
 		11EBD51D155625E9D570DE03 /* Pods-YQToolsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YQToolsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YQToolsDemo/Pods-YQToolsDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		2D001D1622EFEE1B00ED9F61 /* WXBNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXBNavigationBar.h; sourceTree = "<group>"; };
+		2D001D1722EFEE1B00ED9F61 /* WXBNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXBNavigationBar.m; sourceTree = "<group>"; };
 		2D4BA5EF1F25ECE500F29512 /* CALayer+Util_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Util_yq.h"; sourceTree = "<group>"; };
 		2D4BA5F01F25ECE500F29512 /* CALayer+Util_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Util_yq.m"; sourceTree = "<group>"; };
 		2D4BA5F31F25ECE500F29512 /* UIBarButtonItem+Badge_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Badge_yq.h"; sourceTree = "<group>"; };
@@ -762,6 +773,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D001D1522EFEE1B00ED9F61 /* WXBNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				2D001D1622EFEE1B00ED9F61 /* WXBNavigationBar.h */,
+				2D001D1722EFEE1B00ED9F61 /* WXBNavigationBar.m */,
+			);
+			path = WXBNavigationBar;
+			sourceTree = "<group>";
+		};
 		2D4BA5EE1F25ECE500F29512 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1177,6 +1197,7 @@
 				2DF6E5D41E55A17200C81A30 /* YQSandbox.h */,
 				2DF6E5D51E55A17200C81A30 /* YQSandbox.m */,
 				2D9054691E821F7E00FFEF4D /* YQAdjustScreen.h */,
+				2D001D1522EFEE1B00ED9F61 /* WXBNavigationBar */,
 				2D52F79D212C159F00154D85 /* IAP */,
 			);
 			path = Utilities;
@@ -1488,6 +1509,14 @@
 				2DD57E3A21F6BFC20044C9B5 /* UIApplication+Service_yq.m in Headers */,
 				2DD57E3B21F6BFC20044C9B5 /* NSObject+Unicode_yq.h in Headers */,
 				2DD57E3C21F6BFC20044C9B5 /* NSObject+Unicode_yq.m in Headers */,
+				2D58385022EFF03A003FDFBF /* UIView+Mask_yq.h in Headers */,
+				2D58385122EFF03A003FDFBF /* UIView+Mask_yq.m in Headers */,
+				2D58385222EFF03A003FDFBF /* UIDevice+Util_yq.h in Headers */,
+				2D58385322EFF03A003FDFBF /* UIDevice+Util_yq.m in Headers */,
+				2D58385422EFF03A003FDFBF /* UIDevice+WiFi_yq.h in Headers */,
+				2D58385522EFF03A003FDFBF /* UIDevice+WiFi_yq.m in Headers */,
+				2D58385622EFF03A003FDFBF /* WXBNavigationBar.h in Headers */,
+				2D58385722EFF03A003FDFBF /* WXBNavigationBar.m in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1884,6 +1913,7 @@
 				2DF6E2951E5545D200C81A30 /* main.m in Sources */,
 				2D4BA64C1F25ECE600F29512 /* UIButton+Block_yq.m in Sources */,
 				2D4BA6691F25ECE600F29512 /* UITextField+InputLimit_yq.m in Sources */,
+				2D001D1822EFEE1B00ED9F61 /* WXBNavigationBar.m in Sources */,
 				2D4BA65A1F25ECE600F29512 /* UIImage+Alpha_yq.m in Sources */,
 				2DF6E5D71E55A17200C81A30 /* YQPublic.m in Sources */,
 				2D4BA6721F25ECE600F29512 /* UIView+Util_yq.m in Sources */,
