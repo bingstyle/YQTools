@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface UINavigationController (wxb_nav)<UINavigationBarDelegate>
+@interface UINavigationController (wxb_nav)
 
 /// 全屏返回手势
 @property (nonatomic, strong, readonly) UIPanGestureRecognizer *wxb_fullscreenPopGestureRecognizer;

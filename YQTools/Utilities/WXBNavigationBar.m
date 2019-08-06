@@ -74,10 +74,10 @@ typedef void (^_WXBViewControllerWillAppearInjectBlock)(UIViewController *viewCo
 
 /** 更新导航栏背景透明度 */
 - (void)updateNavBarBackgroundAlpha:(CGFloat)alpha {
-
+    
     self.translucent = YES; // 修正translucent为YES，此属性可能被隐式修改，在使用 setBackgroundImage:forBarMetrics: 方法时，如果 image 里的像素点没有 alpha 通道或者 alpha 全部等于 1 会使得 translucent 变为 NO 或者 nil。
     [self setShadowImage:alpha < 1 ? [UIImage new] : nil];
-
+    
     UIView *barBackgroundView = self.subviews.firstObject;
     if (@available(iOS 11.0, *)) {
         for (UIView *view in barBackgroundView.subviews) {
@@ -102,6 +102,7 @@ typedef void (^_WXBViewControllerWillAppearInjectBlock)(UIViewController *viewCo
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         wxb_swizzling_exchangeMethod([UINavigationController class] ,NSSelectorFromString(@"_updateInteractiveTransition:"),    @selector(wxb_updateInteractiveTransition:));
+        wxb_swizzling_exchangeMethod([UINavigationController class], @selector(popViewControllerAnimated:), @selector(wxb_popViewControllerAnimated:));
         wxb_swizzling_exchangeMethod([UINavigationController class], @selector(popToViewController:animated:), @selector(wxb_popToViewController:animated:));
         wxb_swizzling_exchangeMethod([UINavigationController class], @selector(popToRootViewControllerAnimated:), @selector(wxb_popToRootViewControllerAnimated:));
         wxb_swizzling_exchangeMethod([UINavigationController class], @selector(pushViewController:animated:), @selector(wxb_pushViewController:animated:));
@@ -192,7 +193,7 @@ typedef void (^_WXBViewControllerWillAppearInjectBlock)(UIViewController *viewCo
         NSTimeInterval finishDuration = [context transitionDuration] * (double)(1 - [context percentComplete]);
         [UIView animateWithDuration:finishDuration animations:^{
             CGFloat nowAlpha = [context viewControllerForKey:
-                                 UITransitionContextToViewControllerKey].wxb_navBarBackgroundAlpha;
+                                UITransitionContextToViewControllerKey].wxb_navBarBackgroundAlpha;
             NSLog(@"自动完成返回到alpha：%f", nowAlpha);
             [self.navigationBar updateNavBarBackgroundAlpha:nowAlpha];
         }];
@@ -200,7 +201,8 @@ typedef void (^_WXBViewControllerWillAppearInjectBlock)(UIViewController *viewCo
 }
 
 #pragma mark - Pop
-static CGFloat popDuration = 0.3;
+
+static CGFloat popDuration = 0.35;
 static int popDisplayCount = 0;
 - (CGFloat)popProgress {
     CGFloat all = 60 * popDuration;
@@ -208,8 +210,7 @@ static int popDisplayCount = 0;
     return current / all;
 }
 
-- (NSArray<UIViewController *> *)wxb_popToViewController:(UIViewController *)viewController animated:(BOOL)animated {
-
+- (UIViewController *)wxb_popViewControllerAnimated:(BOOL)animated {
     __block CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(popNeedDisplay)];
     [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
     [CATransaction setCompletionBlock:^{
@@ -218,6 +219,23 @@ static int popDisplayCount = 0;
         popDisplayCount = 0;
     }];
     [CATransaction setAnimationDuration:popDuration];
+    [CATransaction setAnimationTimingFunction: [CAMediaTimingFunction  functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+    [CATransaction begin];
+    UIViewController *vc = [self wxb_popViewControllerAnimated:animated];
+    [CATransaction commit];
+    return vc;
+}
+- (NSArray<UIViewController *> *)wxb_popToViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    
+    __block CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(popNeedDisplay)];
+    [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+    [CATransaction setCompletionBlock:^{
+        [displayLink invalidate];
+        displayLink = nil;
+        popDisplayCount = 0;
+    }];
+    [CATransaction setAnimationDuration:popDuration];
+    [CATransaction setAnimationTimingFunction: [CAMediaTimingFunction  functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
     [CATransaction begin];
     NSArray<UIViewController *> *vcs = [self wxb_popToViewController:viewController animated:animated];
     [CATransaction commit];
@@ -233,6 +251,7 @@ static int popDisplayCount = 0;
         popDisplayCount = 0;
     }];
     [CATransaction setAnimationDuration:popDuration];
+    [CATransaction setAnimationTimingFunction: [CAMediaTimingFunction  functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
     [CATransaction begin];
     NSArray<UIViewController *> *vcs = [self wxb_popToRootViewControllerAnimated:animated];
     [CATransaction commit];
@@ -242,7 +261,6 @@ static int popDisplayCount = 0;
     if (self.topViewController != nil && self.topViewController.transitionCoordinator != nil) {
         popDisplayCount += 1;
         CGFloat progress = [self popProgress];
-        
         CGFloat fromAlpha = [self.topViewController.transitionCoordinator viewControllerForKey:UITransitionContextFromViewControllerKey].wxb_navBarBackgroundAlpha;
         CGFloat toAlpha = [self.topViewController.transitionCoordinator viewControllerForKey:UITransitionContextToViewControllerKey].wxb_navBarBackgroundAlpha;
         CGFloat nowAlpha = fromAlpha + (toAlpha - fromAlpha) * progress;
@@ -252,7 +270,7 @@ static int popDisplayCount = 0;
 }
 
 #pragma mark - Push
-static CGFloat pushDuration = 0.5;
+static CGFloat pushDuration = 0.35;
 static int pushDisplayCount = 0;
 - (CGFloat)pushProgress {
     CGFloat all = 60 * pushDuration;
@@ -261,27 +279,27 @@ static int pushDisplayCount = 0;
 }
 
 - (void)wxb_pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-
+    
     if (![self.interactivePopGestureRecognizer.view.gestureRecognizers containsObject:self.wxb_fullscreenPopGestureRecognizer]) {
-
+        
         // Add our own gesture recognizer to where the onboard screen edge pan gesture recognizer is attached to.
         [self.interactivePopGestureRecognizer.view addGestureRecognizer:self.wxb_fullscreenPopGestureRecognizer];
-
+        
         // Forward the gesture events to the private handler of the onboard gesture recognizer.
         NSArray *internalTargets = [self.interactivePopGestureRecognizer valueForKey:@"targets"];
         id internalTarget = [internalTargets.firstObject valueForKey:@"target"];
         SEL internalAction = NSSelectorFromString(@"handleNavigationTransition:");
         self.wxb_fullscreenPopGestureRecognizer.delegate = self.wxb_popGestureRecognizerDelegate;
         [self.wxb_fullscreenPopGestureRecognizer addTarget:internalTarget action:internalAction];
-
+        
         // Disable the onboard gesture recognizer.
         self.interactivePopGestureRecognizer.enabled = NO;
     }
-
+    
     // Handle perferred navigation bar appearance.
     [self wxb_setupViewControllerBasedNavigationBarAppearanceIfNeeded:viewController];
-
-
+    
+    
     __block CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(pushNeedDisplay)];
     [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
     [CATransaction setCompletionBlock:^{
@@ -290,6 +308,7 @@ static int pushDisplayCount = 0;
         pushDisplayCount = 0;
     }];
     [CATransaction setAnimationDuration:pushDuration];
+    [CATransaction setAnimationTimingFunction: [CAMediaTimingFunction  functionWithName:kCAMediaTimingFunctionEaseIn]];
     [CATransaction begin];
     [self wxb_pushViewController:viewController animated:animated];
     [CATransaction commit];
@@ -312,7 +331,7 @@ static int pushDisplayCount = 0;
     if (!self.wxb_viewControllerBasedNavigationBarAppearanceEnabled) {
         return;
     }
-
+    
     __weak typeof(self) weakSelf = self;
     _WXBViewControllerWillAppearInjectBlock block = ^(UIViewController *viewController, BOOL animated) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
@@ -320,7 +339,7 @@ static int pushDisplayCount = 0;
             [strongSelf setNavigationBarHidden:viewController.wxb_prefersNavigationBarHidden animated:animated];
         }
     };
-
+    
     // Setup will appear inject block to appearing view controller.
     // Setup disappearing view controller as well, because not every view controller is added into
     // stack by pushing, maybe by "-setViewControllers:".
@@ -352,7 +371,7 @@ static int pushDisplayCount = 0;
 {
     // Forward to primary implementation.
     [self wxb_viewWillAppear:animated];
-
+    
     if (self.wxb_willAppearInjectBlock) {
         self.wxb_willAppearInjectBlock(self, animated);
     }
