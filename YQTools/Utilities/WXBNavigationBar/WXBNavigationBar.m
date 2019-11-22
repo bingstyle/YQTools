@@ -186,7 +186,7 @@ typedef void (^_WXBViewControllerWillAppearInjectBlock)(UIViewController *viewCo
         NSTimeInterval cancelDuration = [context transitionDuration] * (double)[context percentComplete];
         [UIView animateWithDuration:cancelDuration animations:^{
             CGFloat nowAlpha = [context viewControllerForKey:UITransitionContextFromViewControllerKey].wxb_navBarBackgroundAlpha;
-            NSLog(@"自动取消返回到alpha：%f", nowAlpha);
+//            NSLog(@"自动取消返回到alpha：%f", nowAlpha);
             [self.navigationBar updateNavBarBackgroundAlpha:nowAlpha];
         }];
     } else {// 自动完成了返回手势
@@ -194,7 +194,7 @@ typedef void (^_WXBViewControllerWillAppearInjectBlock)(UIViewController *viewCo
         [UIView animateWithDuration:finishDuration animations:^{
             CGFloat nowAlpha = [context viewControllerForKey:
                                 UITransitionContextToViewControllerKey].wxb_navBarBackgroundAlpha;
-            NSLog(@"自动完成返回到alpha：%f", nowAlpha);
+//            NSLog(@"自动完成返回到alpha：%f", nowAlpha);
             [self.navigationBar updateNavBarBackgroundAlpha:nowAlpha];
         }];
     }
@@ -279,6 +279,11 @@ static int pushDisplayCount = 0;
 }
 
 - (void)wxb_pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    // 处理系统分享打开Message没有标题和取消按钮
+    if ([self isKindOfClass:NSClassFromString(@"MFMessageComposeViewController")]) {
+        [self wxb_pushViewController:viewController animated:animated];
+        return;
+    }
     
     if (![self.interactivePopGestureRecognizer.view.gestureRecognizers containsObject:self.wxb_fullscreenPopGestureRecognizer]) {
         

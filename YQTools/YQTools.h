@@ -33,7 +33,6 @@
 #import "YQSandbox.h"
 #import "YQLocalNotification.h"
 #import "YQAdjustScreen.h"
-#import "WXBNavigationBar.h"
 
 
 #endif /* YQTools_h */
