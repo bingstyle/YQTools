@@ -1,11 +1,11 @@
 
-# 说明平台是ios，版本是8.0
-platform :ios, '8.0'
+# 说明平台是ios，版本是11.0
+platform :ios, '11.0'
 # 忽略引入库的所有警告
 inhibit_all_warnings!
 
 target 'YQToolsDemo' do
 
-pod 'AFNetworking', '~> 3.0'
+pod 'AFNetworking'
 
 end
