@@ -84,9 +84,8 @@ typedef void (^_WXBViewControllerWillAppearInjectBlock)(UIViewController *viewCo
             view.alpha = alpha;
         }
         [barBackgroundView.subviews.firstObject setHidden:alpha == 0];
-    } else {
-        barBackgroundView.alpha = alpha;
     }
+    barBackgroundView.alpha = alpha;
 }
 
 @end
