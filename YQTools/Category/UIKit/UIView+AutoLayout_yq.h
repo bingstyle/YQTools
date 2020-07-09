@@ -10,27 +10,27 @@
 
 @interface UIView (AutoLayout_yq)
 
-- (void)addConstraintToView:(UIView *)view edgeInset:(UIEdgeInsets)edgeInset;
+- (void)yq_addConstraintToView:(UIView *)view edgeInset:(UIEdgeInsets)edgeInset;
 
-- (void)addConstraintWithView:(UIView *)view topView:(UIView *)topView leftView:(UIView *)leftView
+- (void)yq_addConstraintWithView:(UIView *)view topView:(UIView *)topView leftView:(UIView *)leftView
                    bottomView:(UIView *)bottomView rightView:(UIView *)rightView edgeInset:(UIEdgeInsets)edgeInset;
 
-- (void)addConstraintWithLeftView:(UIView *)leftView toRightView:(UIView *)rightView constant:(CGFloat)constant;
+- (void)yq_addConstraintWithLeftView:(UIView *)leftView toRightView:(UIView *)rightView constant:(CGFloat)constant;
 
-- (NSLayoutConstraint *)addConstraintWithTopView:(UIView *)topView toBottomView:(UIView *)bottomView constant:(CGFloat)constant;
+- (NSLayoutConstraint *)yq_addConstraintWithTopView:(UIView *)topView toBottomView:(UIView *)bottomView constant:(CGFloat)constant;
 
-- (void)addConstraintWidth:(CGFloat)width height:(CGFloat)height;
+- (void)yq_addConstraintWidth:(CGFloat)width height:(CGFloat)height;
 
-- (void)addConstraintEqualWithView:(UIView *)view widthToView:(UIView *)wView heightToView:(UIView *)hView;
+- (void)yq_addConstraintEqualWithView:(UIView *)view widthToView:(UIView *)wView heightToView:(UIView *)hView;
 
-- (NSLayoutConstraint *)addConstraintCenterYToView:(UIView *)yView constant:(CGFloat)constant;
+- (NSLayoutConstraint *)yq_addConstraintCenterYToView:(UIView *)yView constant:(CGFloat)constant;
 
-- (void)addConstraintCenterXToView:(UIView *)xView centerYToView:(UIView *)yView;
+- (void)yq_addConstraintCenterXToView:(UIView *)xView centerYToView:(UIView *)yView;
 
-- (void)removeConstraintWithAttribte:(NSLayoutAttribute)attr;
+- (void)yq_removeConstraintWithAttribte:(NSLayoutAttribute)attr;
 
-- (void)removeConstraintWithView:(UIView *)view attribute:(NSLayoutAttribute)attr;
+- (void)yq_removeConstraintWithView:(UIView *)view attribute:(NSLayoutAttribute)attr;
 
-- (void)removeAllConstraints;
+- (void)yq_removeAllConstraints;
 
 @end

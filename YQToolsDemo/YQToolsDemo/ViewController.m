@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "YQTools.h"
 #import "YQSettings.h"
+#import "YQNetworking.h"
 
 @interface ViewController ()
 
@@ -30,6 +31,7 @@
     YQSettingsTableView *tableview = [[YQSettingsTableView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:tableview];
     self.view.backgroundColor = [UIColor yq_randomColor];
+    
 }
 
 #pragma mark - Delegate

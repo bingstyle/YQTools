@@ -19,19 +19,19 @@
 @property (nonatomic, assign) CGFloat alertViewOriginY;  // default center Y
 @property (nonatomic, assign) CGFloat alertViewEdging;   // default 15
 
-+(void)showAlertViewWithView:(UIView *)alertView;
++(void)yq_showAlertViewWithView:(UIView *)alertView;
 
-+ (void)showAlertViewWithView:(UIView *)alertView backgoundTapDismissEnable:(BOOL)backgoundTapDismissEnable;
++ (void)yq_showAlertViewWithView:(UIView *)alertView backgoundTapDismissEnable:(BOOL)backgoundTapDismissEnable;
 
-+(void)showAlertViewWithView:(UIView *)alertView originY:(CGFloat)originY;
++(void)yq_showAlertViewWithView:(UIView *)alertView originY:(CGFloat)originY;
 
-+(void)showAlertViewWithView:(UIView *)alertView originY:(CGFloat)originY backgoundTapDismissEnable:(BOOL)backgoundTapDismissEnable;
++(void)yq_showAlertViewWithView:(UIView *)alertView originY:(CGFloat)originY backgoundTapDismissEnable:(BOOL)backgoundTapDismissEnable;
 
 + (instancetype)alertViewWithView:(UIView *)alertView;
 
-- (void)show;
+- (void)yq_show;
 
-- (void)hide;
+- (void)yq_hide;
 
 @end
 
@@ -45,9 +45,9 @@
         _backgoundTapDismissEnable = NO;
         _alertViewEdging = 15;
         
-        [self addBackgroundView];
+        [self yq_addBackgroundView];
         
-        [self addSingleGesture];
+        [self yq_addSingleGesture];
     }
     return self;
 }
@@ -67,33 +67,33 @@
     return [[self alloc]initWithAlertView:tipView];
 }
 
-+ (void)showAlertViewWithView:(UIView *)alertView
++ (void)yq_showAlertViewWithView:(UIView *)alertView
 {
-    [self showAlertViewWithView:alertView backgoundTapDismissEnable:NO];
+    [self yq_showAlertViewWithView:alertView backgoundTapDismissEnable:NO];
 }
 
-+ (void)showAlertViewWithView:(UIView *)alertView backgoundTapDismissEnable:(BOOL)backgoundTapDismissEnable
++ (void)yq_showAlertViewWithView:(UIView *)alertView backgoundTapDismissEnable:(BOOL)backgoundTapDismissEnable
 {
     YQShowAlertView *showTipView = [self alertViewWithView:alertView];
     showTipView.backgoundTapDismissEnable = backgoundTapDismissEnable;
-    [showTipView show];
+    [showTipView yq_show];
 }
 
-+ (void)showAlertViewWithView:(UIView *)alertView originY:(CGFloat)originY
++ (void)yq_showAlertViewWithView:(UIView *)alertView originY:(CGFloat)originY
 {
-    [self showAlertViewWithView:alertView
+    [self yq_showAlertViewWithView:alertView
                         originY:originY backgoundTapDismissEnable:NO];
 }
 
-+ (void)showAlertViewWithView:(UIView *)alertView originY:(CGFloat)originY backgoundTapDismissEnable:(BOOL)backgoundTapDismissEnable
++ (void)yq_showAlertViewWithView:(UIView *)alertView originY:(CGFloat)originY backgoundTapDismissEnable:(BOOL)backgoundTapDismissEnable
 {
     YQShowAlertView *showTipView = [self alertViewWithView:alertView];
     showTipView.alertViewOriginY = originY;
     showTipView.backgoundTapDismissEnable = backgoundTapDismissEnable;
-    [showTipView show];
+    [showTipView yq_show];
 }
 
-- (void)addBackgroundView
+- (void)yq_addBackgroundView
 {
     if (_backgroundView == nil) {
         UIView *backgroundView = [[UIView alloc]initWithFrame:self.bounds];
@@ -102,42 +102,42 @@
     }
     [self insertSubview:_backgroundView atIndex:0];
     _backgroundView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self addConstraintToView:_backgroundView edgeInset:UIEdgeInsetsZero];
+    [self yq_addConstraintToView:_backgroundView edgeInset:UIEdgeInsetsZero];
 }
 
-- (void)setBackgroundView:(UIView *)backgroundView
+- (void)yq_setBackgroundView:(UIView *)backgroundView
 {
     if (_backgroundView != backgroundView) {
         [_backgroundView removeFromSuperview];
         _backgroundView = backgroundView;
-        [self addBackgroundView];
-        [self addSingleGesture];
+        [self yq_addBackgroundView];
+        [self yq_addSingleGesture];
     }
 }
-- (void)setBackgoundTapDismissEnable:(BOOL)backgoundTapDismissEnable
+- (void)yq_setBackgoundTapDismissEnable:(BOOL)backgoundTapDismissEnable
 {
     _backgoundTapDismissEnable = backgoundTapDismissEnable;
     _singleTap.enabled = backgoundTapDismissEnable;
 }
 
-- (void)didMoveToSuperview
+- (void)yq_didMoveToSuperview
 {
     if (self.superview) {
         self.translatesAutoresizingMaskIntoConstraints = NO;
-        [self.superview addConstraintToView:self edgeInset:UIEdgeInsetsZero];
-        [self layoutAlertView];
+        [self.superview yq_addConstraintToView:self edgeInset:UIEdgeInsetsZero];
+        [self yq_layoutAlertView];
     }
 }
 
-- (void)layoutAlertView
+- (void)yq_layoutAlertView
 {
     _alertView.translatesAutoresizingMaskIntoConstraints = NO;
     // center X
-    [self addConstraintCenterXToView:_alertView centerYToView:nil];
+    [self yq_addConstraintCenterXToView:_alertView centerYToView:nil];
     
     // width, height
     if (!CGSizeEqualToSize(_alertView.frame.size,CGSizeZero)) {
-        [_alertView addConstraintWidth:CGRectGetWidth(_alertView.frame) height:CGRectGetHeight(_alertView.frame)];
+        [_alertView yq_addConstraintWidth:CGRectGetWidth(_alertView.frame) height:CGRectGetHeight(_alertView.frame)];
         
     }else {
         BOOL findAlertViewWidthConstraint = NO;
@@ -149,12 +149,12 @@
         }
         
         if (!findAlertViewWidthConstraint) {
-            [_alertView addConstraintWidth:CGRectGetWidth(self.superview.frame)-2*_alertViewEdging height:0];
+            [_alertView yq_addConstraintWidth:CGRectGetWidth(self.superview.frame)-2*_alertViewEdging height:0];
         }
     }
     
     // topY
-    NSLayoutConstraint *alertViewCenterYConstraint = [self addConstraintCenterYToView:_alertView constant:0];
+    NSLayoutConstraint *alertViewCenterYConstraint = [self yq_addConstraintCenterYToView:_alertView constant:0];
     
     if (_alertViewOriginY > 0) {
         [_alertView layoutIfNeeded];
@@ -163,7 +163,7 @@
 }
 
 #pragma mark - add Gesture
-- (void)addSingleGesture
+- (void)yq_addSingleGesture
 {
     self.userInteractionEnabled = YES;
     //单指单击
@@ -175,12 +175,12 @@
 }
 
 #pragma mark 手指点击事件
-- (void)singleTap:(UITapGestureRecognizer *)sender
+- (void)yq_singleTap:(UITapGestureRecognizer *)sender
 {
-    [self hide];
+    [self yq_hide];
 }
 
-- (void)show
+- (void)yq_show
 {
     if (self.superview == nil) {
         [[[UIApplication sharedApplication] keyWindow] addSubview:self];
@@ -194,7 +194,7 @@
     
 }
 
-- (void)hide
+- (void)yq_hide
 {
     if (self.superview) {
         [UIView animateWithDuration:0.3 animations:^{
@@ -206,7 +206,7 @@
     }
 }
 
-- (void)dealloc
+- (void)yq_dealloc
 {
     NSLog(@"%@ dealloc",NSStringFromClass([self class]));
 }
@@ -219,36 +219,36 @@
 
 #pragma mark - show in window
 
-- (void)showInWindow
+- (void)yq_showInWindow
 {
-    [self showInWindowWithBackgoundTapDismissEnable:NO];
+    [self yq_showInWindowWithBackgoundTapDismissEnable:NO];
 }
 
-- (void)showInWindowWithBackgoundTapDismissEnable:(BOOL)backgoundTapDismissEnable
-{
-    if (self.superview) {
-        [self removeFromSuperview];
-    }
-    [YQShowAlertView showAlertViewWithView:self backgoundTapDismissEnable:backgoundTapDismissEnable];
-}
-
-- (void)showInWindowWithOriginY:(CGFloat)OriginY
-{
-    [self showInWindowWithOriginY:OriginY backgoundTapDismissEnable:NO];
-}
-
-- (void)showInWindowWithOriginY:(CGFloat)OriginY backgoundTapDismissEnable:(BOOL)backgoundTapDismissEnable
+- (void)yq_showInWindowWithBackgoundTapDismissEnable:(BOOL)backgoundTapDismissEnable
 {
     if (self.superview) {
         [self removeFromSuperview];
     }
-    [YQShowAlertView showAlertViewWithView:self originY:OriginY backgoundTapDismissEnable:backgoundTapDismissEnable];
+    [YQShowAlertView yq_showAlertViewWithView:self backgoundTapDismissEnable:backgoundTapDismissEnable];
 }
 
-- (void)hideInWindow
+- (void)yq_showInWindowWithOriginY:(CGFloat)OriginY
+{
+    [self yq_showInWindowWithOriginY:OriginY backgoundTapDismissEnable:NO];
+}
+
+- (void)yq_showInWindowWithOriginY:(CGFloat)OriginY backgoundTapDismissEnable:(BOOL)backgoundTapDismissEnable
+{
+    if (self.superview) {
+        [self removeFromSuperview];
+    }
+    [YQShowAlertView yq_showAlertViewWithView:self originY:OriginY backgoundTapDismissEnable:backgoundTapDismissEnable];
+}
+
+- (void)yq_hideInWindow
 {
     if ([self isShowInWindow]) {
-        [(YQShowAlertView *)self.superview hide];
+        [(YQShowAlertView *)self.superview yq_hide];
     }else {
         NSLog(@"self.superview is nil, or isn't YQShowAlertView");
     }
@@ -265,10 +265,10 @@
     return NO;
 }
 
-- (void)hideView
+- (void)yq_hideView
 {
     if ([self isShowInWindow]) {
-        [self hideInWindow];
+        [self yq_hideInWindow];
     }else {
         NSLog(@"self.viewController is nil, or isn't TYAlertController,or self.superview is nil, or isn't YQShowAlertView");
     }

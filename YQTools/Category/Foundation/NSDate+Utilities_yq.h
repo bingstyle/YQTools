@@ -11,17 +11,6 @@
 @interface NSDate (Utilities_yq)
 
 + (NSCalendar *)yq_currentCalendar; // avoid bottlenecks
-#pragma mark ---- Decomposing dates 分解的日期
-@property (readonly) NSInteger yq_nearestHour;
-@property (readonly) NSInteger yq_hour;
-@property (readonly) NSInteger yq_minute;
-@property (readonly) NSInteger yq_seconds;
-@property (readonly) NSInteger yq_day;
-@property (readonly) NSInteger yq_month;
-@property (readonly) NSInteger yq_week;
-@property (readonly) NSInteger yq_weekday;
-@property (readonly) NSInteger yq_nthWeekday; // e.g. 2nd Tuesday of the month == 2
-@property (readonly) NSInteger yq_year;
 
 #pragma mark ----short time 格式化的时间
 @property (nonatomic, readonly) NSString *yq_shortString;
@@ -36,8 +25,6 @@
 
 ///使用dateStyle timeStyle格式化时间
 - (NSString *)yq_stringWithDateStyle:(NSDateFormatterStyle)dateStyle timeStyle:(NSDateFormatterStyle)timeStyle;
-///给定format格式化时间
-- (NSString *)yq_stringWithFormat:(NSString *)format;
 
 #pragma mark ---- 从当前日期相对日期时间
 ///明天

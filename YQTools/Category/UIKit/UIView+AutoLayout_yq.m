@@ -10,12 +10,12 @@
 
 @implementation UIView (AutoLayout_yq)
 
-- (void)addConstraintToView:(UIView *)view edgeInset:(UIEdgeInsets)edgeInset
+- (void)yq_addConstraintToView:(UIView *)view edgeInset:(UIEdgeInsets)edgeInset
 {
-    [self addConstraintWithView:view topView:self leftView:self bottomView:self rightView:self edgeInset:edgeInset];
+    [self yq_addConstraintWithView:view topView:self leftView:self bottomView:self rightView:self edgeInset:edgeInset];
 }
 
-- (void)addConstraintWithView:(UIView *)view topView:(UIView *)topView leftView:(UIView *)leftView
+- (void)yq_addConstraintWithView:(UIView *)view topView:(UIView *)topView leftView:(UIView *)leftView
                    bottomView:(UIView *)bottomView rightView:(UIView *)rightView edgeInset:(UIEdgeInsets)edgeInset
 {
     if (topView) {
@@ -35,19 +35,19 @@
     }
 }
 
-- (void)addConstraintWithLeftView:(UIView *)leftView toRightView:(UIView *)rightView constant:(CGFloat)constant
+- (void)yq_addConstraintWithLeftView:(UIView *)leftView toRightView:(UIView *)rightView constant:(CGFloat)constant
 {
     [self addConstraint:[NSLayoutConstraint constraintWithItem:leftView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:rightView attribute:NSLayoutAttributeLeft multiplier:1 constant:-constant]];
 }
 
-- (NSLayoutConstraint *)addConstraintWithTopView:(UIView *)topView toBottomView:(UIView *)bottomView constant:(CGFloat)constant
+- (NSLayoutConstraint *)yq_addConstraintWithTopView:(UIView *)topView toBottomView:(UIView *)bottomView constant:(CGFloat)constant
 {
     NSLayoutConstraint *topBottomConstraint =[NSLayoutConstraint constraintWithItem:topView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:bottomView attribute:NSLayoutAttributeTop multiplier:1 constant:-constant];
     [self addConstraint:topBottomConstraint];
     return topBottomConstraint;
 }
 
-- (void)addConstraintWidth:(CGFloat)width height:(CGFloat)height
+- (void)yq_addConstraintWidth:(CGFloat)width height:(CGFloat)height
 {
     if (width > 0) {
         [self addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:0 multiplier:1 constant:width]];
@@ -58,7 +58,7 @@
     }
 }
 
-- (void)addConstraintEqualWithView:(UIView *)view widthToView:(UIView *)wView heightToView:(UIView *)hView
+- (void)yq_addConstraintEqualWithView:(UIView *)view widthToView:(UIView *)wView heightToView:(UIView *)hView
 {
     if (wView) {
         [self addConstraint:[NSLayoutConstraint constraintWithItem:view attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:wView attribute:NSLayoutAttributeWidth multiplier:1 constant:0]];
@@ -69,7 +69,7 @@
     }
 }
 
-- (void)addConstraintCenterXToView:(UIView *)xView centerYToView:(UIView *)yView
+- (void)yq_addConstraintCenterXToView:(UIView *)xView centerYToView:(UIView *)yView
 {
     if (xView) {
         [self addConstraint:[NSLayoutConstraint constraintWithItem:xView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0]];
@@ -80,7 +80,7 @@
     }
 }
 
-- (NSLayoutConstraint *)addConstraintCenterYToView:(UIView *)yView constant:(CGFloat)constant;
+- (NSLayoutConstraint *)yq_addConstraintCenterYToView:(UIView *)yView constant:(CGFloat)constant;
 {
     if (yView) {
         NSLayoutConstraint *centerYConstraint = [NSLayoutConstraint constraintWithItem:yView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:constant];
@@ -90,7 +90,7 @@
     return nil;
 }
 
-- (void)removeConstraintWithAttribte:(NSLayoutAttribute)attr
+- (void)yq_removeConstraintWithAttribte:(NSLayoutAttribute)attr
 {
     for (NSLayoutConstraint *constraint in self.constraints) {
         if (constraint.firstAttribute == attr) {
@@ -100,7 +100,7 @@
     }
 }
 
-- (void)removeConstraintWithView:(UIView *)view attribute:(NSLayoutAttribute)attr
+- (void)yq_removeConstraintWithView:(UIView *)view attribute:(NSLayoutAttribute)attr
 {
     for (NSLayoutConstraint *constraint in self.constraints) {
         if (constraint.firstAttribute == attr && constraint.firstItem == view) {
@@ -110,7 +110,7 @@
     }
 }
 
-- (void)removeAllConstraints
+- (void)yq_removeAllConstraints
 {
     [self removeConstraints:self.constraints];
 }

@@ -10,6 +10,8 @@
 		2D2E22722387C82300161FC5 /* WXBNavigationBar in Resources */ = {isa = PBXBuildFile; fileRef = 2D2E22712387C82300161FC5 /* WXBNavigationBar */; };
 		2D2E22742387C82B00161FC5 /* IAP in Resources */ = {isa = PBXBuildFile; fileRef = 2D2E22732387C82B00161FC5 /* IAP */; };
 		2D2E22762387C9E900161FC5 /* YQTools.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 2D2E22752387C9E900161FC5 /* YQTools.podspec */; };
+		2D46EF1924B6B88600BA13B6 /* UIView+Alert_YQSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D46EF1724B6B88600BA13B6 /* UIView+Alert_YQSettings.m */; };
+		2D46EF1A24B6B88600BA13B6 /* UIView+AutoLayout_YQSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D46EF1824B6B88600BA13B6 /* UIView+AutoLayout_YQSettings.m */; };
 		2D4BA6471F25ECE500F29512 /* CALayer+Util_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA5F01F25ECE500F29512 /* CALayer+Util_yq.m */; };
 		2D4BA6491F25ECE500F29512 /* UIBarButtonItem+Badge_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA5F41F25ECE500F29512 /* UIBarButtonItem+Badge_yq.m */; };
 		2D4BA64A1F25ECE500F29512 /* UIButton+BackgroundColor_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BA5F61F25ECE500F29512 /* UIButton+BackgroundColor_yq.m */; };
@@ -70,8 +72,6 @@
 		2D5A795A22A7AD50007C4CD5 /* UIDevice+Util_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5A795922A7AD50007C4CD5 /* UIDevice+Util_yq.m */; };
 		2D7ACC001FE8BC9E00C411E7 /* UIView+AutoLayout_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACBFF1FE8BC9E00C411E7 /* UIView+AutoLayout_yq.m */; };
 		2D7ACC031FE8BD1600C411E7 /* UIView+Alert_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACC021FE8BD1600C411E7 /* UIView+Alert_yq.m */; };
-		2D7ACC241FE8FD3F00C411E7 /* UIView+Alert_YQSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACC131FE8FD3F00C411E7 /* UIView+Alert_YQSettings.m */; };
-		2D7ACC251FE8FD3F00C411E7 /* UIView+AutoLayout_YQSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACC151FE8FD3F00C411E7 /* UIView+AutoLayout_YQSettings.m */; };
 		2D7ACC261FE8FD3F00C411E7 /* YQSettingsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACC191FE8FD3F00C411E7 /* YQSettingsModel.m */; };
 		2D7ACC271FE8FD3F00C411E7 /* YQSettingsSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACC1B1FE8FD3F00C411E7 /* YQSettingsSwitchCell.m */; };
 		2D7ACC281FE8FD3F00C411E7 /* YQSettingsTableData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACC1D1FE8FD3F00C411E7 /* YQSettingsTableData.m */; };
@@ -84,10 +84,6 @@
 		2DAC0FBF1FFF844B003A17DB /* YQCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5CE1E55A09A00C81A30 /* YQCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC0FC01FFF844B003A17DB /* YQMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5CD1E55A06C00C81A30 /* YQMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC0FC11FFF844B003A17DB /* YQTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E2ED1E5545F600C81A30 /* YQTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DAC0FC21FFF8452003A17DB /* UIView+Alert_YQSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D7ACC121FE8FD3F00C411E7 /* UIView+Alert_YQSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DAC0FC31FFF8452003A17DB /* UIView+Alert_YQSettings.m in Headers */ = {isa = PBXBuildFile; fileRef = 2D7ACC131FE8FD3F00C411E7 /* UIView+Alert_YQSettings.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DAC0FC41FFF8452003A17DB /* UIView+AutoLayout_YQSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D7ACC141FE8FD3F00C411E7 /* UIView+AutoLayout_YQSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DAC0FC51FFF8452003A17DB /* UIView+AutoLayout_YQSettings.m in Headers */ = {isa = PBXBuildFile; fileRef = 2D7ACC151FE8FD3F00C411E7 /* UIView+AutoLayout_YQSettings.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC0FC61FFF8452003A17DB /* YQSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D7ACC161FE8FD3F00C411E7 /* YQSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC0FC71FFF8452003A17DB /* YQSettingsCellDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D7ACC171FE8FD3F00C411E7 /* YQSettingsCellDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC0FC81FFF8452003A17DB /* YQSettingsModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D7ACC181FE8FD3F00C411E7 /* YQSettingsModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -275,8 +271,6 @@
 		2DAC10821FFF8472003A17DB /* YQLocalNotification.m in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E2E31E5545F600C81A30 /* YQLocalNotification.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC10831FFF848B003A17DB /* YQFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5B71E559D4700C81A30 /* YQFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC10841FFF848B003A17DB /* YQUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5B81E559ECD00C81A30 /* YQUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DAC10851FFF84B4003A17DB /* UIView+Alert_YQSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACC131FE8FD3F00C411E7 /* UIView+Alert_YQSettings.m */; };
-		2DAC10861FFF84B4003A17DB /* UIView+AutoLayout_YQSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACC151FE8FD3F00C411E7 /* UIView+AutoLayout_YQSettings.m */; };
 		2DAC10871FFF84B4003A17DB /* YQSettingsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACC191FE8FD3F00C411E7 /* YQSettingsModel.m */; };
 		2DAC10881FFF84B4003A17DB /* YQSettingsSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACC1B1FE8FD3F00C411E7 /* YQSettingsSwitchCell.m */; };
 		2DAC10891FFF84B4003A17DB /* YQSettingsTableData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACC1D1FE8FD3F00C411E7 /* YQSettingsTableData.m */; };
@@ -453,6 +447,10 @@
 		2D2E22712387C82300161FC5 /* WXBNavigationBar */ = {isa = PBXFileReference; lastKnownFileType = folder; name = WXBNavigationBar; path = Utilities/WXBNavigationBar; sourceTree = "<group>"; };
 		2D2E22732387C82B00161FC5 /* IAP */ = {isa = PBXFileReference; lastKnownFileType = folder; name = IAP; path = Utilities/IAP; sourceTree = "<group>"; };
 		2D2E22752387C9E900161FC5 /* YQTools.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = YQTools.podspec; path = ../YQTools.podspec; sourceTree = "<group>"; };
+		2D46EF1524B6B88600BA13B6 /* UIView+AutoLayout_YQSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout_YQSettings.h"; sourceTree = "<group>"; };
+		2D46EF1624B6B88600BA13B6 /* UIView+Alert_YQSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Alert_YQSettings.h"; sourceTree = "<group>"; };
+		2D46EF1724B6B88600BA13B6 /* UIView+Alert_YQSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Alert_YQSettings.m"; sourceTree = "<group>"; };
+		2D46EF1824B6B88600BA13B6 /* UIView+AutoLayout_YQSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout_YQSettings.m"; sourceTree = "<group>"; };
 		2D4BA5EF1F25ECE500F29512 /* CALayer+Util_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Util_yq.h"; sourceTree = "<group>"; };
 		2D4BA5F01F25ECE500F29512 /* CALayer+Util_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Util_yq.m"; sourceTree = "<group>"; };
 		2D4BA5F31F25ECE500F29512 /* UIBarButtonItem+Badge_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Badge_yq.h"; sourceTree = "<group>"; };
@@ -560,10 +558,6 @@
 		2D7ACBFF1FE8BC9E00C411E7 /* UIView+AutoLayout_yq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout_yq.m"; sourceTree = "<group>"; };
 		2D7ACC011FE8BD1600C411E7 /* UIView+Alert_yq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Alert_yq.h"; sourceTree = "<group>"; };
 		2D7ACC021FE8BD1600C411E7 /* UIView+Alert_yq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Alert_yq.m"; sourceTree = "<group>"; };
-		2D7ACC121FE8FD3F00C411E7 /* UIView+Alert_YQSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Alert_YQSettings.h"; sourceTree = "<group>"; };
-		2D7ACC131FE8FD3F00C411E7 /* UIView+Alert_YQSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Alert_YQSettings.m"; sourceTree = "<group>"; };
-		2D7ACC141FE8FD3F00C411E7 /* UIView+AutoLayout_YQSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout_YQSettings.h"; sourceTree = "<group>"; };
-		2D7ACC151FE8FD3F00C411E7 /* UIView+AutoLayout_YQSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout_YQSettings.m"; sourceTree = "<group>"; };
 		2D7ACC161FE8FD3F00C411E7 /* YQSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQSettings.h; sourceTree = "<group>"; };
 		2D7ACC171FE8FD3F00C411E7 /* YQSettingsCellDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQSettingsCellDelegate.h; sourceTree = "<group>"; };
 		2D7ACC181FE8FD3F00C411E7 /* YQSettingsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQSettingsModel.h; sourceTree = "<group>"; };
@@ -942,10 +936,10 @@
 		2D7ACC111FE8FD3F00C411E7 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				2D7ACC121FE8FD3F00C411E7 /* UIView+Alert_YQSettings.h */,
-				2D7ACC131FE8FD3F00C411E7 /* UIView+Alert_YQSettings.m */,
-				2D7ACC141FE8FD3F00C411E7 /* UIView+AutoLayout_YQSettings.h */,
-				2D7ACC151FE8FD3F00C411E7 /* UIView+AutoLayout_YQSettings.m */,
+				2D46EF1624B6B88600BA13B6 /* UIView+Alert_YQSettings.h */,
+				2D46EF1724B6B88600BA13B6 /* UIView+Alert_YQSettings.m */,
+				2D46EF1524B6B88600BA13B6 /* UIView+AutoLayout_YQSettings.h */,
+				2D46EF1824B6B88600BA13B6 /* UIView+AutoLayout_YQSettings.m */,
 				2D7ACC161FE8FD3F00C411E7 /* YQSettings.h */,
 				2D7ACC171FE8FD3F00C411E7 /* YQSettingsCellDelegate.h */,
 				2D7ACC181FE8FD3F00C411E7 /* YQSettingsModel.h */,
@@ -1412,10 +1406,6 @@
 				2DAC0FD71FFF845C003A17DB /* YQRequestMacro.h in Headers */,
 				2DAC0FD81FFF845C003A17DB /* YQSQLMacro.h in Headers */,
 				2DAC0FD91FFF845C003A17DB /* YQUtilsMacro.h in Headers */,
-				2DAC0FC21FFF8452003A17DB /* UIView+Alert_YQSettings.h in Headers */,
-				2DAC0FC31FFF8452003A17DB /* UIView+Alert_YQSettings.m in Headers */,
-				2DAC0FC41FFF8452003A17DB /* UIView+AutoLayout_YQSettings.h in Headers */,
-				2DAC0FC51FFF8452003A17DB /* UIView+AutoLayout_YQSettings.m in Headers */,
 				2DAC0FC61FFF8452003A17DB /* YQSettings.h in Headers */,
 				2DAC0FC71FFF8452003A17DB /* YQSettingsCellDelegate.h in Headers */,
 				2DAC0FC81FFF8452003A17DB /* YQSettingsModel.h in Headers */,
@@ -1589,8 +1579,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DAC10E81FFF883A003A17DB /* YQBaseArchiveModel.m in Sources */,
-				2DAC10851FFF84B4003A17DB /* UIView+Alert_YQSettings.m in Sources */,
-				2DAC10861FFF84B4003A17DB /* UIView+AutoLayout_YQSettings.m in Sources */,
 				2DAC10871FFF84B4003A17DB /* YQSettingsModel.m in Sources */,
 				2DAC10881FFF84B4003A17DB /* YQSettingsSwitchCell.m in Sources */,
 				2DAC10891FFF84B4003A17DB /* YQSettingsTableData.m in Sources */,
@@ -1747,7 +1735,6 @@
 				2DF6E5D71E55A17200C81A30 /* YQPublic.m in Sources */,
 				2D4BA6721F25ECE600F29512 /* UIView+Util_yq.m in Sources */,
 				2D4BA6501F25ECE600F29512 /* UIButton+MiddleAligning_yq.m in Sources */,
-				2D7ACC251FE8FD3F00C411E7 /* UIView+AutoLayout_YQSettings.m in Sources */,
 				2D4BA65B1F25ECE600F29512 /* UIImage+Capture_yq.m in Sources */,
 				2D4BA6531F25ECE600F29512 /* UIColor+Hex_yq.m in Sources */,
 				2DF6E62D1E55ABEF00C81A30 /* NSString+Emoji_yq.m in Sources */,
@@ -1765,11 +1752,13 @@
 				2D4BA66E1F25ECE600F29512 /* UIView+Border_yq.m in Sources */,
 				2D4BA6631F25ECE600F29512 /* UIImageView+Reflect_yq.m in Sources */,
 				2D4BA64D1F25ECE600F29512 /* UIButton+CountDown_yq.m in Sources */,
+				2D46EF1924B6B88600BA13B6 /* UIView+Alert_YQSettings.m in Sources */,
 				2DF6E6321E55ABEF00C81A30 /* NSString+Util_yq.m in Sources */,
 				2D7ACC2B1FE8FD3F00C411E7 /* YQSettingsTimeRangView.m in Sources */,
 				2D4BA6561F25ECE600F29512 /* UIColor+Web_yq.m in Sources */,
 				2DF6E2F71E5545F600C81A30 /* YQLocalNotification.m in Sources */,
 				2D4BA6571F25ECE600F29512 /* UIControl+Block_yq.m in Sources */,
+				2D46EF1A24B6B88600BA13B6 /* UIView+AutoLayout_YQSettings.m in Sources */,
 				2D4BA6781F25EE3200F29512 /* UIButton+ImageTitleStyle_yq.m in Sources */,
 				2D7ACC2A1FE8FD3F00C411E7 /* YQSettingsTableView.m in Sources */,
 				2D4BA6591F25ECE600F29512 /* UIDevice+Hardware_yq.m in Sources */,
@@ -1778,7 +1767,6 @@
 				2DF6E62E1E55ABEF00C81A30 /* NSString+Encode_yq.m in Sources */,
 				2D4BA6671F25ECE600F29512 /* UIScrollView+Addition_yq.m in Sources */,
 				2DF6E6291E55ABEF00C81A30 /* NSObject+Runtime_yq.m in Sources */,
-				2D7ACC241FE8FD3F00C411E7 /* UIView+Alert_YQSettings.m in Sources */,
 				2D4BA6711F25ECE600F29512 /* UIView+Screenshot_yq.m in Sources */,
 				2DF6E5D81E55A17200C81A30 /* YQSandbox.m in Sources */,
 				2DF6E61C1E55ABEF00C81A30 /* NSDate+Utilities_yq.m in Sources */,
@@ -1900,7 +1888,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1957,7 +1945,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -2015,6 +2003,7 @@
 				INFOPLIST_FILE = YQToolsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.3.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yiqi.YQToolsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -2031,6 +2020,7 @@
 				INFOPLIST_FILE = YQToolsDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.3.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yiqi.YQToolsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

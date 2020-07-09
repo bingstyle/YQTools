@@ -81,13 +81,6 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
 }
 
 #pragma mark - String Properties
-- (NSString *) yq_stringWithFormat: (NSString *) format
-{
-    NSDateFormatter *formatter = [NSDateFormatter new];
-    //    formatter.locale = [NSLocale currentLocale]; // Necessary?
-    formatter.dateFormat = format;
-    return [formatter stringFromDate:self];
-}
 
 - (NSString *) yq_stringWithDateStyle: (NSDateFormatterStyle) dateStyle timeStyle: (NSDateFormatterStyle) timeStyle
 {
@@ -448,66 +441,6 @@ static const unsigned componentFlags = (NSCalendarUnitYear| NSCalendarUnitMonth 
     NSDateComponents *components = [gregorianCalendar components:NSCalendarUnitYear fromDate:self toDate:anotherDate options:0];
     return components.year;
 }
-#pragma mark Decomposing Dates
-- (NSInteger)yq_nearestHour
-{
-    NSTimeInterval aTimeInterval = [[NSDate date] timeIntervalSinceReferenceDate] + D_MINUTE * 30;
-    NSDate *newDate = [NSDate dateWithTimeIntervalSinceReferenceDate:aTimeInterval];
-    NSDateComponents *components = [[NSDate yq_currentCalendar] components:NSCalendarUnitHour fromDate:newDate];
-    return components.hour;
-}
-- (NSInteger) yq_hour
-{
-    NSDateComponents *components = [[NSDate yq_currentCalendar] components:componentFlags fromDate:self];
-    return components.hour;
-}
 
-- (NSInteger) yq_minute
-{
-    NSDateComponents *components = [[NSDate yq_currentCalendar] components:componentFlags fromDate:self];
-    return components.minute;
-}
-
-- (NSInteger) yq_seconds
-{
-    NSDateComponents *components = [[NSDate yq_currentCalendar] components:componentFlags fromDate:self];
-    return components.second;
-}
-
-- (NSInteger) yq_day
-{
-    NSDateComponents *components = [[NSDate yq_currentCalendar] components:componentFlags fromDate:self];
-    return components.day;
-}
-
-- (NSInteger) yq_month
-{
-    NSDateComponents *components = [[NSDate yq_currentCalendar] components:componentFlags fromDate:self];
-    return components.month;
-}
-
-- (NSInteger) yq_week
-{
-    NSDateComponents *components = [[NSDate yq_currentCalendar] components:componentFlags fromDate:self];
-    return components.weekOfMonth;
-}
-
-- (NSInteger) yq_weekday
-{
-    NSDateComponents *components = [[NSDate yq_currentCalendar] components:componentFlags fromDate:self];
-    return components.weekday;
-}
-
-- (NSInteger) yq_nthWeekday // e.g. 2nd Tuesday of the month is 2
-{
-    NSDateComponents *components = [[NSDate yq_currentCalendar] components:componentFlags fromDate:self];
-    return components.weekdayOrdinal;
-}
-
-- (NSInteger) yq_year
-{
-    NSDateComponents *components = [[NSDate yq_currentCalendar] components:componentFlags fromDate:self];
-    return components.year;
-}
 
 @end
