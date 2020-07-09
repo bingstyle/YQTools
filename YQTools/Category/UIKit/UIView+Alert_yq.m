@@ -247,7 +247,7 @@
 
 - (void)yq_hideInWindow
 {
-    if ([self isShowInWindow]) {
+    if ([self yq_isShowInWindow]) {
         [(YQShowAlertView *)self.superview yq_hide];
     }else {
         NSLog(@"self.superview is nil, or isn't YQShowAlertView");
@@ -257,7 +257,7 @@
 
 #pragma mark - hide
 
-- (BOOL)isShowInWindow
+- (BOOL)yq_isShowInWindow
 {
     if (self.superview && [self.superview isKindOfClass:[YQShowAlertView class]]) {
         return YES;
@@ -267,7 +267,7 @@
 
 - (void)yq_hideView
 {
-    if ([self isShowInWindow]) {
+    if ([self yq_isShowInWindow]) {
         [self yq_hideInWindow];
     }else {
         NSLog(@"self.viewController is nil, or isn't TYAlertController,or self.superview is nil, or isn't YQShowAlertView");
