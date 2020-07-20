@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D1F36DB24C57A74000C1F7B /* NSFileManager+File_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1F36DA24C57A74000C1F7B /* NSFileManager+File_yq.m */; };
 		2D2E22722387C82300161FC5 /* WXBNavigationBar in Resources */ = {isa = PBXBuildFile; fileRef = 2D2E22712387C82300161FC5 /* WXBNavigationBar */; };
 		2D2E22742387C82B00161FC5 /* IAP in Resources */ = {isa = PBXBuildFile; fileRef = 2D2E22732387C82B00161FC5 /* IAP */; };
 		2D2E22762387C9E900161FC5 /* YQTools.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 2D2E22752387C9E900161FC5 /* YQTools.podspec */; };
@@ -220,8 +221,6 @@
 		2DAC104D1FFF8472003A17DB /* NSDictionary+SafeAccess_yq.m in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5EB1E55ABEF00C81A30 /* NSDictionary+SafeAccess_yq.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC104E1FFF8472003A17DB /* NSDictionary+URL_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5EC1E55ABEF00C81A30 /* NSDictionary+URL_yq.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC104F1FFF8472003A17DB /* NSDictionary+URL_yq.m in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5ED1E55ABEF00C81A30 /* NSDictionary+URL_yq.m */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DAC10501FFF8472003A17DB /* NSFileManager+Path_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5EE1E55ABEF00C81A30 /* NSFileManager+Path_yq.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DAC10511FFF8472003A17DB /* NSFileManager+Path_yq.m in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5EF1E55ABEF00C81A30 /* NSFileManager+Path_yq.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC10521FFF8472003A17DB /* NSIndexPath+Offset_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5F01E55ABEF00C81A30 /* NSIndexPath+Offset_yq.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC10531FFF8472003A17DB /* NSIndexPath+Offset_yq.m in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5F11E55ABEF00C81A30 /* NSIndexPath+Offset_yq.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC10541FFF8472003A17DB /* NSNotificationCenter+MainThread_yq.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5F21E55ABEF00C81A30 /* NSNotificationCenter+MainThread_yq.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -335,7 +334,6 @@
 		2DAC10C51FFF84B4003A17DB /* NSDictionary+Merge_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5E91E55ABEF00C81A30 /* NSDictionary+Merge_yq.m */; };
 		2DAC10C61FFF84B4003A17DB /* NSDictionary+SafeAccess_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5EB1E55ABEF00C81A30 /* NSDictionary+SafeAccess_yq.m */; };
 		2DAC10C71FFF84B4003A17DB /* NSDictionary+URL_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5ED1E55ABEF00C81A30 /* NSDictionary+URL_yq.m */; };
-		2DAC10C81FFF84B4003A17DB /* NSFileManager+Path_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5EF1E55ABEF00C81A30 /* NSFileManager+Path_yq.m */; };
 		2DAC10C91FFF84B4003A17DB /* NSIndexPath+Offset_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5F11E55ABEF00C81A30 /* NSIndexPath+Offset_yq.m */; };
 		2DAC10CA1FFF84B4003A17DB /* NSNotificationCenter+MainThread_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5F31E55ABEF00C81A30 /* NSNotificationCenter+MainThread_yq.m */; };
 		2DAC10CB1FFF84B4003A17DB /* NSNumber+CGFloat_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5F51E55ABEF00C81A30 /* NSNumber+CGFloat_yq.m */; };
@@ -394,7 +392,6 @@
 		2DF6E61F1E55ABEF00C81A30 /* NSDictionary+Merge_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5E91E55ABEF00C81A30 /* NSDictionary+Merge_yq.m */; };
 		2DF6E6201E55ABEF00C81A30 /* NSDictionary+SafeAccess_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5EB1E55ABEF00C81A30 /* NSDictionary+SafeAccess_yq.m */; };
 		2DF6E6211E55ABEF00C81A30 /* NSDictionary+URL_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5ED1E55ABEF00C81A30 /* NSDictionary+URL_yq.m */; };
-		2DF6E6221E55ABEF00C81A30 /* NSFileManager+Path_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5EF1E55ABEF00C81A30 /* NSFileManager+Path_yq.m */; };
 		2DF6E6231E55ABEF00C81A30 /* NSIndexPath+Offset_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5F11E55ABEF00C81A30 /* NSIndexPath+Offset_yq.m */; };
 		2DF6E6241E55ABEF00C81A30 /* NSNotificationCenter+MainThread_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5F31E55ABEF00C81A30 /* NSNotificationCenter+MainThread_yq.m */; };
 		2DF6E6251E55ABEF00C81A30 /* NSNumber+CGFloat_yq.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5F51E55ABEF00C81A30 /* NSNumber+CGFloat_yq.m */; };
@@ -444,6 +441,8 @@
 
 /* Begin PBXFileReference section */
 		11EBD51D155625E9D570DE03 /* Pods-YQToolsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YQToolsDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YQToolsDemo/Pods-YQToolsDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		2D1F36D924C57A74000C1F7B /* NSFileManager+File_yq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+File_yq.h"; sourceTree = "<group>"; };
+		2D1F36DA24C57A74000C1F7B /* NSFileManager+File_yq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+File_yq.m"; sourceTree = "<group>"; };
 		2D2E22712387C82300161FC5 /* WXBNavigationBar */ = {isa = PBXFileReference; lastKnownFileType = folder; name = WXBNavigationBar; path = Utilities/WXBNavigationBar; sourceTree = "<group>"; };
 		2D2E22732387C82B00161FC5 /* IAP */ = {isa = PBXFileReference; lastKnownFileType = folder; name = IAP; path = Utilities/IAP; sourceTree = "<group>"; };
 		2D2E22752387C9E900161FC5 /* YQTools.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = YQTools.podspec; path = ../YQTools.podspec; sourceTree = "<group>"; };
@@ -645,8 +644,6 @@
 		2DF6E5EB1E55ABEF00C81A30 /* NSDictionary+SafeAccess_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+SafeAccess_yq.m"; sourceTree = "<group>"; };
 		2DF6E5EC1E55ABEF00C81A30 /* NSDictionary+URL_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+URL_yq.h"; sourceTree = "<group>"; };
 		2DF6E5ED1E55ABEF00C81A30 /* NSDictionary+URL_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+URL_yq.m"; sourceTree = "<group>"; };
-		2DF6E5EE1E55ABEF00C81A30 /* NSFileManager+Path_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Path_yq.h"; sourceTree = "<group>"; };
-		2DF6E5EF1E55ABEF00C81A30 /* NSFileManager+Path_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Path_yq.m"; sourceTree = "<group>"; };
 		2DF6E5F01E55ABEF00C81A30 /* NSIndexPath+Offset_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+Offset_yq.h"; sourceTree = "<group>"; };
 		2DF6E5F11E55ABEF00C81A30 /* NSIndexPath+Offset_yq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+Offset_yq.m"; sourceTree = "<group>"; };
 		2DF6E5F21E55ABEF00C81A30 /* NSNotificationCenter+MainThread_yq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+MainThread_yq.h"; sourceTree = "<group>"; };
@@ -1156,8 +1153,8 @@
 				2DF6E5EB1E55ABEF00C81A30 /* NSDictionary+SafeAccess_yq.m */,
 				2DF6E5EC1E55ABEF00C81A30 /* NSDictionary+URL_yq.h */,
 				2DF6E5ED1E55ABEF00C81A30 /* NSDictionary+URL_yq.m */,
-				2DF6E5EE1E55ABEF00C81A30 /* NSFileManager+Path_yq.h */,
-				2DF6E5EF1E55ABEF00C81A30 /* NSFileManager+Path_yq.m */,
+				2D1F36D924C57A74000C1F7B /* NSFileManager+File_yq.h */,
+				2D1F36DA24C57A74000C1F7B /* NSFileManager+File_yq.m */,
 				2DF6E5F01E55ABEF00C81A30 /* NSIndexPath+Offset_yq.h */,
 				2DF6E5F11E55ABEF00C81A30 /* NSIndexPath+Offset_yq.m */,
 				2DF6E5F21E55ABEF00C81A30 /* NSNotificationCenter+MainThread_yq.h */,
@@ -1351,8 +1348,6 @@
 				2DAC104D1FFF8472003A17DB /* NSDictionary+SafeAccess_yq.m in Headers */,
 				2DAC104E1FFF8472003A17DB /* NSDictionary+URL_yq.h in Headers */,
 				2DAC104F1FFF8472003A17DB /* NSDictionary+URL_yq.m in Headers */,
-				2DAC10501FFF8472003A17DB /* NSFileManager+Path_yq.h in Headers */,
-				2DAC10511FFF8472003A17DB /* NSFileManager+Path_yq.m in Headers */,
 				2DAC10521FFF8472003A17DB /* NSIndexPath+Offset_yq.h in Headers */,
 				2DAC10531FFF8472003A17DB /* NSIndexPath+Offset_yq.m in Headers */,
 				2DAC10541FFF8472003A17DB /* NSNotificationCenter+MainThread_yq.h in Headers */,
@@ -1643,7 +1638,6 @@
 				2DAC10C51FFF84B4003A17DB /* NSDictionary+Merge_yq.m in Sources */,
 				2DAC10C61FFF84B4003A17DB /* NSDictionary+SafeAccess_yq.m in Sources */,
 				2DAC10C71FFF84B4003A17DB /* NSDictionary+URL_yq.m in Sources */,
-				2DAC10C81FFF84B4003A17DB /* NSFileManager+Path_yq.m in Sources */,
 				2DAC10C91FFF84B4003A17DB /* NSIndexPath+Offset_yq.m in Sources */,
 				2DAC10CA1FFF84B4003A17DB /* NSNotificationCenter+MainThread_yq.m in Sources */,
 				2DAC10CB1FFF84B4003A17DB /* NSNumber+CGFloat_yq.m in Sources */,
@@ -1768,6 +1762,7 @@
 				2D4BA6671F25ECE600F29512 /* UIScrollView+Addition_yq.m in Sources */,
 				2DF6E6291E55ABEF00C81A30 /* NSObject+Runtime_yq.m in Sources */,
 				2D4BA6711F25ECE600F29512 /* UIView+Screenshot_yq.m in Sources */,
+				2D1F36DB24C57A74000C1F7B /* NSFileManager+File_yq.m in Sources */,
 				2DF6E5D81E55A17200C81A30 /* YQSandbox.m in Sources */,
 				2DF6E61C1E55ABEF00C81A30 /* NSDate+Utilities_yq.m in Sources */,
 				2D4BA65C1F25ECE600F29512 /* UIImage+Color_yq.m in Sources */,
@@ -1778,7 +1773,6 @@
 				2DF6E6191E55ABEF00C81A30 /* NSBundle+AppIcon_yq.m in Sources */,
 				2D7ACC001FE8BC9E00C411E7 /* UIView+AutoLayout_yq.m in Sources */,
 				2D52F7AB212C2DBB00154D85 /* SAMKeychain.m in Sources */,
-				2DF6E6221E55ABEF00C81A30 /* NSFileManager+Path_yq.m in Sources */,
 				2DF6E6251E55ABEF00C81A30 /* NSNumber+CGFloat_yq.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

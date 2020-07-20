@@ -14,7 +14,7 @@
 #import "NSArray+SafeAccess_yq.h"
 #import "NSBundle+AppIcon_yq.h"
 #import "NSDecimalNumber+Extension_yq.h"
-#import "NSFileManager+Path_yq.h"
+#import "NSFileManager+File_yq.h"
 #import "NSIndexPath+Offset_yq.h"
 #import "NSNotificationCenter+MainThread_yq.h"
 #import "NSTimer+Addition_yq.h"
