@@ -243,6 +243,7 @@ static inline NSString *cachePath() {
     return [self getWithUrl:url
                refreshCache:refreshCache
                      params:params
+                    headers:nil
                    progress:nil
                     success:success
                        fail:fail];
@@ -251,6 +252,7 @@ static inline NSString *cachePath() {
 + (WXBURLSessionTask *)getWithUrl:(NSString *)url
                      refreshCache:(BOOL)refreshCache
                            params:(NSDictionary *)params
+                          headers:(NSDictionary *)headers
                          progress:(WXBGetProgress)progress
                           success:(SuccessBlock)success
                              fail:(FailureBlock)fail {
@@ -258,6 +260,7 @@ static inline NSString *cachePath() {
                     refreshCache:refreshCache
                        httpMedth:1
                           params:params
+                         headers:headers
                         progress:progress
                          success:success
                             fail:fail];
@@ -271,6 +274,7 @@ static inline NSString *cachePath() {
     return [self postWithUrl:url
                 refreshCache:refreshCache
                       params:params
+                     headers:nil
                     progress:nil
                      success:success
                         fail:fail];
@@ -279,6 +283,7 @@ static inline NSString *cachePath() {
 + (WXBURLSessionTask *)postWithUrl:(NSString *)url
                       refreshCache:(BOOL)refreshCache
                             params:(NSDictionary *)params
+                           headers:(NSDictionary *)headers
                           progress:(WXBPostProgress)progress
                            success:(SuccessBlock)success
                               fail:(FailureBlock)fail {
@@ -286,6 +291,7 @@ static inline NSString *cachePath() {
                     refreshCache:refreshCache
                        httpMedth:2
                           params:params
+                         headers:headers
                         progress:progress
                          success:success
                             fail:fail];
@@ -295,6 +301,7 @@ static inline NSString *cachePath() {
                           refreshCache:(BOOL)refreshCache
                              httpMedth:(NSUInteger)httpMethod
                                 params:(NSDictionary *)params
+                               headers:(NSDictionary *)headers
                               progress:(WXBDownloadProgress)progress
                                success:(SuccessBlock)success
                                   fail:(FailureBlock)fail {
@@ -344,7 +351,7 @@ static inline NSString *cachePath() {
             }
         }
         
-        session = [manager GET:url parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+        session = [manager GET:url parameters:params headers:headers progress:^(NSProgress * _Nonnull downloadProgress) {
             if (progress) {
                 progress(downloadProgress.completedUnitCount, downloadProgress.totalUnitCount);
             }
@@ -367,7 +374,7 @@ static inline NSString *cachePath() {
             NSInteger timesOfRetry = [[[self allTimesOfRetryURLs] objectForKey:url] integerValue];
             if (error.code == CODE_TIMEOUT && timesOfRetry > 0) {
                 [task cancel];
-                [self _requestWithUrl:url refreshCache:refreshCache httpMedth:httpMethod params:params progress:progress success:success fail:fail];
+                [self _requestWithUrl:url refreshCache:refreshCache httpMedth:httpMethod params:params headers:headers progress:progress success:success fail:fail];
                 WXBAppLog(@"%@超时重试%@",url,@(timesOfRetry));
                 //设置请求超时重试次数
                 timesOfRetry--;
@@ -403,7 +410,7 @@ static inline NSString *cachePath() {
             }
         }
         
-        session = [manager POST:url parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+        session = [manager POST:url parameters:params headers:headers progress:^(NSProgress * _Nonnull downloadProgress) {
             if (progress) {
                 progress(downloadProgress.completedUnitCount, downloadProgress.totalUnitCount);
             }
@@ -427,7 +434,7 @@ static inline NSString *cachePath() {
             NSInteger timesOfRetry = [[[self allTimesOfRetryURLs] objectForKey:url] integerValue];
             if (error.code == CODE_TIMEOUT && timesOfRetry > 0) {
                 [task cancel];
-                [self _requestWithUrl:url refreshCache:refreshCache httpMedth:httpMethod params:params progress:progress success:success fail:fail];
+                [self _requestWithUrl:url refreshCache:refreshCache httpMedth:httpMethod params:params headers:headers progress:progress success:success fail:fail];
                 WXBAppLog(@"%@超时重试%@",url,@(timesOfRetry));
                 //设置请求超时重试次数
                 timesOfRetry--;
@@ -461,12 +468,13 @@ static inline NSString *cachePath() {
                                  failure:(FailureBlock)failure
 {
     NSArray *array = [NSArray arrayWithObject:image];
-    return [self uploadImageWithURL:url photos:array params:params progress:progress success:success failure:failure];
+    return [self uploadImageWithURL:url photos:array params:params headers:nil progress:progress success:success failure:failure];
 }
 
 + (WXBURLSessionTask *)uploadImageWithURL:(NSString *)url
                                   photos:(NSArray *)photos
                                   params:(NSDictionary *)params
+                                  headers:(NSDictionary *)headers
                                 progress:(WXBUploadProgress)progress
                                  success:(SuccessBlock)success
                                  failure:(FailureBlock)failure
@@ -490,7 +498,7 @@ static inline NSString *cachePath() {
     NSString *absolute = [self absoluteUrlWithPath:url];
     
     AFHTTPSessionManager *manager = [self manager];
-    WXBURLSessionTask *session = [manager POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    WXBURLSessionTask *session = [manager POST:url parameters:params headers:headers constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         for (int i = 0; i < photos.count; i ++) {
             NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
             formatter.dateFormat=@"yyyyMMddHHmmss";
@@ -543,6 +551,7 @@ static inline NSString *cachePath() {
 + (WXBURLSessionTask *)uploadDataWithURL:(NSString *)url
                                     data:(NSData *)data
                                   params:(NSDictionary *)params
+                                 headers:(NSDictionary *)headers
                                 progress:(WXBUploadProgress)progress
                                  success:(SuccessBlock)success
                                  failure:(FailureBlock)failure
@@ -567,7 +576,7 @@ static inline NSString *cachePath() {
     
     AFHTTPSessionManager *manager = [self manager];
     manager.requestSerializer.timeoutInterval = 60.0f;
-    WXBURLSessionTask *session = [manager POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    WXBURLSessionTask *session = [manager POST:url parameters:params headers:headers constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         [formData appendPartWithFileData:data name:@"dataFile" fileName:@"video.mp4" mimeType:@".mp4"];
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {

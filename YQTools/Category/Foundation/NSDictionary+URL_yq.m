@@ -26,7 +26,7 @@
         if([contents count] == 2) {
             NSString *key = [contents objectAtIndex:0];
             NSString *value = [contents objectAtIndex:1];
-            value = [value stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+            value = [value stringByRemovingPercentEncoding];
             if (key && value) {
                 [dict setObject:value forKey:key];
             }
@@ -46,11 +46,9 @@
         if ([string length]) {
             [string appendString:@"&"];
         }
-        CFStringRef escaped = CFURLCreateStringByAddingPercentEscapes(NULL,(CFStringRef)[[self objectForKey:key] description],
-                                                                      NULL,(CFStringRef)@"!*'();:@&=+$,/?%#[]",
-                                                                      kCFStringEncodingUTF8);
+        
+        NSString *escaped = [key stringByAddingPercentEncodingWithAllowedCharacters:[[NSCharacterSet characterSetWithCharactersInString:@"!*'();:@&=+$,/?%#[]"] invertedSet]];
         [string appendFormat:@"%@=%@", key, escaped];
-        CFRelease(escaped);
     }
     return string;
 }

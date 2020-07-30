@@ -31,7 +31,6 @@
 #import "YQPublic.h"
 #import "YQConvert.h"
 #import "YQSandbox.h"
-#import "YQLocalNotification.h"
 #import "YQAdjustScreen.h"
 
 

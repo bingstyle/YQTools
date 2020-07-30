@@ -7,29 +7,30 @@
 //
 
 #import "UIApplication+Service_yq.h"
+@import WebKit;
 
 @implementation UIApplication (Service_yq)
 
 + (void)yq_directPhoneCallWithPhoneNum:(NSString *)phoneNum {
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"tel:" stringByAppendingString:phoneNum]]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"tel:" stringByAppendingString:phoneNum]] options:@{} completionHandler:nil];
 }
 
 + (void)yq_phoneCallWithPhoneNum:(NSString *)phoneNum contentView:(UIView *)view {
     
-    UIWebView * callWebview = [[UIWebView alloc] init];
-    [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[@"tel:" stringByAppendingString:phoneNum]]]];
-    [view addSubview:callWebview];
+    WKWebView *webView = [WKWebView new];
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[@"tel:" stringByAppendingString:phoneNum]]]];
+    [view addSubview:webView];
 }
 
 + (void)yq_jumpToAppReviewPageWithAppId:(NSString *)appId {
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=" stringByAppendingString:appId]]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=" stringByAppendingString:appId]] options:@{} completionHandler:nil];
 }
 
 + (void)yq_sendEmailToAddress:(NSString *)address {
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"mailto://" stringByAppendingString:address]]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"mailto://" stringByAppendingString:address]] options:@{} completionHandler:nil];
 }
 
 @end

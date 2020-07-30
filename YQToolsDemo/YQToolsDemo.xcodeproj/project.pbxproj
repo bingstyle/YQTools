@@ -266,8 +266,6 @@
 		2DAC107E1FFF8472003A17DB /* YQSandbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5D41E55A17200C81A30 /* YQSandbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC107F1FFF8472003A17DB /* YQSandbox.m in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5D51E55A17200C81A30 /* YQSandbox.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC10801FFF8472003A17DB /* YQAdjustScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D9054691E821F7E00FFEF4D /* YQAdjustScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DAC10811FFF8472003A17DB /* YQLocalNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E2E21E5545F600C81A30 /* YQLocalNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DAC10821FFF8472003A17DB /* YQLocalNotification.m in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E2E31E5545F600C81A30 /* YQLocalNotification.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC10831FFF848B003A17DB /* YQFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5B71E559D4700C81A30 /* YQFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC10841FFF848B003A17DB /* YQUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DF6E5B81E559ECD00C81A30 /* YQUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC10871FFF84B4003A17DB /* YQSettingsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7ACC191FE8FD3F00C411E7 /* YQSettingsModel.m */; };
@@ -356,7 +354,6 @@
 		2DAC10DD1FFF84B4003A17DB /* YQConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5D11E55A17200C81A30 /* YQConvert.m */; };
 		2DAC10DE1FFF84B4003A17DB /* YQPublic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5D31E55A17200C81A30 /* YQPublic.m */; };
 		2DAC10DF1FFF84B4003A17DB /* YQSandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5D51E55A17200C81A30 /* YQSandbox.m */; };
-		2DAC10E01FFF84B4003A17DB /* YQLocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E2E31E5545F600C81A30 /* YQLocalNotification.m */; };
 		2DAC10E51FFF8809003A17DB /* YQBaseArchiveModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DFBDE091F29E1F3000A57D4 /* YQBaseArchiveModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC10E61FFF8809003A17DB /* YQBaseArchiveModel.m in Headers */ = {isa = PBXBuildFile; fileRef = 2DFBDE0A1F29E1F3000A57D4 /* YQBaseArchiveModel.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DAC10E81FFF883A003A17DB /* YQBaseArchiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFBDE0A1F29E1F3000A57D4 /* YQBaseArchiveModel.m */; };
@@ -378,7 +375,6 @@
 		2DF6E29E1E5545D200C81A30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DF6E29C1E5545D200C81A30 /* Main.storyboard */; };
 		2DF6E2A01E5545D200C81A30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DF6E29F1E5545D200C81A30 /* Assets.xcassets */; };
 		2DF6E2A31E5545D200C81A30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DF6E2A11E5545D200C81A30 /* LaunchScreen.storyboard */; };
-		2DF6E2F71E5545F600C81A30 /* YQLocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E2E31E5545F600C81A30 /* YQLocalNotification.m */; };
 		2DF6E5D61E55A17200C81A30 /* YQConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5D11E55A17200C81A30 /* YQConvert.m */; };
 		2DF6E5D71E55A17200C81A30 /* YQPublic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5D31E55A17200C81A30 /* YQPublic.m */; };
 		2DF6E5D81E55A17200C81A30 /* YQSandbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF6E5D51E55A17200C81A30 /* YQSandbox.m */; };
@@ -605,8 +601,6 @@
 		2DF6E2AF1E5545D200C81A30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DF6E2B81E5545D200C81A30 /* YQToolsDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YQToolsDemoUITests.m; sourceTree = "<group>"; };
 		2DF6E2BA1E5545D200C81A30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2DF6E2E21E5545F600C81A30 /* YQLocalNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQLocalNotification.h; sourceTree = "<group>"; };
-		2DF6E2E31E5545F600C81A30 /* YQLocalNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQLocalNotification.m; sourceTree = "<group>"; };
 		2DF6E2ED1E5545F600C81A30 /* YQTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQTools.h; sourceTree = "<group>"; };
 		2DF6E5B71E559D4700C81A30 /* YQFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YQFoundation.h; sourceTree = "<group>"; };
 		2DF6E5B81E559ECD00C81A30 /* YQUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YQUIKit.h; sourceTree = "<group>"; };
@@ -1074,19 +1068,9 @@
 				2DF6E5BB1E559FE800C81A30 /* Macro */,
 				2DF6E3F01E5581B800C81A30 /* Category */,
 				2DF6E5CF1E55A17200C81A30 /* Utilities */,
-				2DF6E2E11E5545F600C81A30 /* Notification */,
 			);
 			name = YQTools;
 			path = ../YQTools;
-			sourceTree = "<group>";
-		};
-		2DF6E2E11E5545F600C81A30 /* Notification */ = {
-			isa = PBXGroup;
-			children = (
-				2DF6E2E21E5545F600C81A30 /* YQLocalNotification.h */,
-				2DF6E2E31E5545F600C81A30 /* YQLocalNotification.m */,
-			);
-			path = Notification;
 			sourceTree = "<group>";
 		};
 		2DF6E3F01E5581B800C81A30 /* Category */ = {
@@ -1393,8 +1377,6 @@
 				2DAC107E1FFF8472003A17DB /* YQSandbox.h in Headers */,
 				2DAC107F1FFF8472003A17DB /* YQSandbox.m in Headers */,
 				2DAC10801FFF8472003A17DB /* YQAdjustScreen.h in Headers */,
-				2DAC10811FFF8472003A17DB /* YQLocalNotification.h in Headers */,
-				2DAC10821FFF8472003A17DB /* YQLocalNotification.m in Headers */,
 				2DAC0FD41FFF845C003A17DB /* YQAppMacro.h in Headers */,
 				2DAC0FD51FFF845C003A17DB /* YQColorMacro.h in Headers */,
 				2DAC0FD61FFF845C003A17DB /* YQNotificationMacro.h in Headers */,
@@ -1660,7 +1642,6 @@
 				2DAC10DD1FFF84B4003A17DB /* YQConvert.m in Sources */,
 				2DAC10DE1FFF84B4003A17DB /* YQPublic.m in Sources */,
 				2DAC10DF1FFF84B4003A17DB /* YQSandbox.m in Sources */,
-				2DAC10E01FFF84B4003A17DB /* YQLocalNotification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1750,7 +1731,6 @@
 				2DF6E6321E55ABEF00C81A30 /* NSString+Util_yq.m in Sources */,
 				2D7ACC2B1FE8FD3F00C411E7 /* YQSettingsTimeRangView.m in Sources */,
 				2D4BA6561F25ECE600F29512 /* UIColor+Web_yq.m in Sources */,
-				2DF6E2F71E5545F600C81A30 /* YQLocalNotification.m in Sources */,
 				2D4BA6571F25ECE600F29512 /* UIControl+Block_yq.m in Sources */,
 				2D46EF1A24B6B88600BA13B6 /* UIView+AutoLayout_YQSettings.m in Sources */,
 				2D4BA6781F25EE3200F29512 /* UIButton+ImageTitleStyle_yq.m in Sources */,

@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
 s.name         = "YQTools"
-s.version      = "1.3.6"
+s.version      = "1.4.0"
 s.ios.deployment_target = '11.0'
 s.summary      = "some utilities"
 s.homepage     = "https://github.com/weixinbing/YQTools"
@@ -27,11 +27,7 @@ end
 
 s.subspec 'Networking' do |ss|
 ss.source_files = 'YQTools/Networking/*.{h,m}'
-ss.dependency 'AFNetworking', '~> 3.0'
-end
-
-s.subspec 'Notification' do |ss|
-ss.source_files = 'YQTools/Notification/*.{h,m}'
+ss.dependency 'AFNetworking', '~> 4.0'
 end
 
 s.subspec 'Utilities' do |ss|

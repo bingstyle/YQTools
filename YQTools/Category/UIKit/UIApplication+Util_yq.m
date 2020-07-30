@@ -13,16 +13,6 @@
 
 @implementation UIApplication (Util_yq)
 
-+ (void)yq_registerAPNs
-{
-    [[UIApplication sharedApplication] registerForRemoteNotifications];
-    
-    UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
-    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types
-                                                                             categories:nil];
-    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
-}
-
 + (UIImage *)yq_launchImage {
     
     UIImage               *lauchImage      = nil;

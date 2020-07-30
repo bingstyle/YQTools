@@ -167,7 +167,7 @@
 {
     self.userInteractionEnabled = YES;
     //单指单击
-    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTap:)];
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(yq_singleTap:)];
     singleTap.enabled = _backgoundTapDismissEnable;
     //增加事件者响应者，
     [_backgroundView addGestureRecognizer:singleTap];

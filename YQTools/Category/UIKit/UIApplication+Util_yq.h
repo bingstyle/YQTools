@@ -13,11 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIApplication (Util_yq)
 
 /**
- *  注册APNs
- */
-+ (void)yq_registerAPNs;
-
-/**
  *  获取启动页图片
  *
  *  @return 启动页图片

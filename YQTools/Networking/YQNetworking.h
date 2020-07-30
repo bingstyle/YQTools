@@ -75,6 +75,7 @@ typedef void (^WXBUploadProgress)(int64_t bytesWritten,
 + (WXBURLSessionTask *)getWithUrl:(NSString *)url
                      refreshCache:(BOOL)refreshCache
                            params:(NSDictionary *)params
+                          headers:(NSDictionary *)headers
                          progress:(WXBGetProgress)progress
                           success:(SuccessBlock)success
                              fail:(FailureBlock)fail;
@@ -98,6 +99,7 @@ typedef void (^WXBUploadProgress)(int64_t bytesWritten,
 + (WXBURLSessionTask *)postWithUrl:(NSString *)url
                       refreshCache:(BOOL)refreshCache
                             params:(NSDictionary *)params
+                           headers:(NSDictionary *)headers
                           progress:(WXBPostProgress)progress
                            success:(SuccessBlock)success
                               fail:(FailureBlock)fail;
@@ -117,6 +119,7 @@ typedef void (^WXBUploadProgress)(int64_t bytesWritten,
 + (WXBURLSessionTask *)uploadImageWithURL:(NSString *)url
                                    photos:(NSArray *)photos
                                    params:(NSDictionary *)params
+                                  headers:(NSDictionary *)headers
                                  progress:(WXBUploadProgress)progress
                                   success:(SuccessBlock)success
                                   failure:(FailureBlock)failure;
@@ -131,6 +134,7 @@ typedef void (^WXBUploadProgress)(int64_t bytesWritten,
 + (WXBURLSessionTask *)uploadDataWithURL:(NSString *)url
                                     data:(NSData *)data
                                   params:(NSDictionary *)params
+                                 headers:(NSDictionary *)headers
                                 progress:(WXBUploadProgress)progress
                                  success:(SuccessBlock)success
                                  failure:(FailureBlock)failure;

@@ -61,6 +61,14 @@
             listArr = nil;
         }
     }
+    // 删除 .DS_Store 文件
+    if (listArr) {
+        NSMutableArray *mArray = listArr.mutableCopy;
+        if ([mArray containsObject:@".DS_Store"]) {
+            [mArray removeObject:@".DS_Store"];
+        }
+        listArr = mArray.copy;
+    }
     return listArr;
 }
 
@@ -470,6 +478,10 @@
     return NSSearchPathForDirectoriesInDomains(directory, NSUserDomainMask, YES)[0];
 }
 + (void)yq_checkPath:(NSString **)path {
+    // 非沙盒路径不处理
+    if ([*path containsString:@"/var/"] || [*path containsString:@"/CoreSimulator/"]) {
+        return;
+    }
     // 如果是相对路径, 默认 doc 目录
     if (![*path containsString:NSHomeDirectory()]) {
         *path = [[self yq_documentsPath] stringByAppendingPathComponent:*path];

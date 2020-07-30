@@ -1,4 +1,4 @@
-
+source 'https://hub.fastgit.org/CocoaPods/Specs.git'
 # 说明平台是ios，版本是11.0
 platform :ios, '11.0'
 # 忽略引入库的所有警告
@@ -6,6 +6,6 @@ inhibit_all_warnings!
 
 target 'YQToolsDemo' do
 
-pod 'AFNetworking'
+pod 'AFNetworking', '~> 4.0'
 
 end

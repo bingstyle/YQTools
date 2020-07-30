@@ -49,10 +49,9 @@
             realNumber = [realNumber stringByAppendingString:subString];
         }
     }
-    
-    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", @"tel://", realNumber]]])
-    {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", @"tel://", realNumber]]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", @"tel://", realNumber]];
+    if ([UIApplication.sharedApplication canOpenURL:url]) {
+        [UIApplication.sharedApplication openURL:url options:@{} completionHandler:nil];
     }
 }
 #pragma mark - 计算星座

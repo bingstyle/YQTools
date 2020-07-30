@@ -23,7 +23,7 @@
  *
  *  @return urlEncode 后的字符串
  */
-- (NSString *)yq_urlEncodeUsingEncoding:(NSStringEncoding)encoding;
+//- (NSString *)yq_urlEncodeUsingEncoding:(NSStringEncoding)encoding;
 /**
  *  @brief  urlDecode
  *
@@ -37,7 +37,7 @@
  *
  *  @return urlDecode 后的字符串
  */
-- (NSString *)yq_urlDecodeUsingEncoding:(NSStringEncoding)encoding;
+//- (NSString *)yq_urlDecodeUsingEncoding:(NSStringEncoding)encoding;
 
 /**
  *  @brief  url query转成NSDictionary
